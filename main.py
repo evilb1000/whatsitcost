@@ -4,10 +4,10 @@ import json
 
 app = FastAPI(title="Material Trends API")
 
-# Enable CORS for frontend access
+# === Enable CORS ===
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Change this in prod
+    allow_origins=["*"],  # 🔒 Set your frontend URL in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
