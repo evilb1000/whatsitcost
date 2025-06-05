@@ -98,8 +98,8 @@ import os
 import openai  # Make sure this is installed in your environment
 
 # === Load OpenAI Key ===
-with open("/app/gpt_api_key.txt", "r") as f:
-    openai.api_key = f.read().strip()
+openai.api_key = os.getenv("GPT_KEY")
+
 
 # === Request model ===
 class GPTRequest(BaseModel):
