@@ -1,9 +1,13 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from openai import OpenAI
+import os
 import requests
 
 # === CONFIG ===
 BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main/AIBrain/JSONS"
+client = OpenAI(api_key=os.getenv("GPT_KEY"))
 
 app = FastAPI(title="Material Trends API")
 
@@ -34,6 +38,20 @@ rolling_by_material = load_json_from_github(f"{BASE_URL}/material_rolling.json")
 rolling_12mo_by_material = load_json_from_github(f"{BASE_URL}/material_rolling_12mo.json")
 rolling_3yr_by_material = load_json_from_github(f"{BASE_URL}/material_rolling_3yr.json")
 correlations_by_material = load_json_from_github(f"{BASE_URL}/material_correlations.json")
+
+# === Aggregate Keys ===
+all_keys = set()
+for dataset in [
+    rolling_by_material,
+    trendlines_by_material,
+    spikes_by_material,
+    rolling_12mo_by_material,
+    rolling_3yr_by_material,
+    correlations_by_material,
+]:
+    all_keys.update(dataset.keys())
+
+material_list = sorted(all_keys)
 
 # === ROUTES ===
 
@@ -90,24 +108,30 @@ def get_correlation(base: str, target: str):
         raise HTTPException(status_code=404, detail="Correlation data not found")
     return base_data[target]
 
+# === GPT Chat Endpoint ===
 
-from pydantic import BaseModel
-from openai import OpenAI
-import os
-
-# === Load OpenAI Key ===
-client = OpenAI(api_key=os.getenv("GPT_KEY"))
-
-# === Request model ===
 class GPTRequest(BaseModel):
     messages: list
 
 @app.post("/gpt")
 def chat_with_gpt(payload: GPTRequest):
     try:
+        system_message = {
+            "role": "system",
+            "content": (
+                "You are a construction material trends assistant. "
+                "You have access to JSON datasets for many materials, including:\n\n"
+                + ", ".join(material_list) + "\n\n"
+                "Users might refer to materials informally or imprecisely (e.g., 'diesel' means '#2 Diesel Fuel'). "
+                "Your job is to map these fuzzy inputs to actual dataset keys, and respond as if the correct dataset was accessed."
+            )
+        }
+
+        messages = [system_message] + payload.messages
+
         response = client.chat.completions.create(
             model="gpt-4",
-            messages=payload.messages
+            messages=messages
         )
         return response.choices[0].message
     except Exception as e:
