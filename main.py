@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import requests
 
 # === CONFIG ===
-BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main"
+BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main/AIBrain/JSONS"
 
 app = FastAPI(title="Material Trends API")
 
