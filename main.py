@@ -89,3 +89,29 @@ def get_correlation(base: str, target: str):
     if base_data is None or target not in base_data:
         raise HTTPException(status_code=404, detail="Correlation data not found")
     return base_data[target]
+
+
+
+from pydantic import BaseModel
+import os
+
+import openai  # Make sure this is installed in your environment
+
+# === Load OpenAI Key ===
+with open("/app/gpt_api_key.txt", "r") as f:
+    openai.api_key = f.read().strip()
+
+# === Request model ===
+class GPTRequest(BaseModel):
+    messages: list
+
+@app.post("/gpt")
+def chat_with_gpt(payload: GPTRequest):
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=payload.messages
+        )
+        return response.choices[0].message
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
