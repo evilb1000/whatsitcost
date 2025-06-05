@@ -91,15 +91,12 @@ def get_correlation(base: str, target: str):
     return base_data[target]
 
 
-
 from pydantic import BaseModel
+from openai import OpenAI
 import os
 
-import openai  # Make sure this is installed in your environment
-
 # === Load OpenAI Key ===
-openai.api_key = os.getenv("GPT_KEY")
-
+client = OpenAI(api_key=os.getenv("GPT_KEY"))
 
 # === Request model ===
 class GPTRequest(BaseModel):
@@ -108,7 +105,7 @@ class GPTRequest(BaseModel):
 @app.post("/gpt")
 def chat_with_gpt(payload: GPTRequest):
     try:
-        response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model="gpt-4",
             messages=payload.messages
         )
