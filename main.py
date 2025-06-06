@@ -23,11 +23,14 @@ app.add_middleware(
 # === Load JSON Helper ===
 def load_json_from_github(url):
     try:
+        print(f"📦 Loading: {url}")  # 👈 LOG
         response = requests.get(url)
         response.raise_for_status()
-        return response.json()
+        data = response.json()
+        print(f"✅ Loaded {len(data)} records from {url}")  # 👈 LOG
+        return data
     except Exception as e:
-        print(f"Error loading {url}: {e}")
+        print(f"❌ Error loading {url}: {e}")  # 👈 LOG
         return {}
 
 # === Load Data ===
@@ -41,17 +44,23 @@ correlations_by_material = load_json_from_github(f"{BASE_URL}/material_correlati
 
 # === Aggregate Keys ===
 all_keys = set()
-for dataset in [
-    rolling_by_material,
-    trendlines_by_material,
-    spikes_by_material,
-    rolling_12mo_by_material,
-    rolling_3yr_by_material,
-    correlations_by_material,
+check_material = "Precast Concrete Products"  # 👈 LOG this specific one
+for name, dataset in [
+    ("Rolling", rolling_by_material),
+    ("Trendlines", trendlines_by_material),
+    ("Spikes", spikes_by_material),
+    ("12mo", rolling_12mo_by_material),
+    ("3yr", rolling_3yr_by_material),
+    ("Correlations", correlations_by_material),
 ]:
+    if check_material in dataset:
+        print(f"🧱 Found '{check_material}' in {name}")  # 👈 LOG
+    else:
+        print(f"⚠️ Missing '{check_material}' in {name}")  # 👈 LOG
     all_keys.update(dataset.keys())
 
 material_list = sorted(all_keys)
+print(f"🧠 Final material list contains {len(material_list)} materials")  # 👈 LOG
 
 # === ROUTES ===
 
@@ -116,6 +125,10 @@ class GPTRequest(BaseModel):
 @app.post("/gpt")
 def chat_with_gpt(payload: GPTRequest):
     try:
+        print("📨 Incoming GPT request:")  # 👈 LOG
+        for msg in payload.messages:
+            print(f"🗣️ {msg.get('content', '')[:100]}")  # 👈 LOG preview of each user message
+
         system_message = {
             "role": "system",
             "content": (
@@ -129,10 +142,19 @@ def chat_with_gpt(payload: GPTRequest):
 
         messages = [system_message] + payload.messages
 
+        print("🧠 System prompt preview:")  # 👈 LOG
+        print(system_message["content"][:500] + "...")  # preview only
+
         response = client.chat.completions.create(
             model="gpt-4",
             messages=messages
         )
-        return response.choices[0].message
+
+        reply = response.choices[0].message
+        print("✅ GPT response preview:")  # 👈 LOG
+        print(reply.content[:300])  # preview only
+        return reply
+
     except Exception as e:
+        print(f"❌ GPT ERROR: {e}")  # 👈 LOG
         raise HTTPException(status_code=500, detail=str(e))
