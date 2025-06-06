@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from openai import OpenAI
+from typing import Optional
 import os
 import requests
 
@@ -23,14 +24,14 @@ app.add_middleware(
 # === Load JSON Helper ===
 def load_json_from_github(url):
     try:
-        print(f"📦 Loading: {url}")  # 👈 LOG
+        print(f"📦 Loading: {url}")
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
-        print(f"✅ Loaded {len(data)} records from {url}")  # 👈 LOG
+        print(f"✅ Loaded {len(data)} records from {url}")
         return data
     except Exception as e:
-        print(f"❌ Error loading {url}: {e}")  # 👈 LOG
+        print(f"❌ Error loading {url}: {e}")
         return {}
 
 # === Load Data ===
@@ -44,7 +45,7 @@ correlations_by_material = load_json_from_github(f"{BASE_URL}/material_correlati
 
 # === Aggregate Keys ===
 all_keys = set()
-check_material = "Precast Concrete Products"  # 👈 LOG this specific one
+check_material = "Precast Concrete Products"
 for name, dataset in [
     ("Rolling", rolling_by_material),
     ("Trendlines", trendlines_by_material),
@@ -54,13 +55,13 @@ for name, dataset in [
     ("Correlations", correlations_by_material),
 ]:
     if check_material in dataset:
-        print(f"🧱 Found '{check_material}' in {name}")  # 👈 LOG
+        print(f"🧱 Found '{check_material}' in {name}")
     else:
-        print(f"⚠️ Missing '{check_material}' in {name}")  # 👈 LOG
+        print(f"⚠️ Missing '{check_material}' in {name}")
     all_keys.update(dataset.keys())
 
 material_list = sorted(all_keys)
-print(f"🧠 Final material list contains {len(material_list)} materials")  # 👈 LOG
+print(f"🧠 Final material list contains {len(material_list)} materials")
 
 # === ROUTES ===
 
@@ -125,9 +126,9 @@ class GPTRequest(BaseModel):
 @app.post("/gpt")
 def chat_with_gpt(payload: GPTRequest):
     try:
-        print("📨 Incoming GPT request:")  # 👈 LOG
+        print("📨 Incoming GPT request:")
         for msg in payload.messages:
-            print(f"🗣️ {msg.get('content', '')[:100]}")  # 👈 LOG preview of each user message
+            print(f"🗣️ {msg.get('content', '')[:100]}")
 
         system_message = {
             "role": "system",
@@ -142,8 +143,8 @@ def chat_with_gpt(payload: GPTRequest):
 
         messages = [system_message] + payload.messages
 
-        print("🧠 System prompt preview:")  # 👈 LOG
-        print(system_message["content"][:500] + "...")  # preview only
+        print("🧠 System prompt preview:")
+        print(system_message["content"][:500] + "...")
 
         response = client.chat.completions.create(
             model="gpt-4",
@@ -151,10 +152,94 @@ def chat_with_gpt(payload: GPTRequest):
         )
 
         reply = response.choices[0].message
-        print("✅ GPT response preview:")  # 👈 LOG
-        print(reply.content[:300])  # preview only
+        print("✅ GPT response preview:")
+        print(reply.content[:300])
         return reply
 
     except Exception as e:
-        print(f"❌ GPT ERROR: {e}")  # 👈 LOG
+        print(f"❌ GPT ERROR: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+# === RESOLVE INTENT ===
+
+class ResolveIntentRequest(BaseModel):
+    user_input: str
+from resolve_intent import resolve_intent as gpt_resolve_intent  # 👈 Import your GPT resolver
+
+class ResolveIntentRequest(BaseModel):
+    user_input: str
+
+@app.post("/resolve-intent")
+def handle_resolve_intent(payload: ResolveIntentRequest):
+    print(f"🔍 Resolving intent for: {payload.user_input}")
+
+    # Use GPT-based resolver
+    result = gpt_resolve_intent(payload.user_input, material_list)
+
+    material = result.get("material")
+    metric = result.get("metric")
+
+    if not material or not metric:
+        raise HTTPException(status_code=400, detail="Intent could not be resolved.")
+
+    # Map metric to endpoint
+    metric_to_endpoint = {
+        "yoy": f"/trends/{{DATE}}",  # placeholder — you'd sub DATE at runtime
+        "mom": f"/trends/{{DATE}}",  # same as above
+        "rolling": f"/rolling/{material}",
+        "rolling_12mo": f"/rolling-12mo/{material}",
+        "rolling_3yr": f"/rolling-3yr/{material}",
+        "spike": f"/spikes/{material}",
+        "trendline": f"/trendline/{material}"
+    }
+
+    endpoint = metric_to_endpoint.get(metric)
+    if not endpoint:
+        raise HTTPException(status_code=400, detail=f"Unknown metric '{metric}'")
+
+    print(f"🚀 GPT mapped '{payload.user_input}' → {endpoint}")
+    return {"material": material, "metric": metric, "endpoint": endpoint}
+
+from resolve_intent import resolve_intent
+from fetch_data import fetch_data
+
+class UserInputRequest(BaseModel):
+    user_input: str
+
+@app.post("/resolve-and-fetch")
+def resolve_and_fetch(payload: UserInputRequest):
+    print(f"🔍 Incoming query: {payload.user_input}")
+
+    # Step 1: Resolve Intent
+    intent = resolve_intent(payload.user_input)
+    material = intent.get("material")
+    metric = intent.get("metric")
+
+    if not material or not metric:
+        return {"error": "Failed to resolve intent", "raw_response": intent}
+
+    print(f"🎯 Resolved → Material: {material}, Metric: {metric}")
+
+    # Step 2: Fetch Data
+    data = fetch_data(material, metric)
+
+    if data is None:
+        return {"error": "Failed to fetch data from backend"}
+
+    return {
+        "material": material,
+        "metric": metric,
+        "data": data
+    }
+
+from explain_data import explain_data  # Make sure this is at the top of the file
+
+class ExplainRequest(BaseModel):
+    material: str
+    metric: str
+
+@app.post("/explain")
+def explain(payload: ExplainRequest):
+    print(f"📖 Explaining data for: {payload.material} | {payload.metric}")
+    result = explain_data(payload.material, payload.metric)
+    return {"explanation": result}
