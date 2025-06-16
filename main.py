@@ -5,6 +5,8 @@ from openai import OpenAI
 from typing import Optional
 import os
 import requests
+from GPT_Tools.functions import get_latest_rolling_entry
+
 
 # === CONFIG ===
 BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main/AIBrain/JSONS"
@@ -64,6 +66,11 @@ material_list = sorted(all_keys)
 print(f"🧠 Final material list contains {len(material_list)} materials")
 
 # === ROUTES ===
+
+@app.get("/latest-rolling/{material}")
+def latest_rolling(material: str):
+    return get_latest_rolling_entry(material, rolling_by_material)
+
 
 @app.get("/")
 def root():
