@@ -7,6 +7,14 @@ import os
 import requests
 from GPT_Tools.functions import get_latest_rolling_entry
 
+# === Pydantic Models ===
+class GPTQuery(BaseModel):
+    material: str
+    date: str
+    metric: Optional[str] = None
+    prompt: str
+
+
 
 # === CONFIG ===
 BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main/AIBrain/JSONS"
@@ -131,41 +139,44 @@ class GPTRequest(BaseModel):
     messages: list
 
 @app.post("/gpt")
-def chat_with_gpt(payload: GPTRequest):
+async def run_gpt(query: GPTQuery):
     try:
-        print("📨 Incoming GPT request:")
-        for msg in payload.messages:
-            print(f"🗣️ {msg.get('content', '')[:100]}")
-
-        system_message = {
-            "role": "system",
-            "content": (
-                "You are a construction material trends assistant. "
-                "You have access to JSON datasets for many materials, including:\n\n"
-                + ", ".join(material_list) + "\n\n"
-                "Users might refer to materials informally or imprecisely (e.g., 'diesel' means '#2 Diesel Fuel'). "
-                "Your job is to map these fuzzy inputs to actual dataset keys, and respond as if the correct dataset was accessed."
-            )
-        }
-
-        messages = [system_message] + payload.messages
-
-        print("🧠 System prompt preview:")
-        print(system_message["content"][:500] + "...")
-
-        response = client.chat.completions.create(
-            model="gpt-4",
-            messages=messages
+        # === Load material trend data ===
+        tool_response = get_latest_rolling_entry(
+            material=query.material,
+            date=query.date,
+            field=query.metric
         )
 
-        reply = response.choices[0].message
-        print("✅ GPT response preview:")
-        print(reply.content[:300])
-        return reply
+        # === Create prompt context ===
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a highly skilled economic analyst specializing in construction materials. "
+                        "Use the information from the tool output provided to answer user queries about price trends, "
+                        "momentum, volatility, or co-movements of materials like precast concrete, diesel, steel, etc. "
+                        "Speak clearly and directly, without hedging, and summarize in plain English."
+                    )
+                },
+                {
+                    "role": "user",
+                    "content": query.prompt
+                },
+                {
+                    "role": "assistant",
+                    "content": f"Tool output: {tool_response}"
+                }
+            ]
+        )
+
+        return {"response": response.choices[0].message.content}
 
     except Exception as e:
-        print(f"❌ GPT ERROR: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
 
 # === RESOLVE INTENT ===
 
