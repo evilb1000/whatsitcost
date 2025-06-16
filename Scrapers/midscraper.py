@@ -10,7 +10,7 @@ API_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 # Destination folder and time window
 OUTPUT_FOLDER = "/Users/benatwood/PycharmProjects/WhatsItCost/ScrapedData"
 END_YEAR = 2025
-END_MONTH = "04"
+END_MONTH = "05"
 
 # Legacy Series IDs and start dates
 series_info = {

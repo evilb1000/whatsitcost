@@ -9,7 +9,7 @@ from GPT_Tools.functions import get_latest_rolling_entry
 
 
 # === CONFIG ===
-BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/refs/heads/main/AIBrain/JSONS"
+base_url = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main/AIBrain/JSONS/"
 client = OpenAI(api_key=os.getenv("GPT_KEY"))
 
 app = FastAPI(title="Material Trends API")

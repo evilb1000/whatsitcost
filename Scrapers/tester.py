@@ -1,110 +1,25 @@
-import os
-import requests
-import csv
-from datetime import datetime
+import pandas as pd
 
-# BLS API key and endpoint
-API_KEY = "f7be3dbe922e472aac4b08da9abf3aa3"
-API_URL = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
+# === Load CSV ===
+file_path = "/Users/benatwood/PycharmProjects/WhatsItCost/AIBrain/theBehemoth.csv"
+df = pd.read_csv(file_path)
 
-# Destination folder and time window
-OUTPUT_FOLDER = "/Users/benatwood/PycharmProjects/WhatsItCost/ScrapedData"
-END_YEAR = 2025
-END_MONTH = "04"
+# === Clean and prep ===
+df["series_id"] = df["series_id"].astype(str).str.strip()
+df["month"] = df["month"].astype(str).str.extract(r"M(\d+)").astype(float)
+df["year"] = pd.to_numeric(df["year"], errors="coerce")
+df["mom_growth"] = pd.to_numeric(df["mom_growth"], errors="coerce")
 
-# Legacy Series IDs and start dates
-series_info = {
-    "WPU062101": ("1980", "06"),
-    "WPU101706": ("1982", "06"),
-    "WPU102502": ("1983", "12"),
-    "WPU107405": ("1981", "06"),
-    "WPU107408": ("1983", "12"),
-    "WPU1076": ("1980", "06"),
-    "WPU1079": ("1981", "06"),
-    "WPU1334": ("1980", "06"),
-    "WPU1335": ("1980", "06"),
-    "WPU1342": ("1984", "12"),
-    "WPU13710102": ("1994", "02"),
-    "WPU3012": ("2009", "06"),
-    "WPU443": ("2009", "03"),
-    "WPU4531": ("2009", "03"),
-    "WPU4532": ("2009", "03"),
-    "WPU80": ("2009", "06"),
-    "WPU801": ("2009", "06"),
-    "WPU801101": ("2004", "12"),
-    "WPU801102": ("2005", "12"),
-    "WPU801103": ("2006", "06"),
-    "WPU801104": ("2007", "06"),
-    "WPUFD4": ("2009", "11"),
-    "WPUFD43": ("2009", "11"),
-    "WPUFD431": ("2009", "11"),
-    "WPUFD432": ("2009", "11")
-}
+# === Filter for WPU1017 where MoM growth > 7% (0.07) ===
+subset = df[(df["series_id"] == "WPU1017") & (df["mom_growth"] > 0.07)]
 
-# Collect and log data
-all_data = []
+# === Sort to find the 5 most recent ===
+subset_sorted = subset.sort_values(by=["year", "month"], ascending=False).head(5)
 
-for series_id, (start_year, start_month) in series_info.items():
-    print(f"Fetching {series_id} from {start_year}-{start_month} to {END_YEAR}-{END_MONTH}...")
-
-    payload = {
-        "seriesid": [series_id],
-        "startyear": start_year,
-        "endyear": str(END_YEAR),
-        "registrationkey": API_KEY
-    }
-    headers = {"Content-type": "application/json"}
-
-    try:
-        res = requests.post(API_URL, json=payload, headers=headers)
-        res.raise_for_status()
-        data = res.json()
-
-        latest_date_str = None
-
-        for series in data.get("Results", {}).get("series", []):
-            for entry in series["data"]:
-                entry_year = entry["year"]
-                entry_month = entry["period"][1:]
-                entry_date_str = f"{entry_year}-{entry_month}"
-
-                if (int(entry_year) > int(start_year)) or (
-                    int(entry_year) == int(start_year) and int(entry_month) >= int(start_month)
-                ):
-                    row = {
-                        "series_id": series_id,
-                        "year": entry_year,
-                        "month": entry_month,
-                        "value": entry["value"],
-                        "date": entry_date_str
-                    }
-                    all_data.append(row)
-
-            # Get last available date (first in response is most recent)
-            if series["data"]:
-                last_data_point = series["data"][0]
-                last_year = last_data_point["year"]
-                last_month = last_data_point["period"][1:]
-                latest_date_str = f"{last_year}-{last_month}"
-                print(f"🟡 Last data for {series_id}: {latest_date_str}")
-
-                if int(last_year) < 2024:
-                    print(f"⚠️  {series_id} may be discontinued — last update: {latest_date_str}")
-
-    except Exception as e:
-        print(f"❌ Failed to fetch {series_id}: {e}")
-
-# Generate filename
-earliest_year = min(int(v[0]) for v in series_info.values())
-timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-filename = f"bls_scrape_{earliest_year}_to_{END_YEAR}_{timestamp}.csv"
-filepath = os.path.join(OUTPUT_FOLDER, filename)
-
-# Write to CSV
-os.makedirs(OUTPUT_FOLDER, exist_ok=True)
-with open(filepath, mode="w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=["series_id", "year", "month", "value", "date"])
-    writer.writeheader()
-    writer.writerows(all_data)
-
-print(f"\n✅ Saved {len(all_data)} records to {filepath}")
+# === Display results ===
+if subset_sorted.empty:
+    print("❌ No months found where WPU1017 MoM growth exceeded 7%")
+else:
+    print("✅ Last 5 times WPU1017 MoM growth exceeded 7%:")
+    for _, row in subset_sorted.iterrows():
+        print(f"• {int(row['month'])}/{int(row['year'])}: {round(row['mom_growth'] * 100, 2)}%")
