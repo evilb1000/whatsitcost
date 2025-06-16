@@ -14,8 +14,6 @@ class GPTQuery(BaseModel):
     metric: Optional[str] = None
     prompt: str
 
-
-
 # === CONFIG ===
 BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main/AIBrain/JSONS"
 client = OpenAI(api_key=os.getenv("GPT_KEY"))
@@ -45,6 +43,7 @@ def load_json_from_github(url):
         return {}
 
 # === Load Data ===
+print("🚚 Initializing dataset loading from GitHub...")
 trends_by_date = load_json_from_github(f"{BASE_URL}/material_trends.json")
 trendlines_by_material = load_json_from_github(f"{BASE_URL}/material_trendlines.json")
 spikes_by_material = load_json_from_github(f"{BASE_URL}/material_spikes.json")
@@ -52,10 +51,12 @@ rolling_by_material = load_json_from_github(f"{BASE_URL}/material_rolling.json")
 rolling_12mo_by_material = load_json_from_github(f"{BASE_URL}/material_rolling_12mo.json")
 rolling_3yr_by_material = load_json_from_github(f"{BASE_URL}/material_rolling_3yr.json")
 correlations_by_material = load_json_from_github(f"{BASE_URL}/material_correlations.json")
+print("✅ Finished loading datasets.")
 
 # === Aggregate Keys ===
 all_keys = set()
 check_material = "Precast Concrete Products"
+print("🔍 Verifying material presence across datasets...")
 for name, dataset in [
     ("Rolling", rolling_by_material),
     ("Trendlines", trendlines_by_material),
@@ -77,59 +78,74 @@ print(f"🧠 Final material list contains {len(material_list)} materials")
 
 @app.get("/latest-rolling/{material}")
 def latest_rolling(material: str):
+    print(f"📈 Fetching latest rolling entry for: {material}")
     return get_latest_rolling_entry(material, rolling_by_material)
-
 
 @app.get("/")
 def root():
+    print("🌐 Root endpoint accessed")
     return {"message": "Material Trends API is live!"}
 
 @app.get("/trends/{date}")
 def get_trends_for_date(date: str):
+    print(f"📅 Looking up trends for date: {date}")
     data = trends_by_date.get(date)
     if data is None:
+        print(f"❌ No data for date: {date}")
         raise HTTPException(status_code=404, detail="Date not found")
     return data
 
 @app.get("/trendline/{material}")
 def get_trendline(material: str):
+    print(f"📊 Getting trendline for: {material}")
     data = trendlines_by_material.get(material)
     if data is None:
+        print(f"❌ No trendline found for: {material}")
         raise HTTPException(status_code=404, detail="Material not found")
     return data
 
 @app.get("/spikes/{material}")
 def get_spikes(material: str):
+    print(f"📉 Checking for spikes in: {material}")
     data = spikes_by_material.get(material)
     if data is None:
+        print(f"❌ No spike data found for: {material}")
         raise HTTPException(status_code=404, detail="Material not found")
     return data
 
 @app.get("/rolling/{material}")
 def get_rolling_avg(material: str):
+    print(f"📊 Getting rolling average for: {material}")
     data = rolling_by_material.get(material)
     if data is None:
+        print(f"❌ No rolling data found for: {material}")
         raise HTTPException(status_code=404, detail="Material not found")
     return data
 
 @app.get("/rolling-12mo/{material}")
 def get_rolling_12mo(material: str):
+    print(f"📆 Getting 12-month rolling data for: {material}")
     data = rolling_12mo_by_material.get(material)
     if data is None:
+        print(f"❌ No 12mo data found for: {material}")
         raise HTTPException(status_code=404, detail="Material not found")
     return data
 
 @app.get("/rolling-3yr/{material}")
 def get_rolling_3yr(material: str):
+    print(f"📅 Getting 3-year rolling data for: {material}")
     data = rolling_3yr_by_material.get(material)
     if data is None:
+        print(f"❌ No 3yr data found for: {material}")
         raise HTTPException(status_code=404, detail="Material not found")
     return data
 
 @app.get("/correlations/{base}/{target}")
 def get_correlation(base: str, target: str):
+    print(f"🔗 Fetching correlation from {base} to {target}")
     base_data = correlations_by_material.get(base)
     if base_data is None or target not in base_data:
+        print(f"❌ Correlation not found: {base} → {target}")
         raise HTTPException(status_code=404, detail="Correlation data not found")
     return base_data[target]
 
@@ -140,14 +156,16 @@ class GPTRequest(BaseModel):
 
 @app.post("/gpt")
 async def run_gpt(query: GPTQuery):
+    print(f"🧠 GPT Query incoming: {query.dict()}")
     try:
         tool_response = get_latest_rolling_entry(
             material=query.material,
-            dataset=rolling_by_material,  # 👈 You were missing this!
+            dataset=rolling_by_material,
             date=query.date,
             field=query.metric
         )
-        # === Create prompt context ===
+        print(f"🛠️ Tool output: {tool_response}")
+
         response = client.chat.completions.create(
             model="gpt-4",
             messages=[
@@ -171,38 +189,37 @@ async def run_gpt(query: GPTQuery):
             ]
         )
 
-        return {"response": response.choices[0].message.content}
+        result = response.choices[0].message.content
+        print(f"💬 GPT Response: {result}")
+        return {"response": result}
 
     except Exception as e:
+        print(f"🔥 GPT Error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
-
 
 # === RESOLVE INTENT ===
 
 class ResolveIntentRequest(BaseModel):
     user_input: str
-from resolve_intent import resolve_intent as gpt_resolve_intent  # 👈 Import your GPT resolver
 
-class ResolveIntentRequest(BaseModel):
-    user_input: str
+from resolve_intent import resolve_intent as gpt_resolve_intent
 
 @app.post("/resolve-intent")
 def handle_resolve_intent(payload: ResolveIntentRequest):
     print(f"🔍 Resolving intent for: {payload.user_input}")
-
-    # Use GPT-based resolver
     result = gpt_resolve_intent(payload.user_input, material_list)
 
     material = result.get("material")
     metric = result.get("metric")
+    print(f"🧠 Resolved → Material: {material}, Metric: {metric}")
 
     if not material or not metric:
+        print(f"❌ Intent resolution failed for input: {payload.user_input}")
         raise HTTPException(status_code=400, detail="Intent could not be resolved.")
 
-    # Map metric to endpoint
     metric_to_endpoint = {
-        "yoy": f"/trends/{{DATE}}",  # placeholder — you'd sub DATE at runtime
-        "mom": f"/trends/{{DATE}}",  # same as above
+        "yoy": f"/trends/{{DATE}}",
+        "mom": f"/trends/{{DATE}}",
         "rolling": f"/rolling/{material}",
         "rolling_12mo": f"/rolling-12mo/{material}",
         "rolling_3yr": f"/rolling-3yr/{material}",
@@ -212,6 +229,7 @@ def handle_resolve_intent(payload: ResolveIntentRequest):
 
     endpoint = metric_to_endpoint.get(metric)
     if not endpoint:
+        print(f"❌ Unknown metric: {metric}")
         raise HTTPException(status_code=400, detail=f"Unknown metric '{metric}'")
 
     print(f"🚀 GPT mapped '{payload.user_input}' → {endpoint}")
@@ -227,29 +245,28 @@ class UserInputRequest(BaseModel):
 def resolve_and_fetch(payload: UserInputRequest):
     print(f"🔍 Incoming query: {payload.user_input}")
 
-    # Step 1: Resolve Intent
     intent = resolve_intent(payload.user_input)
     material = intent.get("material")
     metric = intent.get("metric")
 
+    print(f"🧩 Intent resolved → Material: {material}, Metric: {metric}")
     if not material or not metric:
+        print("❌ Failed to resolve intent.")
         return {"error": "Failed to resolve intent", "raw_response": intent}
 
-    print(f"🎯 Resolved → Material: {material}, Metric: {metric}")
-
-    # Step 2: Fetch Data
     data = fetch_data(material, metric)
-
     if data is None:
+        print(f"❌ No data fetched for {material} | {metric}")
         return {"error": "Failed to fetch data from backend"}
 
+    print(f"📦 Fetched data for {material} | {metric}")
     return {
         "material": material,
         "metric": metric,
         "data": data
     }
 
-from explain_data import explain_data  # Make sure this is at the top of the file
+from explain_data import explain_data
 
 class ExplainRequest(BaseModel):
     material: str
@@ -259,4 +276,5 @@ class ExplainRequest(BaseModel):
 def explain(payload: ExplainRequest):
     print(f"📖 Explaining data for: {payload.material} | {payload.metric}")
     result = explain_data(payload.material, payload.metric)
+    print(f"✅ Explanation generated.")
     return {"explanation": result}
