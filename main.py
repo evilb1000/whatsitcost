@@ -141,13 +141,12 @@ class GPTRequest(BaseModel):
 @app.post("/gpt")
 async def run_gpt(query: GPTQuery):
     try:
-        # === Load material trend data ===
         tool_response = get_latest_rolling_entry(
             material=query.material,
+            dataset=rolling_by_material,  # 👈 You were missing this!
             date=query.date,
             field=query.metric
         )
-
         # === Create prompt context ===
         response = client.chat.completions.create(
             model="gpt-4",
