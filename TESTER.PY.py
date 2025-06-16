@@ -5,7 +5,7 @@ file_path = "/Users/benatwood/PycharmProjects/WhatsItCost/AIBrain/JSONS/material
 with open(file_path, "r") as f:
     data = json.load(f)
 
-material = "Aluminum Mill Shapes"
+material = "Asphalt (At Refinery)"
 
 if material in data:
     for entry in data[material]:

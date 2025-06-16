@@ -30,23 +30,47 @@ def get_latest_rolling_entry(material: str, dataset: dict, date: str = None, fie
             print(f"🕓 No date provided, using latest: {record['Date']}")
 
         # Return requested field
+        # Always return full record, even if field was specified
         if field:
-            value = record.get(field, "N/A")
-            print(f"📌 Returning specific field '{field}': {value}")
-            return {
-                "material": material,
-                "date": record["Date"],
-                field: value
-            }
+            print(f"📌 Field '{field}' was requested, but returning full record for GPT to interpret.")
         else:
-            print("📌 Returning full record with MoM and YoY")
-            return {
-                "material": material,
-                "date": record["Date"],
-                "MoM_3mo_avg": record.get("MoM_3mo_avg"),
-                "YoY_3mo_avg": record.get("YoY_3mo_avg")
-            }
+            print("📌 No specific field requested. Returning full record.")
+
+        return {
+            "material": material,
+            "date": record["Date"],
+            "MoM_3mo_avg": record.get("MoM_3mo_avg"),
+            "YoY_3mo_avg": record.get("YoY_3mo_avg")
+        }
+
 
     except Exception as e:
         print(f"🔥 Exception caught: {e}")
         return {"error": f"Failed to get entry: {e}"}
+
+
+def get_trend_mom_summary(material: str, dataset: dict, date: str = None):
+    """
+    Returns the MoM trend summary for a specific material and date from the material_trends.json dataset.
+    """
+    print(f"📈 [MoM] Requested material: '{material}', date: '{date}'")
+
+    if not date:
+        return {"error": "Date is required for MoM trend lookup."}
+
+    data_for_date = dataset.get(date)
+    if not data_for_date:
+        print(f"❌ [MoM] No data available for date: {date}")
+        return {"error": f"No data available for date: {date}"}
+
+    material_data = data_for_date.get(material)
+    if not material_data:
+        print(f"❌ [MoM] Material '{material}' not found in data for {date}")
+        return {"error": f"Material '{material}' not found in data for {date}"}
+
+    print(f"✅ [MoM] Found MoM trend data for '{material}' on {date}: {material_data}")
+    return {
+        "material": material,
+        "date": date,
+        "MoM_change": material_data
+    }

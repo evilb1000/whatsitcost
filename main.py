@@ -7,7 +7,8 @@ from openai import OpenAI
 from typing import Optional
 import os
 import requests
-from GPT_Tools.functions import get_latest_rolling_entry
+from GPT_Tools.functions import get_latest_rolling_entry, get_trend_mom_summary
+
 
 # === Pydantic Models ===
 class GPTQuery(BaseModel):
@@ -160,14 +161,30 @@ class GPTRequest(BaseModel):
 async def run_gpt(query: GPTQuery):
     print(f"🧠 GPT Query incoming: {query.dict()}")
     try:
+        # === Existing Rolling Entry ===
         tool_response = get_latest_rolling_entry(
             material=query.material,
             dataset=rolling_by_material,
             date=query.date,
             field=query.metric
         )
-        print(f"🛠️ Tool output: {tool_response}")
+        print(f"🛠️ Rolling Tool Output: {tool_response}")
 
+        # === NEW: MoM Trend Summary ===
+        trend_mom_response = get_trend_mom_summary(
+            material=query.material,
+            dataset=trends_by_date,
+            date=query.date
+        )
+        print(f"📈 MoM Trend Output: {trend_mom_response}")
+
+        # === Combine Outputs into One Payload ===
+        combined_summary = {
+            "rolling_entry": tool_response,
+            "mom_trend": trend_mom_response
+        }
+
+        # === GPT Call ===
         response = client.chat.completions.create(
             model="gpt-4",
             messages=[
@@ -186,7 +203,7 @@ async def run_gpt(query: GPTQuery):
                 },
                 {
                     "role": "assistant",
-                    "content": f"Tool output: {tool_response}"
+                    "content": f"Tool output: {combined_summary}"
                 }
             ]
         )
