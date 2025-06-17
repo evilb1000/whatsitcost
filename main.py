@@ -96,14 +96,11 @@ def root():
     print("🌐 Root endpoint accessed")
     return {"message": "Material Trends API is live!"}
 
-@app.get("/trends/{date}")
-def get_trends_for_date(date: str):
-    print(f"📅 Looking up trends for date: {date}")
-    data = trends_by_date.get(date)
-    if data is None:
-        print(f"❌ No data for date: {date}")
-        raise HTTPException(status_code=404, detail="Date not found")
-    return data
+@app.get("/trends/{material}/{date}")
+def get_trend_for_material_date(material: str, date: str):
+    print(f"📅 Looking up MoM/YoY for '{material}' on {date}")
+    return get_trend_mom_summary(material, trendlines_by_material, date)
+
 
 @app.get("/trendline/{material}")
 def get_trendline(material: str):
