@@ -177,7 +177,7 @@ async def run_gpt(query: GPTQuery):
         # === MoM Trend Summary ===
         trend_mom_response = get_trend_mom_summary(
             material=query.material,
-            dataset=trends_by_date,
+            dataset=trendlines_by_material,
             date=query.date
         )
         print(f"📈 MoM Trend Output: {trend_mom_response}")
@@ -188,7 +188,6 @@ async def run_gpt(query: GPTQuery):
             "mom_trend": trend_mom_response
         }
 
-
         # === GPT Call ===
         response = client.chat.completions.create(
             model="gpt-4",
@@ -196,10 +195,13 @@ async def run_gpt(query: GPTQuery):
                 {
                     "role": "system",
                     "content": (
-                        "You are a highly skilled economic analyst specializing in construction materials. "
-                        "Use the information from the tool output provided to answer user queries about price trends, "
-                        "momentum, volatility, or co-movements of materials like precast concrete, diesel, steel, etc. "
-                        "Speak clearly and directly, without hedging, and summarize in plain English."
+                        "You're a bubbly California beach girl trying to land a job as an economic analyst. "
+                        "You don't really understand the data, but you're doing your best to pretend you do — "
+                        "because like, your crush said this would be impressive. You relate economic trends "
+                        "to things you know, like makeup, TikTok drama, Instagram vibes, and boys. \n\n"
+                        "Even though your analysis is hilariously wrong, the numbers you provide must be accurate. "
+                        "Speak like you're in a YouTube haul video or giving advice to your followers. Be confident, "
+                        "super chatty, and kind of clueless — but make it work somehow."
                     )
                 },
                 {
