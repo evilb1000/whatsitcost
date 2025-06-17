@@ -1,76 +1,108 @@
-def get_latest_rolling_entry(material: str, dataset: dict, date: str = None, field: str = None):
-    """
-    Returns the latest or date-specific entry from the rolling dataset for a given material.
-    Optionally returns only a specific field if requested.
-    """
-    print(f"🔍 Incoming request: material='{material}', date='{date}', field='{field}'")
+import re
 
+def get_latest_trend_entry(material: str, dataset: dict, date: str = "latest", field: str = None):
+    """
+    Returns the latest or date-specific entry from the trendline dataset for a given material.
+    Each material maps to a list of date-stamped records.
+    Optionally returns only a specific field (e.g., MoM or YoY).
+    """
     records = dataset.get(material)
     if not records:
-        print(f"❌ Material not found in dataset: '{material}'")
-        return {"error": f"Material '{material}' not found"}
+        return {"error": f"Material '{material}' not found in dataset."}
 
-    print(f"✅ Found {len(records)} records for '{material}'")
+    # Ensure all entries have a valid 'Date' key
+    dated_records = [r for r in records if "Date" in r and re.match(r"\d{4}-\d{2}", r["Date"])]
+    if not dated_records:
+        return {"error": f"No valid date entries found for '{material}'."}
 
-    try:
-        if date:
-            print(f"🔎 Searching for record with exact date: {date}")
-            available_dates = [r["Date"] for r in records]
-            print(f"📅 Available dates: {available_dates}")
+    # Find the correct entry
+    if date == "latest":
+        target = max(dated_records, key=lambda r: r["Date"])
+    else:
+        target = next((r for r in dated_records if r["Date"] == date), None)
+        if not target:
+            return {"error": f"No entry found for date '{date}' in '{material}'."}
 
-            record = next((r for r in records if r["Date"] == date), None)
+    if field:
+        return {field: target.get(field)}
+    return target
 
-            if not record:
-                print(f"❌ No matching date found for: {date}")
-                return {"error": f"No data for {material} on {date}"}
-            else:
-                print(f"✅ Found record for date {date}: {record}")
-        else:
-            record = max(records, key=lambda x: x["Date"])
-            print(f"🕓 No date provided, using latest: {record['Date']}")
 
-        # Return requested field
-        # Always return full record, even if field was specified
-        if field:
-            print(f"📌 Field '{field}' was requested, but returning full record for GPT to interpret.")
-        else:
-            print("📌 No specific field requested. Returning full record.")
+def get_trend_mom_summary(material: str, dataset: dict, date: str):
+    """
+    Returns the MoM and YoY values for a specific material and month from the trendline dataset.
+    Expects dataset format:
+    {
+        "Material Name": [
+            { "Date": "YYYY-MM", "MoM": float, "YoY": float },
+            ...
+        ]
+    }
+    """
+    records = dataset.get(material)
+    if not records:
+        return {"error": f"Material '{material}' not found in dataset."}
 
+    # Look for exact date match
+    match = next((entry for entry in records if entry.get("Date") == date), None)
+    if not match:
+        return {"error": f"No data for '{material}' in {date}."}
+
+    return {
+        "Date": date,
+        "MoM": match.get("MoM"),
+        "YoY": match.get("YoY")
+    }
+
+
+
+def get_momentum(material: str, dataset: dict, date: str = None):
+    """
+    Returns momentum stats for a material: 3-month avg MoM/YoY change + latest single-month values.
+    """
+    stats = dataset.get(material)
+    if not stats:
+        return {"error": f"No momentum data found for '{material}'."}
+
+    if date is None:
+        # Just return the 3-month averages
         return {
-            "material": material,
-            "date": record["Date"],
-            "MoM_3mo_avg": record.get("MoM_3mo_avg"),
-            "YoY_3mo_avg": record.get("YoY_3mo_avg")
+            "3mo_avg_mom": stats.get("3mo_avg_mom"),
+            "3mo_avg_yoy": stats.get("3mo_avg_yoy")
         }
 
+    # Try to get specific month-level stats too
+    monthly = stats.get("monthly", {}).get(date)
+    if not monthly:
+        return {
+            "3mo_avg_mom": stats.get("3mo_avg_mom"),
+            "3mo_avg_yoy": stats.get("3mo_avg_yoy"),
+            "note": f"No specific monthly momentum available for {date}."
+        }
 
-    except Exception as e:
-        print(f"🔥 Exception caught: {e}")
-        return {"error": f"Failed to get entry: {e}"}
-
-
-def get_trend_mom_summary(material: str, dataset: dict, date: str = None):
-    """
-    Returns the MoM trend summary for a specific material and date from the material_trends.json dataset.
-    """
-    print(f"📈 [MoM] Requested material: '{material}', date: '{date}'")
-
-    if not date:
-        return {"error": "Date is required for MoM trend lookup."}
-
-    data_for_date = dataset.get(date)
-    if not data_for_date:
-        print(f"❌ [MoM] No data available for date: {date}")
-        return {"error": f"No data available for date: {date}"}
-
-    material_data = data_for_date.get(material)
-    if not material_data:
-        print(f"❌ [MoM] Material '{material}' not found in data for {date}")
-        return {"error": f"Material '{material}' not found in data for {date}"}
-
-    print(f"✅ [MoM] Found MoM trend data for '{material}' on {date}: {material_data}")
     return {
-        "material": material,
-        "date": date,
-        "MoM_change": material_data
+        "3mo_avg_mom": stats.get("3mo_avg_mom"),
+        "3mo_avg_yoy": stats.get("3mo_avg_yoy"),
+        "monthly_mom": monthly.get("mom"),
+        "monthly_yoy": monthly.get("yoy")
     }
+
+
+def get_spikes(material: str, dataset: dict):
+    """
+    Returns a list of spike months for the given material, if any.
+    """
+    spikes = dataset.get(material)
+    if not spikes:
+        return {"note": f"No spikes detected for '{material}'."}
+    return {"spike_months": spikes}
+
+
+def get_volatility(material: str, dataset: dict):
+    """
+    Placeholder function — volatility.json is not currently implemented.
+    """
+    vol = dataset.get(material)
+    if not vol:
+        return {"note": f"No volatility data available for '{material}'."}
+    return {"volatility_score": vol}

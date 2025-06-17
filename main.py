@@ -7,7 +7,14 @@ from openai import OpenAI
 from typing import Optional
 import os
 import requests
-from GPT_Tools.functions import get_latest_rolling_entry, get_trend_mom_summary
+from GPT_Tools.functions import (
+    get_latest_trend_entry,
+    get_trend_mom_summary,
+    get_momentum,
+    get_spikes,
+    get_volatility
+)
+
 
 
 # === Pydantic Models ===
@@ -79,10 +86,10 @@ print(f"🧠 Final material list contains {len(material_list)} materials")
 
 # === ROUTES ===
 
-@app.get("/latest-rolling/{material}")
-def latest_rolling(material: str):
-    print(f"📈 Fetching latest rolling entry for: {material}")
-    return get_latest_rolling_entry(material, rolling_by_material)
+@app.get("/latest-trend/{material}")
+def latest_trend(material: str):
+    print(f"📈 Fetching latest trend entry for: {material}")
+    return get_latest_trend_entry(material, trendlines_by_material)
 
 @app.get("/")
 def root():
@@ -161,16 +168,16 @@ class GPTRequest(BaseModel):
 async def run_gpt(query: GPTQuery):
     print(f"🧠 GPT Query incoming: {query.dict()}")
     try:
-        # === Existing Rolling Entry ===
-        tool_response = get_latest_rolling_entry(
+        # === Updated Trend Entry ===
+        tool_response = get_latest_trend_entry(
             material=query.material,
-            dataset=rolling_by_material,
+            dataset=trendlines_by_material,
             date=query.date,
             field=query.metric
         )
-        print(f"🛠️ Rolling Tool Output: {tool_response}")
+        print(f"🛠️ Trend Tool Output: {tool_response}")
 
-        # === NEW: MoM Trend Summary ===
+        # === MoM Trend Summary ===
         trend_mom_response = get_trend_mom_summary(
             material=query.material,
             dataset=trends_by_date,
@@ -180,9 +187,10 @@ async def run_gpt(query: GPTQuery):
 
         # === Combine Outputs into One Payload ===
         combined_summary = {
-            "rolling_entry": tool_response,
+            "trend_entry": tool_response,
             "mom_trend": trend_mom_response
         }
+
 
         # === GPT Call ===
         response = client.chat.completions.create(
