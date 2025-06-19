@@ -389,9 +389,26 @@ async def run_gpt(query: GPTQuery):
         print(f"💬 Final GPT Message: {result}")
         return { "response": result }
 
+
     except Exception as e:
+
         print(f"🔥 Error in /gpt handler: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+
+        return {
+
+            "response": (
+
+                "I'm sorry, I could not process this request. "
+
+                "Please let Ben know at Ben@mbawpa.org. "
+
+                "Copy and paste your query. "
+
+                "The errors can be fixed and will make me smarter."
+
+            )
+
+        }
 
 
 from pydantic import BaseModel
