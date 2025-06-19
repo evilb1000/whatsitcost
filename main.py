@@ -7,6 +7,7 @@ from openai import OpenAI
 from typing import Optional
 import os
 import requests
+import json
 from GPT_Tools.functions import (
     get_latest_trend_entry,
     get_trend_mom_summary,
@@ -59,9 +60,45 @@ rolling_by_material = load_json_from_github(f"{BASE_URL}/material_rolling.json")
 rolling_12mo_by_material = load_json_from_github(f"{BASE_URL}/material_rolling_12mo.json")
 rolling_3yr_by_material = load_json_from_github(f"{BASE_URL}/material_rolling_3yr.json")
 correlations_by_material = load_json_from_github(f"{BASE_URL}/material_correlations.json")
+snapshot_summary = load_json_from_github(f"{BASE_URL}/latest_snapshot.json")  # ✅ Added
 print("✅ Finished loading datasets.")
 
+
 def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
+    # 🧠 Shortcut for executive summary prompt
+    if any(phrase in prompt.lower() for phrase in [
+        "latest update", "latest summary", "give me the update",
+        "what happened recently", "overall update", "latest trends",
+        "market snapshot", "broad overview", "give me the rundown"
+    ]):
+        print("📊 Executing snapshot summary mode...")
+
+        snapshot_prompt = (
+            "You are a market analyst assistant. Based on the following snapshot of construction material trends, "
+            "write a clear, expert-level executive summary covering:\n"
+            "- Major trends\n"
+            "- Notable price increases or drops\n"
+            "- Any standout insights\n\n"
+            "Snapshot data:\n" + json.dumps(snapshot_summary, indent=2)
+
+        )
+
+        messages = [
+            { "role": "system", "content": "You summarize construction material market data into concise, expert-level insights." },
+            { "role": "user", "content": snapshot_prompt }
+        ]
+
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=messages,
+            temperature=0.5
+        )
+
+        summary = response.choices[0].message.content.strip()
+        print("📈 Snapshot summary generated.")
+        return { "summary": summary }
+
+    # 🧠 Regular material extraction logic
     system_prompt = (
         "You are a helpful assistant. A user will send a freeform question about construction materials.\n"
         "From their prompt, extract:\n"
@@ -90,7 +127,7 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     print(f"🎯 Parsed intent: {content}")
 
     try:
-        parsed = eval(content)  # Use json.loads() if your GPT consistently returns true JSON
+        parsed = eval(content)  # Use json.loads() if GPT always returns valid JSON
 
         # 🔧 Patch: default to 'latest' if vague or missing date
         if not parsed.get("date") or "lately" in prompt.lower() or "recently" in prompt.lower():
