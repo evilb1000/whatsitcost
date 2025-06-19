@@ -70,7 +70,7 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
         "- The most specific date (in YYYY-MM format, or 'latest')\n\n"
         "If no date is provided, assume 'latest'.\n"
         "Return only a valid JSON object like:\n"
-        '{ "material": "Asphalt (At Refinery)", "metric": "momentum", "date": "2024-11" }\n\n'
+        '{ \"material\": \"Asphalt (At Refinery)\", \"metric\": \"momentum\", \"date\": \"2024-11\" }\n\n'
         "Here is the list of materials:\n" +
         "\n".join(f"- {m}" for m in materials)
     )
@@ -90,11 +90,18 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     print(f"🎯 Parsed intent: {content}")
 
     try:
-        return eval(content)  # You can swap to json.loads() if GPT returns valid JSON
+        parsed = eval(content)  # Use json.loads() if your GPT consistently returns true JSON
+
+        # 🔧 Patch: default to 'latest' if vague or missing date
+        if not parsed.get("date") or "lately" in prompt.lower() or "recently" in prompt.lower():
+            parsed["date"] = "latest"
+
+        print(f"🧠 Final parsed values → material: {parsed.get('material')}, metric: {parsed.get('metric')}, date: {parsed.get('date')}")
+        return parsed
+
     except Exception as e:
         print(f"⚠️ Failed to parse GPT response: {e}")
         raise HTTPException(status_code=400, detail="Failed to extract intent from prompt.")
-
 
 
 # === Aggregate Keys ===
