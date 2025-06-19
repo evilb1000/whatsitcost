@@ -19,10 +19,8 @@ from GPT_Tools.functions import (
 
 # === Pydantic Models ===
 class GPTQuery(BaseModel):
-    material: str
-    date: str
-    metric: Optional[str] = None
     prompt: str
+
 
 # === CONFIG ===
 BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main/AIBrain/JSONS"
@@ -63,6 +61,42 @@ rolling_3yr_by_material = load_json_from_github(f"{BASE_URL}/material_rolling_3y
 correlations_by_material = load_json_from_github(f"{BASE_URL}/material_correlations.json")
 print("✅ Finished loading datasets.")
 
+def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
+    system_prompt = (
+        "You are a helpful assistant. A user will send a freeform question about construction materials.\n"
+        "From their prompt, extract:\n"
+        "- The most relevant material (must be from the provided list)\n"
+        "- The requested metric (one of: 'momentum', 'volatility', 'spike', 'rolling')\n"
+        "- The most specific date (in YYYY-MM format, or 'latest')\n\n"
+        "If no date is provided, assume 'latest'.\n"
+        "Return only a valid JSON object like:\n"
+        '{ "material": "Asphalt (At Refinery)", "metric": "momentum", "date": "2024-11" }\n\n'
+        "Here is the list of materials:\n" +
+        "\n".join(f"- {m}" for m in materials)
+    )
+
+    messages = [
+        { "role": "system", "content": system_prompt },
+        { "role": "user", "content": prompt }
+    ]
+
+    response = client.chat.completions.create(
+        model="gpt-4",
+        messages=messages,
+        temperature=0
+    )
+
+    content = response.choices[0].message.content.strip()
+    print(f"🎯 Parsed intent: {content}")
+
+    try:
+        return eval(content)  # You can swap to json.loads() if GPT returns valid JSON
+    except Exception as e:
+        print(f"⚠️ Failed to parse GPT response: {e}")
+        raise HTTPException(status_code=400, detail="Failed to extract intent from prompt.")
+
+
+
 # === Aggregate Keys ===
 all_keys = set()
 check_material = "Precast Concrete Products"
@@ -83,6 +117,8 @@ for name, dataset in [
 
 material_list = sorted(all_keys)
 print(f"🧠 Final material list contains {len(material_list)} materials")
+
+
 
 # === ROUTES ===
 
@@ -163,72 +199,66 @@ class GPTRequest(BaseModel):
 
 @app.post("/gpt")
 async def run_gpt(query: GPTQuery):
-    print(f"🧠 GPT Query incoming: {query.dict()}")
+    print(f"🧠 GPT Prompt received: {query.prompt}")
+
     try:
-        # === Updated Trend Entry ===
-        tool_response = get_latest_trend_entry(
-            material=query.material,
-            dataset=trendlines_by_material,
-            date=query.date,
-            field=query.metric
-        )
-        print(f"🛠️ Trend Tool Output: {tool_response}")
+        # Step 1: Resolve material, metric, date
+        intent = resolve_prompt_with_gpt(query.prompt, material_list)
+        material = intent["material"]
+        metric = intent["metric"]
+        date = intent["date"]
 
-        # === MoM Trend Summary ===
-        trend_mom_response = get_trend_mom_summary(
-            material=query.material,
-            dataset=trendlines_by_material,
-            date=query.date
-        )
-        print(f"📈 MoM Trend Output: {trend_mom_response}")
+        print(f"🔎 Resolved — Material: {material}, Metric: {metric}, Date: {date}")
 
-        # === Combine Outputs into One Payload ===
+        # Step 2: Get data for the requested insight
+        trend_output = get_latest_trend_entry(
+            material=material,
+            dataset=trendlines_by_material,
+            date=date,
+            field=metric
+        )
+
+        summary = get_trend_mom_summary(
+            material=material,
+            dataset=trendlines_by_material,
+            date=date
+        )
+
         combined_summary = {
-            "trend_entry": tool_response,
-            "mom_trend": trend_mom_response
+            "trend_entry": trend_output,
+            "mom_trend": summary
         }
 
-        # === GPT Call ===
-        response = client.chat.completions.create(
+        # Step 3: Send to GPT for final chat response
+        final_response = client.chat.completions.create(
             model="gpt-4",
             messages=[
                 {
                     "role": "system",
                     "content": (
-                        "You're a bubbly California beach girl trying to land a job as an economic analyst. "
-                        "You don't really understand the data, but you're doing your best to pretend you do — "
-                        "because like, your crush said this would be impressive. You relate economic trends "
-                        "to things you know, like makeup, TikTok drama, Instagram vibes, and boys. \n\n"
-                        "Even though your analysis is hilariously wrong, the numbers you provide must be accurate. "
-                        "Speak like you're in a YouTube haul video or giving advice to your followers. Be confident, "
-                        "super chatty, and kind of clueless — but make it work somehow."
+                        "You're a helpful economic analyst. Use the tool output below to write a clear summary of the trend.\n"
+                        "Stay professional and focused. If there's a large spike or drop, highlight it.\n"
                     )
                 },
-                {
-                    "role": "user",
-                    "content": query.prompt
-                },
-                {
-                    "role": "assistant",
-                    "content": f"Tool output: {combined_summary}"
-                }
+                { "role": "user", "content": query.prompt },
+                { "role": "assistant", "content": f"Tool output: {combined_summary}" }
             ]
         )
 
-        result = response.choices[0].message.content
-        print(f"💬 GPT Response: {result}")
-        return {"response": result}
+        result = final_response.choices[0].message.content
+        print(f"💬 Final GPT Message: {result}")
+        return { "response": result }
 
     except Exception as e:
-        print(f"🔥 GPT Error: {e}")
+        print(f"🔥 Error in /gpt handler: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-# === RESOLVE INTENT ===
+
+from pydantic import BaseModel
+from resolve_intent import resolve_intent as gpt_resolve_intent
 
 class ResolveIntentRequest(BaseModel):
     user_input: str
-
-from resolve_intent import resolve_intent as gpt_resolve_intent
 
 @app.post("/resolve-intent")
 def handle_resolve_intent(payload: ResolveIntentRequest):
@@ -261,36 +291,6 @@ def handle_resolve_intent(payload: ResolveIntentRequest):
     print(f"🚀 GPT mapped '{payload.user_input}' → {endpoint}")
     return {"material": material, "metric": metric, "endpoint": endpoint}
 
-from resolve_intent import resolve_intent
-from fetch_data import fetch_data
-
-class UserInputRequest(BaseModel):
-    user_input: str
-
-@app.post("/resolve-and-fetch")
-def resolve_and_fetch(payload: UserInputRequest):
-    print(f"🔍 Incoming query: {payload.user_input}")
-
-    intent = resolve_intent(payload.user_input)
-    material = intent.get("material")
-    metric = intent.get("metric")
-
-    print(f"🧩 Intent resolved → Material: {material}, Metric: {metric}")
-    if not material or not metric:
-        print("❌ Failed to resolve intent.")
-        return {"error": "Failed to resolve intent", "raw_response": intent}
-
-    data = fetch_data(material, metric)
-    if data is None:
-        print(f"❌ No data fetched for {material} | {metric}")
-        return {"error": "Failed to fetch data from backend"}
-
-    print(f"📦 Fetched data for {material} | {metric}")
-    return {
-        "material": material,
-        "metric": metric,
-        "data": data
-    }
 
 from explain_data import explain_data
 
@@ -298,9 +298,3 @@ class ExplainRequest(BaseModel):
     material: str
     metric: str
 
-@app.post("/explain")
-def explain(payload: ExplainRequest):
-    print(f"📖 Explaining data for: {payload.material} | {payload.metric}")
-    result = explain_data(payload.material, payload.metric)
-    print(f"✅ Explanation generated.")
-    return {"explanation": result}
