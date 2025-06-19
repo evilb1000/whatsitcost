@@ -352,6 +352,16 @@ async def run_gpt(query: GPTQuery):
 
         # Step 2: Get data for the requested insight
         # ✅ Resolve "latest" to actual date in dataset
+        # 🛡️ Validate metric first
+        valid_metrics = ["momentum", "volatility", "spike", "rolling"]
+        if metric not in valid_metrics:
+            print(f"❌ Invalid metric parsed: {metric}")
+            raise HTTPException(
+                status_code=400,
+                detail="I'm sorry, I could not process that metric. Please ask about momentum, volatility, spike, or rolling."
+            )
+
+        # ✅ Resolve "latest" to actual date
         if date == "latest":
             all_dates = [entry["date"] for entry in trendlines_by_material[material]]
             date = max(all_dates)
