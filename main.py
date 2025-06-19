@@ -38,7 +38,17 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
         "market-wide update",
         "construction trends lately",
         "general pricing trends",
-        "current state of the market"
+        "current state of the market",
+        "latest on construction materials",
+        "what's the latest on construction materials",
+        "latest construction materials data",
+        "construction material update",
+        "latest construction material summary",
+        "summary of construction materials",
+        "overall construction market",
+        "how is the construction materials market doing",
+        "broad view of construction costs",
+        "state of construction prices"
     ]):
         print("🧠 Resolver: Exec summary match — no material to extract.")
         return { "material": None, "metric": None, "date": "latest" }
