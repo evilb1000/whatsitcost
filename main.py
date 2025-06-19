@@ -16,7 +16,47 @@ from GPT_Tools.functions import (
     get_volatility
 )
 
+def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
+    system_prompt = (
+        "You are a helpful assistant. A user will send a freeform question about construction materials.\n"
+        "From their prompt, extract:\n"
+        "- The most relevant material (must be from the provided list)\n"
+        "- The requested metric (one of: 'momentum', 'volatility', 'spike', 'rolling')\n"
+        "- The most specific date (in YYYY-MM format, or 'latest')\n\n"
+        "If no date is provided, assume 'latest'.\n"
+        "Return only a valid JSON object like:\n"
+        '{ \"material\": \"Asphalt (At Refinery)\", \"metric\": \"momentum\", \"date\": \"2024-11\" }\n\n'
+        "Here is the list of materials:\n" +
+        "\n".join(f"- {m}" for m in materials)
+    )
 
+    messages = [
+        { "role": "system", "content": system_prompt },
+        { "role": "user", "content": prompt }
+    ]
+
+    response = client.chat.completions.create(
+        model="gpt-4",
+        messages=messages,
+        temperature=0
+    )
+
+    content = response.choices[0].message.content.strip()
+    print(f"🎯 Parsed intent: {content}")
+
+    try:
+        parsed = eval(content)  # Use json.loads() if your GPT consistently returns true JSON
+
+        # 🔧 Patch: default to 'latest' if vague or missing date
+        if not parsed.get("date") or "lately" in prompt.lower() or "recently" in prompt.lower():
+            parsed["date"] = "latest"
+
+        print(f"🧠 Final parsed values → material: {parsed.get('material')}, metric: {parsed.get('metric')}, date: {parsed.get('date')}")
+        return parsed
+
+    except Exception as e:
+        print(f"⚠️ Failed to parse GPT response: {e}")
+        raise HTTPException(status_code=400, detail="Failed to extract intent from prompt.")
 
 # === Pydantic Models ===
 class GPTQuery(BaseModel):
