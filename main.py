@@ -351,6 +351,13 @@ async def run_gpt(query: GPTQuery):
         print(f"🔎 Resolved — Material: {material}, Metric: {metric}, Date: {date}")
 
         # Step 2: Get data for the requested insight
+        # ✅ Resolve "latest" to actual date in dataset
+        if date == "latest":
+            all_dates = [entry["date"] for entry in trendlines_by_material[material]]
+            date = max(all_dates)
+            print(f"⏱️ 'latest' resolved to → {date}")
+
+        # Step 2: Get data for the requested insight
         trend_output = get_latest_trend_entry(
             material=material,
             dataset=trendlines_by_material,
