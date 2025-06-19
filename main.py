@@ -17,6 +17,15 @@ from GPT_Tools.functions import (
 )
 
 def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
+    # 🧠 Exec summary detection — shortcut out
+    if any(phrase in prompt.lower() for phrase in [
+        "latest update", "latest summary", "give me the update",
+        "what happened recently", "overall update", "latest trends",
+        "market snapshot", "broad overview", "give me the rundown"
+    ]):
+        print("🧠 Resolver: Exec summary match — no material to extract.")
+        return { "material": None, "metric": None, "date": "latest" }
+
     system_prompt = (
         "You are a helpful assistant. A user will send a freeform question about construction materials.\n"
         "From their prompt, extract:\n"
@@ -29,6 +38,7 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
         "Here is the list of materials:\n" +
         "\n".join(f"- {m}" for m in materials)
     )
+
 
     messages = [
         { "role": "system", "content": system_prompt },
