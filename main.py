@@ -98,48 +98,6 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
         print("📈 Snapshot summary generated.")
         return { "summary": summary }
 
-    # 🧠 Regular material extraction logic
-    system_prompt = (
-        "You are a helpful assistant. A user will send a freeform question about construction materials.\n"
-        "From their prompt, extract:\n"
-        "- The most relevant material (must be from the provided list)\n"
-        "- The requested metric (one of: 'momentum', 'volatility', 'spike', 'rolling')\n"
-        "- The most specific date (in YYYY-MM format, or 'latest')\n\n"
-        "If no date is provided, assume 'latest'.\n"
-        "Return only a valid JSON object like:\n"
-        '{ \"material\": \"Asphalt (At Refinery)\", \"metric\": \"momentum\", \"date\": \"2024-11\" }\n\n'
-        "Here is the list of materials:\n" +
-        "\n".join(f"- {m}" for m in materials)
-    )
-
-    messages = [
-        { "role": "system", "content": system_prompt },
-        { "role": "user", "content": prompt }
-    ]
-
-    response = client.chat.completions.create(
-        model="gpt-4",
-        messages=messages,
-        temperature=0
-    )
-
-    content = response.choices[0].message.content.strip()
-    print(f"🎯 Parsed intent: {content}")
-
-    try:
-        parsed = eval(content)  # Use json.loads() if GPT always returns valid JSON
-
-        # 🔧 Patch: default to 'latest' if vague or missing date
-        if not parsed.get("date") or "lately" in prompt.lower() or "recently" in prompt.lower():
-            parsed["date"] = "latest"
-
-        print(f"🧠 Final parsed values → material: {parsed.get('material')}, metric: {parsed.get('metric')}, date: {parsed.get('date')}")
-        return parsed
-
-    except Exception as e:
-        print(f"⚠️ Failed to parse GPT response: {e}")
-        raise HTTPException(status_code=400, detail="Failed to extract intent from prompt.")
-
 
 # === Aggregate Keys ===
 all_keys = set()
@@ -248,6 +206,32 @@ async def run_gpt(query: GPTQuery):
     try:
         # Step 1: Resolve material, metric, date
         intent = resolve_prompt_with_gpt(query.prompt, material_list)
+        # ✨ EXECUTIVE SUMMARY BYPASS (no material → snapshot summary)
+        if intent.get("material") is None:
+            print("📊 Exec summary triggered — no material provided.")
+
+            snapshot_prompt = (
+                    "You are a market analyst assistant. Based on the following snapshot of construction material trends, "
+                    "write a clear, expert-level executive summary covering:\n"
+                    "- Major trends\n"
+                    "- Notable price increases or drops\n"
+                    "- Any standout insights\n\n"
+                    "Snapshot data:\n" + json.dumps(snapshot_summary, indent=2)
+            )
+
+            final_response = client.chat.completions.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system",
+                     "content": "You summarize construction material market data into concise, expert-level insights."},
+                    {"role": "user", "content": snapshot_prompt}
+                ],
+                temperature=0.5
+            )
+
+            result = final_response.choices[0].message.content.strip()
+            print(f"📈 Exec Summary GPT Result: {result}")
+            return {"response": result}
         material = intent["material"]
         metric = intent["metric"]
         date = intent["date"]
