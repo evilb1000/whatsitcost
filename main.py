@@ -29,9 +29,12 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     print("📥 Starting resolve_prompt_with_gpt")
     print(f"📝 Incoming prompt: {prompt}")
     print(f"📦 Material count: {len(materials)}")
+    matched_materials = [m for m in materials if m.lower() in prompt.lower()]
+    print(f"🔎 Matched materials from prompt: {matched_materials}")
+
 
     # 🧠 Exec summary detection — shortcut out
-    if any(phrase in prompt.lower() for phrase in [
+    if not matched_materials and any(phrase in prompt.lower() for phrase in [
         "latest update",
         "latest summary",
         "overall summary",
