@@ -15,8 +15,16 @@ from GPT_Tools.functions import (
     get_spikes,
     get_volatility
 )
+from GPT_Tools.material_clusters import CLUSTERS
+def resolve_cluster(name):
+    return CLUSTERS.get(name.lower(), [])
+
 
 # == this is your prompt logic. no scripts go in here for output. only for discerning input.
+from GPT_Tools.material_clusters import CLUSTERS
+def resolve_cluster(name):
+    return CLUSTERS.get(name.lower(), [])
+
 def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     # 🧠 Exec summary detection — shortcut out
     if any(phrase in prompt.lower() for phrase in [
@@ -53,6 +61,13 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
         print("🧠 Resolver: Exec summary match — no material to extract.")
         return { "material": None, "metric": None, "date": "latest" }
 
+    # 🧩 Cluster detection — shortcut out
+    for cluster_name in CLUSTERS:
+        if cluster_name.lower() in prompt.lower():
+            print(f"🧠 Resolver: Cluster match → {cluster_name}")
+            return { "material": cluster_name, "metric": None, "date": "latest" }
+
+    # 🎯 Fallback to GPT intent extraction
     system_prompt = (
         "You are a helpful assistant. A user will send a freeform question about construction materials.\n"
         "From their prompt, extract:\n"
@@ -65,7 +80,6 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
         "Here is the list of materials:\n" +
         "\n".join(f"- {m}" for m in materials)
     )
-
 
     messages = [
         { "role": "system", "content": system_prompt },
@@ -82,9 +96,8 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     print(f"🎯 Parsed intent: {content}")
 
     try:
-        parsed = eval(content)  # Use json.loads() if your GPT consistently returns true JSON
+        parsed = eval(content)
 
-        # 🔧 Patch: default to 'latest' if vague or missing date
         if not parsed.get("date") or "lately" in prompt.lower() or "recently" in prompt.lower():
             parsed["date"] = "latest"
 
@@ -94,6 +107,9 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     except Exception as e:
         print(f"⚠️ Failed to parse GPT response: {e}")
         raise HTTPException(status_code=400, detail="Failed to extract intent from prompt.")
+
+
+
 
 # === Pydantic Models ===
 class GPTQuery(BaseModel):
@@ -137,7 +153,9 @@ rolling_by_material = load_json_from_github(f"{BASE_URL}/material_rolling.json")
 rolling_12mo_by_material = load_json_from_github(f"{BASE_URL}/material_rolling_12mo.json")
 rolling_3yr_by_material = load_json_from_github(f"{BASE_URL}/material_rolling_3yr.json")
 correlations_by_material = load_json_from_github(f"{BASE_URL}/material_correlations.json")
-snapshot_summary = load_json_from_github(f"{BASE_URL}/latest_snapshot.json")  # ✅ Added
+snapshot_summary = load_json_from_github(f"{BASE_URL}/latest_snapshot.json")
+cluster_data = load_json_from_github(f"{BASE_URL}/cluster_data.json")  # ✅ Added for cluster summaries
+# ✅ Added
 print("✅ Finished loading datasets.")
 
 
@@ -281,6 +299,8 @@ async def run_gpt(query: GPTQuery):
                     "Snapshot data:\n" + json.dumps(snapshot_summary, indent=2)
             )
 
+
+
             final_response = client.chat.completions.create(
                 model="gpt-4",
                 messages=[
@@ -297,6 +317,36 @@ async def run_gpt(query: GPTQuery):
         material = intent["material"]
         metric = intent["metric"]
         date = intent["date"]
+        # ✳️ CLUSTER SUMMARY HANDLER
+        if material in cluster_data:
+            print(f"📦 Cluster summary triggered for: {material}")
+
+            cluster_blob = cluster_data[material]
+
+            cluster_prompt = (
+                f"You are a market analyst assistant. Based on the following data for the '{material}' cluster, "
+                f"write a concise, expert-level financial summary. Your tone should be formal, analytical, and direct.\n\n"
+                f"Cluster data:\n{json.dumps(cluster_blob, indent=2)}\n\n"
+                f"**Instructions:**\n"
+                f"- Focus on both MoM and YoY changes.\n"
+                f"- Highlight any major outliers or movers within the group.\n"
+                f"- Keep it clean, structured, and free of bullet points or numbered lists.\n"
+                f"- This will be shown in a professional financial app — so avoid fluff or speculation."
+            )
+
+            final_response = client.chat.completions.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system",
+                     "content": "You generate financial summaries for construction material clusters."},
+                    {"role": "user", "content": cluster_prompt}
+                ],
+                temperature=0.5
+            )
+
+            result = final_response.choices[0].message.content.strip()
+            print(f"📊 Cluster Summary Result: {result}")
+            return {"response": result}
 
         print(f"🔎 Resolved — Material: {material}, Metric: {metric}, Date: {date}")
 
