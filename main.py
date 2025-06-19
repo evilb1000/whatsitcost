@@ -16,12 +16,29 @@ from GPT_Tools.functions import (
     get_volatility
 )
 
+# == this is your prompt logic. no scripts go in here for output. only for discerning input.
 def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     # 🧠 Exec summary detection — shortcut out
     if any(phrase in prompt.lower() for phrase in [
-        "latest update", "latest summary", "give me the update",
-        "what happened recently", "overall update", "latest trends",
-        "market snapshot", "broad overview", "give me the rundown"
+        "latest update",
+        "latest summary",
+        "overall summary",
+        "overall update",
+        "market snapshot",
+        "snapshot overview",
+        "high-level update",
+        "executive summary",
+        "broad market trends",
+        "what’s happening in the market",
+        "give me the overview",
+        "what happened recently",
+        "what’s the market doing",
+        "summary of latest data",
+        "latest market movement",
+        "market-wide update",
+        "construction trends lately",
+        "general pricing trends",
+        "current state of the market"
     ]):
         print("🧠 Resolver: Exec summary match — no material to extract.")
         return { "material": None, "metric": None, "date": "latest" }
@@ -228,10 +245,22 @@ async def run_gpt(query: GPTQuery):
 
             snapshot_prompt = (
                     "You are a market analyst assistant. Based on the following snapshot of construction material trends, "
-                    "write a clear, expert-level executive summary covering:\n"
-                    "- Major trends\n"
-                    "- Notable price increases or drops\n"
-                    "- Any standout insights\n\n"
+                    "write a clean, structured executive summary **as of the provided snapshot_date**. Follow this format:\n\n"
+                    "1. Begin with the core indexes:\n"
+                    "   - Consumer Price Index (CPI-U)\n"
+                    "   - Producer Price Index (PPI) for Final Demand\n"
+                    "   - Final Demand Construction Index\n"
+                    "   - Inputs to Construction Industries\n\n"
+                    "2. Summarize the overall market direction:\n"
+                    "   - Is the majority of material movement upward, downward, or stable?\n\n"
+                    "3. Include the percentage breakdown:\n"
+                    "   - % of materials that increased\n"
+                    "   - % that decreased\n"
+                    "   - % that remained stable\n\n"
+                    "4. List the standout performers:\n"
+                    "   - Top risers with % increase\n"
+                    "   - Top fallers with % decrease\n\n"
+                    "Use formal, analytical language suited for a financial report. Avoid vague commentary or fluff.\n\n"
                     "Snapshot data:\n" + json.dumps(snapshot_summary, indent=2)
             )
 
