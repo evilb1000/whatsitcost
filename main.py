@@ -26,6 +26,10 @@ def resolve_cluster(name):
     return CLUSTERS.get(name.lower(), [])
 
 def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
+    print("📥 Starting resolve_prompt_with_gpt")
+    print(f"📝 Incoming prompt: {prompt}")
+    print(f"📦 Material count: {len(materials)}")
+
     # 🧠 Exec summary detection — shortcut out
     if any(phrase in prompt.lower() for phrase in [
         "latest update",
@@ -68,6 +72,8 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
             return { "material": cluster_name, "metric": None, "date": "latest" }
 
     # 🎯 Fallback to GPT intent extraction
+    print("🎯 No shortcut match — falling back to GPT resolution")
+
     system_prompt = (
             "You are a helpful assistant. A user will send a freeform question about construction materials.\n"
             "From their prompt, extract:\n"
@@ -89,6 +95,7 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
         { "role": "user", "content": prompt }
     ]
 
+    print("📡 Sending prompt to GPT...")
     response = client.chat.completions.create(
         model="gpt-4",
         messages=messages,
@@ -96,12 +103,15 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     )
 
     content = response.choices[0].message.content.strip()
-    print(f"🎯 Parsed intent: {content}")
+    print(f"🧾 Raw GPT content: {content}")
 
     try:
         parsed = eval(content)
+        print(f"📊 Parsed dict: {parsed}")
 
+        # 🧼 Post-process — force 'latest' only in date field
         if not parsed.get("date") or "lately" in prompt.lower() or "recently" in prompt.lower():
+            print("📅 Prompt implies recency or no date provided — setting date to 'latest'")
             parsed["date"] = "latest"
 
         print(f"🧠 Final parsed values → material: {parsed.get('material')}, metric: {parsed.get('metric')}, date: {parsed.get('date')}")
@@ -110,7 +120,6 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     except Exception as e:
         print(f"⚠️ Failed to parse GPT response: {e}")
         raise HTTPException(status_code=400, detail="Failed to extract intent from prompt.")
-
 
 
 
