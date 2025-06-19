@@ -69,16 +69,19 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
 
     # 🎯 Fallback to GPT intent extraction
     system_prompt = (
-        "You are a helpful assistant. A user will send a freeform question about construction materials.\n"
-        "From their prompt, extract:\n"
-        "- The most relevant material (must be from the provided list)\n"
-        "- The requested metric (one of: 'momentum', 'volatility', 'spike', 'rolling')\n"
-        "- The most specific date (in YYYY-MM format, or 'latest')\n\n"
-        "If no date is provided, assume 'latest'.\n"
-        "Return only a valid JSON object like:\n"
-        '{ \"material\": \"Asphalt (At Refinery)\", \"metric\": \"momentum\", \"date\": \"2024-11\" }\n\n'
-        "Here is the list of materials:\n" +
-        "\n".join(f"- {m}" for m in materials)
+            "You are a helpful assistant. A user will send a freeform question about construction materials.\n"
+            "From their prompt, extract:\n"
+            "- The most relevant material (must be from the provided list)\n"
+            "- The requested metric (must be exactly one of: 'momentum', 'volatility', 'spike', or 'rolling')\n"
+            "- The most specific date (must be in YYYY-MM format — or use 'latest' for the date only)\n\n"
+            "IMPORTANT:\n"
+            "- Do not use 'latest' as a metric.\n"
+            "- If no metric is specified, default to 'momentum'.\n"
+            "- Only use 'latest' in the 'date' field.\n\n"
+            "Return only a valid JSON object like:\n"
+            "{ \"material\": \"Asphalt (At Refinery)\", \"metric\": \"momentum\", \"date\": \"2024-11\" }\n\n"
+            "Here is the list of materials:\n" +
+            "\n".join(f"- {m}" for m in materials)
     )
 
     messages = [
