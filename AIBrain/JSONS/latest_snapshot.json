@@ -1,0 +1,51 @@
+{
+  "core_materials": [
+    {
+      "material": "CUUR0000SA0",
+      "name": "Consumer Price Index (CPI-U)",
+      "mom": 0.21
+    },
+    {
+      "material": "WPUFD4",
+      "name": "Producer Price Index (PPI For Final Demand",
+      "mom": 0.2
+    },
+    {
+      "material": "WPUFD43",
+      "name": "Final Demand Construction",
+      "mom": 0.16
+    },
+    {
+      "material": "WPUIP230000",
+      "name": "Inputs to Construction Industries",
+      "mom": 0.28
+    }
+  ],
+  "stable_pct": 77.5,
+  "rising_pct": 13.8,
+  "falling_pct": 8.8,
+  "risers": [
+    {
+      "material": "WPU101212",
+      "name": "Stainless and Alloy Steel Scrap",
+      "mom": 13.71
+    },
+    {
+      "material": "WPU1017",
+      "name": "Steel Mill Products",
+      "mom": 6.69
+    }
+  ],
+  "fallers": [
+    {
+      "material": "WPU1012",
+      "name": "Iron and Steel Scrap",
+      "mom": -8.61
+    },
+    {
+      "material": "WPU102501",
+      "name": "Aluminum Mill Shapes",
+      "mom": -3.65
+    }
+  ]
+}
