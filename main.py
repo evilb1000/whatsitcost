@@ -250,9 +250,11 @@ async def run_gpt(query: GPTQuery):
                     "   - Consumer Price Index (CPI-U)\n"
                     "   - Producer Price Index (PPI) for Final Demand\n"
                     "   - Final Demand Construction Index\n"
-                    "   - Inputs to Construction Industries\n\n"
+                    "   - Inputs to Construction Industries\n"
+                    "   - Include each index’s month-over-month (MoM) percentage change.\n\n"
                     "2. Summarize the overall market direction:\n"
-                    "   - Is the majority of material movement upward, downward, or stable?\n\n"
+                    "   - Is the majority of material movement upward, downward, or stable?\n"
+                    "   - Use clear, declarative language to describe the market.\n\n"
                     "3. Include the percentage breakdown:\n"
                     "   - % of materials that increased\n"
                     "   - % that decreased\n"
@@ -260,7 +262,11 @@ async def run_gpt(query: GPTQuery):
                     "4. List the standout performers:\n"
                     "   - Top risers with % increase\n"
                     "   - Top fallers with % decrease\n\n"
-                    "Use formal, analytical language suited for a financial report. Avoid vague commentary or fluff.\n\n"
+                    "**Formatting Instructions:**\n"
+                    "- Structure the output as concise, readable paragraphs — do not use numbered sections or bullet points.\n"
+                    "- Each of the four items above should be its own paragraph.\n"
+                    "- Use formal, analytical language suited for a financial or economic report.\n"
+                    "- Avoid vague commentary, filler, or speculative language.\n\n"
                     "Snapshot data:\n" + json.dumps(snapshot_summary, indent=2)
             )
 
