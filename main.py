@@ -104,40 +104,6 @@ snapshot_summary = load_json_from_github(f"{BASE_URL}/latest_snapshot.json")  # 
 print("✅ Finished loading datasets.")
 
 
-def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
-    # 🧠 Shortcut for executive summary prompt
-    if any(phrase in prompt.lower() for phrase in [
-        "latest update", "latest summary", "give me the update",
-        "what happened recently", "overall update", "latest trends",
-        "market snapshot", "broad overview", "give me the rundown"
-    ]):
-        print("📊 Executing snapshot summary mode...")
-
-        snapshot_prompt = (
-            "You are a market analyst assistant. Based on the following snapshot of construction material trends, "
-            "write a clear, expert-level executive summary covering:\n"
-            "- Major trends\n"
-            "- Notable price increases or drops\n"
-            "- Any standout insights\n\n"
-            "Snapshot data:\n" + json.dumps(snapshot_summary, indent=2)
-
-        )
-
-        messages = [
-            { "role": "system", "content": "You summarize construction material market data into concise, expert-level insights." },
-            { "role": "user", "content": snapshot_prompt }
-        ]
-
-        response = client.chat.completions.create(
-            model="gpt-4",
-            messages=messages,
-            temperature=0.5
-        )
-
-        summary = response.choices[0].message.content.strip()
-        print("📈 Snapshot summary generated.")
-        return { "summary": summary }
-
 
 # === Aggregate Keys ===
 all_keys = set()
