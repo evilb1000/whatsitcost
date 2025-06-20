@@ -378,7 +378,7 @@ async def run_gpt(query: GPTQuery):
 
         # ✅ Resolve "latest" to actual date
         if date == "latest":
-            all_dates = [entry["date"] for entry in trendlines_by_material[material]]
+            all_dates = [entry.get("date") or entry.get("Date") for entry in trendlines_by_material[material]]
             date = max(all_dates)
             print(f"⏱️ 'latest' resolved to → {date}")
 
