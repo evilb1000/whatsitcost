@@ -2719,6 +2719,11 @@
       "Date": "2025-04",
       "MoM": -2.19,
       "YoY": -28.47
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 2.75,
+      "YoY": -8.81
     }
   ],
   "Aluminum Mill Shapes": [
@@ -5441,6 +5446,11 @@
       "Date": "2025-04",
       "MoM": 1.72,
       "YoY": 17.9
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -3.65,
+      "YoY": 8.8
     }
   ],
   "Architectural Coatings": [
@@ -8162,6 +8172,11 @@
     {
       "Date": "2025-04",
       "MoM": 0.6,
+      "YoY": 0.95
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.0,
       "YoY": 0.95
     }
   ],
@@ -10885,6 +10900,11 @@
       "Date": "2025-04",
       "MoM": 0.24,
       "YoY": 1.51
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.0,
+      "YoY": 1.34
     }
   ],
   "Asphalt (At Refinery)": [
@@ -13607,6 +13627,11 @@
       "Date": "2025-04",
       "MoM": 6.26,
       "YoY": -2.22
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -2.59,
+      "YoY": -9.73
     }
   ],
   "Asphalt Felts and Coatings": [
@@ -16329,6 +16354,11 @@
       "Date": "2025-04",
       "MoM": -0.72,
       "YoY": 0.77
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 3.46,
+      "YoY": 1.92
     }
   ],
   "Brick and Structural Clay Tile": [
@@ -19051,6 +19081,11 @@
       "Date": "2025-04",
       "MoM": 0.19,
       "YoY": 1.91
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.0,
+      "YoY": 1.59
     }
   ],
   "Cement": [
@@ -21773,6 +21808,11 @@
       "Date": "2025-04",
       "MoM": 0.31,
       "YoY": 1.62
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.63,
+      "YoY": 1.92
     }
   ],
   "Commercial Structures": [
@@ -24495,6 +24535,11 @@
       "Date": "2025-04",
       "MoM": 0.34,
       "YoY": 2.05
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.18,
+      "YoY": 2.66
     }
   ],
   "Concrete Block and Brick": [
@@ -27217,6 +27262,11 @@
       "Date": "2025-04",
       "MoM": 0.28,
       "YoY": 3.53
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.05,
+      "YoY": 3.46
     }
   ],
   "Concrete Contractors": [
@@ -29939,6 +29989,11 @@
       "Date": "2025-04",
       "MoM": 0.5,
       "YoY": 2.11
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.01,
+      "YoY": 1.98
     }
   ],
   "Concrete Pipe": [
@@ -32661,6 +32716,11 @@
       "Date": "2025-04",
       "MoM": 0.13,
       "YoY": 7.95
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.12,
+      "YoY": 7.62
     }
   ],
   "Concrete Products": [
@@ -35383,6 +35443,11 @@
       "Date": "2025-04",
       "MoM": 0.3,
       "YoY": 2.26
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.24,
+      "YoY": 2.51
     }
   ],
   "Const, Mining & Forestry Machine and Equipment. Rental and Leasing": [
@@ -38105,6 +38170,11 @@
       "Date": "2025-04",
       "MoM": 0.66,
       "YoY": 0.04
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.26,
+      "YoY": 0.44
     }
   ],
   "Construction (Partial)": [
@@ -40827,6 +40897,11 @@
       "Date": "2025-04",
       "MoM": -0.35,
       "YoY": 2.08
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.15,
+      "YoY": 2.22
     }
   ],
   "Construction Employment": [
@@ -43549,6 +43624,11 @@
       "Date": "2025-04",
       "MoM": 0.13,
       "YoY": 1.75
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.02,
+      "YoY": 1.54
     }
   ],
   "Construction MAchinery and Equipment": [
@@ -46271,6 +46351,11 @@
       "Date": "2025-04",
       "MoM": 1.06,
       "YoY": 1.65
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.44,
+      "YoY": 2.03
     }
   ],
   "Construction and Sand/Gravel/Crushed Stone": [
@@ -48993,6 +49078,11 @@
       "Date": "2025-04",
       "MoM": 0.18,
       "YoY": 7.34
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.19,
+      "YoY": 7.32
     }
   ],
   "Construction for Government ": [
@@ -51715,6 +51805,11 @@
       "Date": "2025-04",
       "MoM": -0.46,
       "YoY": 2.25
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.26,
+      "YoY": 2.62
     }
   ],
   "Construction for Private Capital Investment": [
@@ -54437,6 +54532,11 @@
       "Date": "2025-04",
       "MoM": -0.37,
       "YoY": 1.64
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.11,
+      "YoY": 1.69
     }
   ],
   "Consumer Price Index (CPI-U)": [
@@ -57159,6 +57259,11 @@
       "Date": "2025-04",
       "MoM": 0.31,
       "YoY": 2.31
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.21,
+      "YoY": 2.35
     }
   ],
   "Copper Base Scrap": [
@@ -59881,6 +59986,11 @@
       "Date": "2025-04",
       "MoM": -7.83,
       "YoY": -4.83
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 4.56,
+      "YoY": -7.53
     }
   ],
   "Copper and Brass Mill Shapes": [
@@ -62603,6 +62713,11 @@
       "Date": "2025-04",
       "MoM": 1.96,
       "YoY": 6.98
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -3.52,
+      "YoY": -1.26
     }
   ],
   "Education and Vocational Structures": [
@@ -65325,6 +65440,11 @@
       "Date": "2025-04",
       "MoM": 0.26,
       "YoY": 1.46
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.13,
+      "YoY": 2.21
     }
   ],
   "Electrical Contractors": [
@@ -68047,6 +68167,11 @@
       "Date": "2025-04",
       "MoM": 0.36,
       "YoY": 1.96
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.07,
+      "YoY": 1.89
     }
   ],
   "Engineering Services": [
@@ -70769,6 +70894,11 @@
       "Date": "2025-04",
       "MoM": 0.33,
       "YoY": 2.27
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.1,
+      "YoY": 2.38
     }
   ],
   "Fabricated Steel Plate": [
@@ -73489,6 +73619,11 @@
     },
     {
       "Date": "2025-04",
+      "MoM": 0.0,
+      "YoY": 12.72
+    },
+    {
+      "Date": "2025-05",
       "MoM": 0.0,
       "YoY": 12.72
     }
@@ -76213,6 +76348,11 @@
       "Date": "2025-04",
       "MoM": 1.35,
       "YoY": 6.01
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 1.42,
+      "YoY": 7.07
     }
   ],
   "Fabricated Structural Metal Bar Joists and Rebar": [
@@ -78935,6 +79075,11 @@
       "Date": "2025-04",
       "MoM": 3.27,
       "YoY": 7.11
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 2.18,
+      "YoY": 8.46
     }
   ],
   "Fabricated Structural Metal for Bridges": [
@@ -81657,6 +81802,11 @@
       "Date": "2025-04",
       "MoM": 1.21,
       "YoY": -1.03
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -2.14,
+      "YoY": -6.07
     }
   ],
   "Fabricated Structural Metal for Non-Industrial Buildings": [
@@ -84379,6 +84529,11 @@
       "Date": "2025-04",
       "MoM": 3.59,
       "YoY": 6.82
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 3.06,
+      "YoY": 8.73
     }
   ],
   "Final Demand Construction": [
@@ -87101,6 +87256,11 @@
       "Date": "2025-04",
       "MoM": -0.39,
       "YoY": 1.83
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.16,
+      "YoY": 1.97
     }
   ],
   "Flatt Glass": [
@@ -89823,6 +89983,11 @@
       "Date": "2025-04",
       "MoM": -1.87,
       "YoY": -0.44
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.16,
+      "YoY": -0.55
     }
   ],
   "Gypsum Building MAterials": [
@@ -92545,6 +92710,11 @@
       "Date": "2025-04",
       "MoM": -0.6,
       "YoY": 3.04
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.0,
+      "YoY": 1.4
     }
   ],
   "Healthcare Structures": [
@@ -95267,6 +95437,11 @@
       "Date": "2025-04",
       "MoM": 0.28,
       "YoY": 1.74
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.17,
+      "YoY": 2.51
     }
   ],
   "Highways and Streets": [
@@ -97989,6 +98164,11 @@
       "Date": "2025-04",
       "MoM": -0.29,
       "YoY": 1.18
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.52,
+      "YoY": 2.29
     }
   ],
   "Industrial Structures": [
@@ -100711,6 +100891,11 @@
       "Date": "2025-04",
       "MoM": 0.2,
       "YoY": 2.11
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.22,
+      "YoY": 2.87
     }
   ],
   "Inputs to Construction Industries": [
@@ -103433,6 +103618,11 @@
       "Date": "2025-04",
       "MoM": -0.26,
       "YoY": 0.69
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.28,
+      "YoY": 1.86
     }
   ],
   "Inputs to Construction Industries, Energy": [
@@ -106155,6 +106345,11 @@
       "Date": "2025-04",
       "MoM": 0.06,
       "YoY": -19.05
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 1.24,
+      "YoY": -10.78
     }
   ],
   "Inputs to Construction Industries, Goods": [
@@ -108877,6 +109072,11 @@
       "Date": "2025-04",
       "MoM": -0.13,
       "YoY": 0.07
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.36,
+      "YoY": 1.35
     }
   ],
   "Inputs to Construction Industries, Goods Less Foods": [
@@ -111599,6 +111799,11 @@
       "Date": "2025-04",
       "MoM": -0.14,
       "YoY": 2.16
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.28,
+      "YoY": 2.57
     }
   ],
   "Inputs to Construction Industries, Services": [
@@ -114321,6 +114526,11 @@
       "Date": "2025-04",
       "MoM": -0.52,
       "YoY": 1.94
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.13,
+      "YoY": 2.9
     }
   ],
   "Insulation Materials": [
@@ -117043,6 +117253,11 @@
       "Date": "2025-04",
       "MoM": -0.69,
       "YoY": 3.55
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.62,
+      "YoY": 3.59
     }
   ],
   "Iron and Steel Scrap": [
@@ -119765,6 +119980,11 @@
       "Date": "2025-04",
       "MoM": -7.86,
       "YoY": 3.0
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -8.61,
+      "YoY": -5.47
     }
   ],
   "Labor Force Participation Rate": [
@@ -122487,6 +122707,11 @@
       "Date": "2025-04",
       "MoM": 0.16,
       "YoY": -0.16
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.32,
+      "YoY": -0.32
     }
   ],
   "Lumber and Plywood": [
@@ -125209,6 +125434,11 @@
       "Date": "2025-04",
       "MoM": -1.33,
       "YoY": 4.57
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.97,
+      "YoY": 5.51
     }
   ],
   "Mainenance and Repair Construction": [
@@ -127931,6 +128161,11 @@
       "Date": "2025-04",
       "MoM": -0.39,
       "YoY": 0.48
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.28,
+      "YoY": 1.73
     }
   ],
   "Maint & Repair of Nonres Buildings (Partial)": [
@@ -130653,6 +130888,11 @@
       "Date": "2025-04",
       "MoM": 0.04,
       "YoY": 4.57
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.1,
+      "YoY": 4.66
     }
   ],
   "Multifamily": [
@@ -133375,6 +133615,11 @@
       "Date": "2025-04",
       "MoM": -0.06,
       "YoY": 0.5
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.45,
+      "YoY": 1.95
     }
   ],
   "New Health Care Building Construction": [
@@ -136097,6 +136342,11 @@
       "Date": "2025-04",
       "MoM": -0.19,
       "YoY": 3.48
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.3,
+      "YoY": 3.14
     }
   ],
   "New Industrial Building Construction": [
@@ -138819,6 +139069,11 @@
       "Date": "2025-04",
       "MoM": -0.36,
       "YoY": 0.46
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.27,
+      "YoY": 0.3
     }
   ],
   "New Nonresedential Construction ": [
@@ -141541,6 +141796,11 @@
       "Date": "2025-04",
       "MoM": 0.01,
       "YoY": 1.25
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.29,
+      "YoY": 2.22
     }
   ],
   "New Nonresidential Building Construction": [
@@ -144263,6 +144523,11 @@
       "Date": "2025-04",
       "MoM": -0.41,
       "YoY": 1.74
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.16,
+      "YoY": 1.89
     }
   ],
   "New Office Building Construction": [
@@ -146985,6 +147250,11 @@
       "Date": "2025-04",
       "MoM": -0.52,
       "YoY": 2.52
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.33,
+      "YoY": 2.81
     }
   ],
   "New Residential Construction": [
@@ -149707,6 +149977,11 @@
       "Date": "2025-04",
       "MoM": -0.37,
       "YoY": 0.57
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.31,
+      "YoY": 1.88
     }
   ],
   "New School Building Construction": [
@@ -152429,6 +152704,11 @@
       "Date": "2025-04",
       "MoM": -0.6,
       "YoY": 1.67
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.41,
+      "YoY": 2.3
     }
   ],
   "New Warehouse Building Construction": [
@@ -155151,6 +155431,11 @@
       "Date": "2025-04",
       "MoM": -0.23,
       "YoY": -0.2
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.03,
+      "YoY": -0.22
     }
   ],
   "Nonresidential Maintenance and Repair": [
@@ -157873,6 +158158,11 @@
       "Date": "2025-04",
       "MoM": -0.48,
       "YoY": 0.35
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.33,
+      "YoY": 1.63
     }
   ],
   "Ornamental and Architectural Metal Work": [
@@ -160595,6 +160885,11 @@
       "Date": "2025-04",
       "MoM": 0.42,
       "YoY": 14.24
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.89,
+      "YoY": 9.6
     }
   ],
   "Other Misc. Non Residential Construction": [
@@ -163317,6 +163612,11 @@
       "Date": "2025-04",
       "MoM": 0.02,
       "YoY": 0.95
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.34,
+      "YoY": 2.14
     }
   ],
   "Other Non Residential": [
@@ -166039,6 +166339,11 @@
       "Date": "2025-04",
       "MoM": -0.07,
       "YoY": 1.1
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.36,
+      "YoY": 2.2
     }
   ],
   "Paving Mixtures": [
@@ -168761,6 +169066,11 @@
       "Date": "2025-04",
       "MoM": -9.48,
       "YoY": 1.54
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -1.95,
+      "YoY": 0.68
     }
   ],
   "Plastic Construction Products": [
@@ -171483,6 +171793,11 @@
       "Date": "2025-04",
       "MoM": 0.58,
       "YoY": -1.87
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -0.01,
+      "YoY": -1.58
     }
   ],
   "Plumbing Contractors ": [
@@ -174205,6 +174520,11 @@
       "Date": "2025-04",
       "MoM": -1.37,
       "YoY": 1.27
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.81,
+      "YoY": 2.11
     }
   ],
   "Power and Communications Structiors": [
@@ -176927,6 +177247,11 @@
       "Date": "2025-04",
       "MoM": 0.23,
       "YoY": 1.0
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.27,
+      "YoY": 2.06
     }
   ],
   "Precast Concrete Products": [
@@ -179649,6 +179974,11 @@
       "Date": "2025-04",
       "MoM": 0.56,
       "YoY": 3.14
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.78,
+      "YoY": 4.26
     }
   ],
   "Prefabricated Metal Buildings": [
@@ -182371,6 +182701,11 @@
       "Date": "2025-04",
       "MoM": -0.17,
       "YoY": -1.91
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.93,
+      "YoY": -0.67
     }
   ],
   "Prepared Asphalt and Tar Rooging and Siding Products": [
@@ -185093,6 +185428,11 @@
       "Date": "2025-04",
       "MoM": -0.85,
       "YoY": 0.69
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 3.83,
+      "YoY": 1.78
     }
   ],
   "Prestressed Concrete Products": [
@@ -187815,6 +188155,11 @@
       "Date": "2025-04",
       "MoM": 0.18,
       "YoY": -1.11
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.03,
+      "YoY": 0.15
     }
   ],
   "Producer Price Index (PPI For Final Demand": [
@@ -190537,6 +190882,11 @@
       "Date": "2025-04",
       "MoM": -0.43,
       "YoY": 2.38
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.2,
+      "YoY": 2.62
     }
   ],
   "Ready Mixed Concrete": [
@@ -193259,6 +193609,11 @@
       "Date": "2025-04",
       "MoM": 0.23,
       "YoY": 1.66
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.13,
+      "YoY": 1.62
     }
   ],
   "Residential Maintenance and Repair": [
@@ -195981,6 +196336,11 @@
       "Date": "2025-04",
       "MoM": -0.26,
       "YoY": 0.68
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.22,
+      "YoY": 1.8
     }
   ],
   "Roofing Contractors": [
@@ -198703,6 +199063,11 @@
       "Date": "2025-04",
       "MoM": 0.39,
       "YoY": 3.19
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.07,
+      "YoY": 3.55
     }
   ],
   "Sheet Metal Products": [
@@ -201425,6 +201790,11 @@
       "Date": "2025-04",
       "MoM": 1.13,
       "YoY": 2.3
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.2,
+      "YoY": 2.36
     }
   ],
   "Stainless and Alloy Steel Scrap": [
@@ -204147,6 +204517,11 @@
       "Date": "2025-04",
       "MoM": -10.31,
       "YoY": -17.95
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 13.71,
+      "YoY": -8.57
     }
   ],
   "Steel Mill Products": [
@@ -206869,6 +207244,11 @@
       "Date": "2025-04",
       "MoM": 5.85,
       "YoY": 2.36
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 6.69,
+      "YoY": 8.84
     }
   ],
   "Steel Pipe and Tube": [
@@ -209591,6 +209971,11 @@
       "Date": "2025-04",
       "MoM": 6.31,
       "YoY": 4.13
+    },
+    {
+      "Date": "2025-05",
+      "MoM": -2.01,
+      "YoY": 2.09
     }
   ],
   "Truck Transportation of Freight": [
@@ -212313,6 +212698,11 @@
       "Date": "2025-04",
       "MoM": -0.19,
       "YoY": 0.56
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 1.44,
+      "YoY": 1.83
     }
   ],
   "Truck and Bus (Inc Off Highway) Pneumatic Tires": [
@@ -215035,6 +215425,11 @@
       "Date": "2025-04",
       "MoM": 0.15,
       "YoY": -0.06
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.12,
+      "YoY": 1.56
     }
   ],
   "Unemployment Rate": [
@@ -217757,6 +218152,11 @@
       "Date": "2025-04",
       "MoM": 0.0,
       "YoY": 7.69
+    },
+    {
+      "Date": "2025-05",
+      "MoM": 0.0,
+      "YoY": 5.0
     }
   ]
 }
