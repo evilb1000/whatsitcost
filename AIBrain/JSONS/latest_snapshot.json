@@ -1,60 +1,60 @@
 {
-  "snapshot_date": "2025-05",
+  "snapshot_date": "2025-06",
   "core_materials": [
     {
       "material": "CUUR0000SA0",
       "name": "Consumer Price Index (CPI-U)",
-      "mom": 0.21,
-      "yoy": 2.35
+      "mom": 0.34,
+      "yoy": 2.67
     },
     {
       "material": "WPUFD4",
       "name": "Producer Price Index (PPI For Final Demand",
-      "mom": 0.2,
-      "yoy": 2.62
+      "mom": 0.29,
+      "yoy": 2.34
     },
     {
       "material": "WPUFD43",
       "name": "Final Demand Construction",
-      "mom": 0.16,
-      "yoy": 1.97
+      "mom": -0.01,
+      "yoy": 1.63
     },
     {
       "material": "WPUIP230000",
       "name": "Inputs to Construction Industries",
       "mom": 0.28,
-      "yoy": 1.86
+      "yoy": 2.24
     }
   ],
-  "stable_pct": 77.5,
-  "rising_pct": 13.8,
-  "falling_pct": 8.8,
+  "stable_pct": 80.0,
+  "rising_pct": 8.8,
+  "falling_pct": 11.2,
   "risers": [
     {
-      "material": "WPU101212",
-      "name": "Stainless and Alloy Steel Scrap",
-      "mom": 13.71,
-      "yoy": -8.57
+      "material": "WPU10740553",
+      "name": "Fabricated Structural Metal for Bridges",
+      "mom": 22.02,
+      "yoy": 22.5
     },
     {
-      "material": "WPU1017",
-      "name": "Steel Mill Products",
-      "mom": 6.69,
-      "yoy": 8.84
+      "material": "WPU802",
+      "name": "Maint & Repair of Nonres Buildings (Partial)",
+      "mom": 3.24,
+      "yoy": 7.96
     }
   ],
   "fallers": [
     {
-      "material": "WPU1012",
-      "name": "Iron and Steel Scrap",
-      "mom": -8.61,
-      "yoy": -5.47
+      "material": "LNS14000000",
+      "name": "Unemployment Rate",
+      "mom": -10.0,
+      "yoy": 0.0
     },
     {
-      "material": "WPU102501",
-      "name": "Aluminum Mill Shapes",
-      "mom": -3.65,
-      "yoy": 8.8
+      "material": "WPU1017",
+      "name": "Steel Mill Products",
+      "mom": -5.14,
+      "yoy": 5.11
     }
   ]
 }

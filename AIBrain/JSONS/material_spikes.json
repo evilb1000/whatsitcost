@@ -3434,6 +3434,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": -8.81
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": -7.09
     }
   ],
   "Aluminum Mill Shapes": [
@@ -4756,6 +4761,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": 8.8
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 6.31
     }
   ],
   "Architectural Coatings": [
@@ -7986,6 +7996,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": -9.73
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": -11.57
     }
   ],
   "Asphalt Felts and Coatings": [
@@ -11085,6 +11100,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": 7.62
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 10.26
     }
   ],
   "Concrete Products": [
@@ -13157,6 +13177,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": 7.32
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 7.49
     }
   ],
   "Construction for Government ": [
@@ -18915,6 +18940,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": 12.72
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 13.58
     }
   ],
   "Fabricated Structural Metal": [
@@ -19557,6 +19587,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": 7.07
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 8.93
     }
   ],
   "Fabricated Structural Metal Bar Joists and Rebar": [
@@ -20154,6 +20189,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": 8.46
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 8.32
     }
   ],
   "Fabricated Structural Metal for Bridges": [
@@ -20726,6 +20766,16 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": -6.07
+    },
+    {
+      "Date": "2025-06",
+      "Type": "MoM",
+      "Change": 22.02
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 22.5
     }
   ],
   "Fabricated Structural Metal for Non-Industrial Buildings": [
@@ -21028,6 +21078,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": 8.73
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 9.4
     }
   ],
   "Final Demand Construction": [
@@ -24094,6 +24149,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": -10.78
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": -8.13
     }
   ],
   "Inputs to Construction Industries, Goods": [
@@ -30461,6 +30521,11 @@
       "Date": "2025-03",
       "Type": "YoY",
       "Change": 7.57
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 7.96
     }
   ],
   "Multifamily": [
@@ -33283,6 +33348,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": 9.6
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 9.21
     }
   ],
   "Other Misc. Non Residential Construction": [
@@ -41610,6 +41680,11 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": -8.57
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": -6.61
     }
   ],
   "Steel Mill Products": [
@@ -43127,6 +43202,16 @@
       "Date": "2025-05",
       "Type": "YoY",
       "Change": 8.84
+    },
+    {
+      "Date": "2025-06",
+      "Type": "MoM",
+      "Change": -5.14
+    },
+    {
+      "Date": "2025-06",
+      "Type": "YoY",
+      "Change": 5.11
     }
   ],
   "Steel Pipe and Tube": [
