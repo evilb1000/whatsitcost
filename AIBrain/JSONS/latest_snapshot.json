@@ -10,25 +10,25 @@
     {
       "material": "WPUFD4",
       "name": "Producer Price Index (PPI For Final Demand",
-      "mom": 0.29,
+      "mom": 0.19,
       "yoy": 2.34
     },
     {
       "material": "WPUFD43",
       "name": "Final Demand Construction",
-      "mom": -0.01,
+      "mom": 0.27,
       "yoy": 1.63
     },
     {
       "material": "WPUIP230000",
       "name": "Inputs to Construction Industries",
-      "mom": 0.28,
+      "mom": 0.36,
       "yoy": 2.24
     }
   ],
-  "stable_pct": 80.0,
-  "rising_pct": 8.8,
-  "falling_pct": 11.2,
+  "stable_pct": 82.5,
+  "rising_pct": 10.0,
+  "falling_pct": 7.5,
   "risers": [
     {
       "material": "WPU10740553",
@@ -39,7 +39,7 @@
     {
       "material": "WPU802",
       "name": "Maint & Repair of Nonres Buildings (Partial)",
-      "mom": 3.24,
+      "mom": 3.28,
       "yoy": 7.96
     }
   ],
@@ -53,7 +53,7 @@
     {
       "material": "WPU1017",
       "name": "Steel Mill Products",
-      "mom": -5.14,
+      "mom": -5.48,
       "yoy": 5.11
     }
   ]
