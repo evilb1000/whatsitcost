@@ -1,281 +1,281 @@
 {
   "metals": {
-    "as_of": "2025-M06",
+    "as_of": "2025-M07",
     "count": 11,
     "materials": [
       {
         "series_name": "Aluminum Mill Shapes",
         "series_id": "WPU102501",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0031041887097778,
-        "YoY": 0.0631217383368318
+        "MoM": 0.0743120231723148,
+        "YoY": 0.1366495493823341
       },
       {
         "series_name": "Copper and Brass Mill Shapes",
         "series_id": "WPU102502",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0114376388448111,
-        "YoY": -0.0216375929578437
+        "MoM": 0.0570027360811284,
+        "YoY": 0.0685192645011085
       },
       {
         "series_name": "Iron and Steel Scrap",
         "series_id": "WPU1012",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0033318244604482,
-        "YoY": -0.015709719381588
+        "MoM": -0.0017067900478693,
+        "YoY": 0.0141933285996718
       },
       {
         "series_name": "Stainless and Alloy Steel Scrap",
         "series_id": "WPU101212",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0259860389087769,
-        "YoY": -0.0660514559624352
+        "MoM": -0.0238559102092308,
+        "YoY": -0.0685424403418681
       },
       {
         "series_name": "Steel Mill Products",
         "series_id": "WPU1017",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0547981749273284,
-        "YoY": 0.0510930238109039
+        "MoM": -0.0048224293027989,
+        "YoY": 0.0883535271468438
       },
       {
         "series_name": "Steel Pipe and Tube",
         "series_id": "WPU101706",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0046135321607923,
-        "YoY": 0.0432566882180416
+        "MoM": -0.007181040396588,
+        "YoY": 0.0374601336857167
       },
       {
         "series_name": "Fabricated Steel Plate",
         "series_id": "WPU1076",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0076258274948231,
-        "YoY": 0.1357568941173623
+        "MoM": 0.0059469460009851,
+        "YoY": 0.1425111790369249
       },
       {
         "series_name": "Fabricated Structural Metal",
         "series_id": "WPU107405",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0105041719800154,
-        "YoY": 0.0892765161097615
+        "MoM": -0.010597358880687,
+        "YoY": 0.0809675307871464
       },
       {
         "series_name": "Prefabricated Metal Buildings",
         "series_id": "WPU1079",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.011073061219321,
-        "YoY": 0.0053061943973782
+        "MoM": -0.0092340020333061,
+        "YoY": 0.0057470011301405
       },
       {
         "series_name": "Ornamental and Architectural Metal Work",
         "series_id": "WPU107408",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0027280425452749,
-        "YoY": 0.0920517449702145
+        "MoM": 0.0,
+        "YoY": 0.092026187855198
       },
       {
         "series_name": "Sheet Metal Products",
         "series_id": "WPU1073",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0122715894111813,
-        "YoY": 0.0355201058953786
+        "MoM": 0.0003600772529379,
+        "YoY": 0.0449974353793307
       }
     ]
   },
   "concrete": {
-    "as_of": "2025-M06",
+    "as_of": "2025-M07",
     "count": 8,
     "materials": [
       {
         "series_name": "Cement",
         "series_id": "WPU1322",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0,
-        "YoY": 0.0195619480534166
+        "MoM": -0.0013634474158238,
+        "YoY": 0.0172248317600831
       },
       {
         "series_name": "Concrete Block and Brick",
         "series_id": "WPU1331",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 6.089948539944601e-05,
-        "YoY": 0.0315687531899857
+        "MoM": 0.0007485143892376,
+        "YoY": 0.0333472192747346
       },
       {
         "series_name": "Concrete Contractors",
         "series_id": "PCU23811X23811X",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0001591054979178,
-        "YoY": 0.0186240973014064
+        "MoM": 0.0233158916641984,
+        "YoY": 0.0408361366336966
       },
       {
         "series_name": "Concrete Pipe",
         "series_id": "WPU1332",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0,
-        "YoY": 0.1026229344460598
+        "MoM": -0.0027900005569875,
+        "YoY": 0.0759367462392202
       },
       {
         "series_name": "Concrete Products",
         "series_id": "WPU133",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0017714119418471,
-        "YoY": 0.0298352378490851
+        "MoM": -0.001654634503966,
+        "YoY": 0.020887021621087
       },
       {
         "series_name": "Precast Concrete Products",
         "series_id": "WPU1334",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0017267554943323,
-        "YoY": 0.0492428764850976
+        "MoM": 0.0059281206281627,
+        "YoY": 0.0539383670389912
       },
       {
         "series_name": "Prestressed Concrete Products",
         "series_id": "WPU1335",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0028093348776461,
-        "YoY": 0.0084423040385934
+        "MoM": 0.0025830268378126,
+        "YoY": 0.0099403414482532
       },
       {
         "series_name": "Ready Mixed Concrete",
         "series_id": "WPU1333",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0037070082909157,
-        "YoY": 0.0200635542200211
+        "MoM": -0.0049353143423538,
+        "YoY": 0.0050840829096596
       }
     ]
   },
   "asphalt": {
-    "as_of": "2025-M06",
+    "as_of": "2025-M07",
     "count": 4,
     "materials": [
       {
         "series_name": "Asphalt (At Refinery)",
         "series_id": "WPU058102",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0119868373530237,
-        "YoY": -0.1157073177739944
+        "MoM": -0.0192848990467215,
+        "YoY": -0.1365135108072152
       },
       {
         "series_name": "Asphalt Felts and Coatings",
         "series_id": "WPU136",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0001376608552754,
-        "YoY": 0.023212199832123
+        "MoM": -0.0058403708463374,
+        "YoY": 0.0138456992911868
       },
       {
         "series_name": "Paving Mixtures",
         "series_id": "WPU1394",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0016459372905339,
-        "YoY": 0.0096113424350403
+        "MoM": 0.0018152060705252,
+        "YoY": 0.0031211590748259
       },
       {
         "series_name": "Prepared Asphalt and Tar Rooging and Siding Products",
         "series_id": "WPU1361",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0001647579872717,
-        "YoY": 0.0244552854833401
+        "MoM": -0.0069188204765803,
+        "YoY": 0.0133129643933067
       }
     ]
   },
   "structures": {
-    "as_of": "2025-M06",
+    "as_of": "2025-M07",
     "count": 9,
     "materials": [
       {
         "series_name": "Commercial Structures",
         "series_id": "WPUIP231211",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0024596709790767,
-        "YoY": 0.0275232962470612
+        "MoM": 0.0054438141080739,
+        "YoY": 0.0327251324308415
       },
       {
         "series_name": "Industrial Structures",
         "series_id": "WPUIP231220",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.00206688730635,
-        "YoY": 0.0281231419700072
+        "MoM": 0.0058511458226286,
+        "YoY": 0.031714242422246
       },
       {
         "series_name": "Healthcare Structures",
         "series_id": "WPUIP231212",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0025742917487852,
-        "YoY": 0.0268663782333677
+        "MoM": 0.0045812565183731,
+        "YoY": 0.0311502541671591
       },
       {
         "series_name": "Education and Vocational Structures",
         "series_id": "WPUIP231233",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0019654721321828,
-        "YoY": 0.023944997629208
+        "MoM": 0.004894488715663,
+        "YoY": 0.0276104285601535
       },
       {
         "series_name": "New Residential Construction",
         "series_id": "WPUIP231100",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0071639829116003,
-        "YoY": 0.0260324602281858
+        "MoM": 0.0017473740488873,
+        "YoY": 0.0279258966862248
       },
       {
         "series_name": "New Nonresidential Building Construction",
         "series_id": "WPU801",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0016857567742449,
-        "YoY": 0.0143054198517156
+        "MoM": 0.0064240315630295,
+        "YoY": 0.0096901324907463
       },
       {
         "series_name": "New School Building Construction",
         "series_id": "WPU801102",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0002312895483307,
-        "YoY": 0.0188113134581791
+        "MoM": 0.0070396718020337,
+        "YoY": 0.0110418318924909
       },
       {
         "series_name": "New Office Building Construction",
         "series_id": "WPU801103",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": 0.0031521708076602,
-        "YoY": 0.0204500760459955
+        "MoM": 0.0032682222391122,
+        "YoY": 0.0104876368368673
       },
       {
         "series_name": "New Warehouse Building Construction",
         "series_id": "WPU801101",
-        "month": "M06",
+        "month": "M07",
         "year": "2025",
-        "MoM": -0.0007933138649822,
-        "YoY": -0.0022266565039779
+        "MoM": 0.0098807100713678,
+        "YoY": 0.005971349499322
       }
     ]
   }

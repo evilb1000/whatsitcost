@@ -100996,8 +100996,8 @@
   },
   "2025-03": {
     "#2 Diesel Fuel": {
-      "MoM": -7.22,
-      "YoY": -24.44
+      "MoM": -7.21,
+      "YoY": -24.43
     },
     "Aluminum Mill Shapes": {
       "MoM": 4.99,
@@ -101024,20 +101024,20 @@
       "YoY": 2.15
     },
     "Cement": {
-      "MoM": 0.5,
-      "YoY": 1.89
+      "MoM": 0.49,
+      "YoY": 1.88
     },
     "Commercial Structures": {
-      "MoM": 0.97,
-      "YoY": 2.13
+      "MoM": 0.93,
+      "YoY": 2.09
     },
     "Concrete Block and Brick": {
       "MoM": 0.45,
       "YoY": 3.7
     },
     "Concrete Contractors": {
-      "MoM": 0.04,
-      "YoY": 2.28
+      "MoM": -0.05,
+      "YoY": 2.2
     },
     "Concrete Pipe": {
       "MoM": -1.84,
@@ -101048,12 +101048,12 @@
       "YoY": 1.49
     },
     "Const, Mining & Forestry Machine and Equipment. Rental and Leasing": {
-      "MoM": -0.31,
-      "YoY": -0.81
+      "MoM": -0.68,
+      "YoY": -1.18
     },
     "Construction (Partial)": {
-      "MoM": 0.43,
-      "YoY": 2.61
+      "MoM": 0.18,
+      "YoY": 2.36
     },
     "Construction Employment": {
       "MoM": 0.06,
@@ -101064,16 +101064,16 @@
       "YoY": 0.8
     },
     "Construction and Sand/Gravel/Crushed Stone": {
-      "MoM": -0.32,
-      "YoY": 7.37
+      "MoM": -0.22,
+      "YoY": 7.48
     },
     "Construction for Government ": {
-      "MoM": 0.33,
-      "YoY": 3.0
+      "MoM": 0.13,
+      "YoY": 2.79
     },
     "Construction for Private Capital Investment": {
-      "MoM": 0.17,
-      "YoY": 1.73
+      "MoM": -0.14,
+      "YoY": 1.42
     },
     "Consumer Price Index (CPI-U)": {
       "MoM": 0.22,
@@ -101088,11 +101088,11 @@
       "YoY": 7.29
     },
     "Education and Vocational Structures": {
-      "MoM": 0.84,
-      "YoY": 1.75
+      "MoM": 0.77,
+      "YoY": 1.68
     },
     "Electrical Contractors": {
-      "MoM": 0.13,
+      "MoM": 0.12,
       "YoY": 2.73
     },
     "Engineering Services": {
@@ -101104,12 +101104,12 @@
       "YoY": 12.72
     },
     "Fabricated Structural Metal": {
-      "MoM": 2.8,
-      "YoY": 4.87
+      "MoM": 3.24,
+      "YoY": 5.31
     },
     "Fabricated Structural Metal Bar Joists and Rebar": {
-      "MoM": 6.39,
-      "YoY": 4.13
+      "MoM": 7.53,
+      "YoY": 5.25
     },
     "Fabricated Structural Metal for Bridges": {
       "MoM": 0.72,
@@ -101120,48 +101120,48 @@
       "YoY": 4.42
     },
     "Final Demand Construction": {
-      "MoM": 0.22,
-      "YoY": 2.12
+      "MoM": -0.05,
+      "YoY": 1.84
     },
     "Flatt Glass": {
-      "MoM": 0.04,
-      "YoY": 1.34
+      "MoM": 0.0,
+      "YoY": 1.3
     },
     "Gypsum Building MAterials": {
       "MoM": 0.42,
       "YoY": 2.81
     },
     "Healthcare Structures": {
-      "MoM": 0.87,
-      "YoY": 1.96
+      "MoM": 0.81,
+      "YoY": 1.9
     },
     "Highways and Streets": {
-      "MoM": 0.61,
-      "YoY": 1.58
+      "MoM": 0.6,
+      "YoY": 1.57
     },
     "Industrial Structures": {
-      "MoM": 1.13,
-      "YoY": 2.1
+      "MoM": 1.06,
+      "YoY": 2.03
     },
     "Inputs to Construction Industries": {
-      "MoM": 0.78,
-      "YoY": 1.6
+      "MoM": 0.73,
+      "YoY": 1.55
     },
     "Inputs to Construction Industries, Energy": {
       "MoM": -3.63,
       "YoY": -15.88
     },
     "Inputs to Construction Industries, Goods": {
-      "MoM": 0.37,
-      "YoY": 0.75
+      "MoM": 0.41,
+      "YoY": 0.79
     },
     "Inputs to Construction Industries, Goods Less Foods": {
-      "MoM": 0.73,
-      "YoY": 2.51
+      "MoM": 0.78,
+      "YoY": 2.55
     },
     "Inputs to Construction Industries, Services": {
-      "MoM": 1.58,
-      "YoY": 3.28
+      "MoM": 1.36,
+      "YoY": 3.06
     },
     "Insulation Materials": {
       "MoM": 0.36,
@@ -101180,64 +101180,64 @@
       "YoY": 7.64
     },
     "Mainenance and Repair Construction": {
-      "MoM": 0.62,
-      "YoY": 1.53
+      "MoM": 0.58,
+      "YoY": 1.48
     },
     "Maint & Repair of Nonres Buildings (Partial)": {
       "MoM": 2.5,
       "YoY": 7.59
     },
     "Multifamily": {
-      "MoM": 0.95,
-      "YoY": 1.7
+      "MoM": 0.88,
+      "YoY": 1.63
     },
     "New Health Care Building Construction": {
-      "MoM": 0.28,
-      "YoY": 2.5
+      "MoM": -1.27,
+      "YoY": 0.91
     },
     "New Industrial Building Construction": {
       "MoM": 0.04,
       "YoY": 0.63
     },
     "New Nonresedential Construction ": {
-      "MoM": 0.81,
-      "YoY": 1.69
+      "MoM": 0.77,
+      "YoY": 1.65
     },
     "New Nonresidential Building Construction": {
-      "MoM": 0.15,
-      "YoY": 1.95
+      "MoM": -0.13,
+      "YoY": 1.67
     },
     "New Office Building Construction": {
       "MoM": 0.14,
       "YoY": 2.66
     },
     "New Residential Construction": {
-      "MoM": 0.89,
-      "YoY": 1.92
+      "MoM": 0.83,
+      "YoY": 1.86
     },
     "New School Building Construction": {
-      "MoM": 0.04,
+      "MoM": 0.03,
       "YoY": 2.61
     },
     "New Warehouse Building Construction": {
-      "MoM": 0.22,
-      "YoY": 0.34
+      "MoM": 0.19,
+      "YoY": 0.31
     },
     "Nonresidential Maintenance and Repair": {
-      "MoM": 0.76,
-      "YoY": 1.4
+      "MoM": 0.72,
+      "YoY": 1.36
     },
     "Ornamental and Architectural Metal Work": {
       "MoM": 7.33,
       "YoY": 16.75
     },
     "Other Misc. Non Residential Construction": {
-      "MoM": 0.75,
-      "YoY": 1.56
+      "MoM": 0.68,
+      "YoY": 1.5
     },
     "Other Non Residential": {
-      "MoM": 0.73,
-      "YoY": 1.65
+      "MoM": 0.69,
+      "YoY": 1.61
     },
     "Paving Mixtures": {
       "MoM": 0.2,
@@ -101245,14 +101245,14 @@
     },
     "Plastic Construction Products": {
       "MoM": -0.05,
-      "YoY": -1.75
+      "YoY": -1.74
     },
     "Plumbing Contractors ": {
       "MoM": 1.65,
       "YoY": 2.93
     },
     "Power and Communications Structiors": {
-      "MoM": 0.8,
+      "MoM": 0.79,
       "YoY": 1.56
     },
     "Precast Concrete Products": {
@@ -101272,20 +101272,20 @@
       "YoY": -1.02
     },
     "Producer Price Index (PPI For Final Demand": {
-      "MoM": 0.17,
-      "YoY": 3.23
+      "MoM": 0.1,
+      "YoY": 3.15
     },
     "Ready Mixed Concrete": {
       "MoM": -0.26,
       "YoY": 0.63
     },
     "Residential Maintenance and Repair": {
-      "MoM": 0.61,
-      "YoY": 1.84
+      "MoM": 0.56,
+      "YoY": 1.79
     },
     "Roofing Contractors": {
-      "MoM": -0.11,
-      "YoY": 3.42
+      "MoM": -0.12,
+      "YoY": 3.41
     },
     "Sheet Metal Products": {
       "MoM": 1.48,
@@ -101296,16 +101296,16 @@
       "YoY": -6.86
     },
     "Steel Mill Products": {
-      "MoM": 6.84,
-      "YoY": -6.02
+      "MoM": 6.88,
+      "YoY": -5.99
     },
     "Steel Pipe and Tube": {
       "MoM": 3.7,
       "YoY": -5.23
     },
     "Truck Transportation of Freight": {
-      "MoM": -0.98,
-      "YoY": 1.73
+      "MoM": -2.5,
+      "YoY": 0.17
     },
     "Truck and Bus (Inc Off Highway) Pneumatic Tires": {
       "MoM": 0.06,
@@ -101338,64 +101338,64 @@
       "YoY": -2.23
     },
     "Asphalt Felts and Coatings": {
-      "MoM": -0.42,
-      "YoY": 1.07
+      "MoM": -0.46,
+      "YoY": 1.03
     },
     "Brick and Structural Clay Tile": {
       "MoM": 0.19,
       "YoY": 1.9
     },
     "Cement": {
-      "MoM": 0.58,
-      "YoY": 2.04
+      "MoM": 0.14,
+      "YoY": 1.58
     },
     "Commercial Structures": {
-      "MoM": 0.14,
-      "YoY": 1.83
+      "MoM": 0.11,
+      "YoY": 1.76
     },
     "Concrete Block and Brick": {
       "MoM": 0.19,
       "YoY": 3.44
     },
     "Concrete Contractors": {
-      "MoM": 0.42,
-      "YoY": 2.01
+      "MoM": 0.44,
+      "YoY": 1.95
     },
     "Concrete Pipe": {
       "MoM": 0.13,
       "YoY": 7.95
     },
     "Concrete Products": {
-      "MoM": 0.2,
-      "YoY": 2.09
+      "MoM": -0.23,
+      "YoY": 1.64
     },
     "Const, Mining & Forestry Machine and Equipment. Rental and Leasing": {
-      "MoM": 0.62,
-      "YoY": -0.01
+      "MoM": 0.26,
+      "YoY": -0.74
     },
     "Construction (Partial)": {
-      "MoM": -0.42,
-      "YoY": 1.8
+      "MoM": -0.43,
+      "YoY": 1.54
     },
     "Construction Employment": {
       "MoM": 0.0,
       "YoY": 1.59
     },
     "Construction MAchinery and Equipment": {
-      "MoM": 0.79,
-      "YoY": 1.4
+      "MoM": 0.82,
+      "YoY": 1.43
     },
     "Construction and Sand/Gravel/Crushed Stone": {
-      "MoM": 0.24,
-      "YoY": 7.2
+      "MoM": 0.3,
+      "YoY": 7.37
     },
     "Construction for Government ": {
       "MoM": -0.52,
-      "YoY": 2.02
+      "YoY": 1.8
     },
     "Construction for Private Capital Investment": {
-      "MoM": -0.45,
-      "YoY": 1.29
+      "MoM": -0.46,
+      "YoY": 0.97
     },
     "Consumer Price Index (CPI-U)": {
       "MoM": 0.31,
@@ -101410,12 +101410,12 @@
       "YoY": 4.55
     },
     "Education and Vocational Structures": {
-      "MoM": 0.14,
-      "YoY": 1.32
+      "MoM": 0.08,
+      "YoY": 1.19
     },
     "Electrical Contractors": {
-      "MoM": 0.34,
-      "YoY": 1.87
+      "MoM": 0.28,
+      "YoY": 1.8
     },
     "Engineering Services": {
       "MoM": 0.32,
@@ -101426,12 +101426,12 @@
       "YoY": 12.72
     },
     "Fabricated Structural Metal": {
-      "MoM": 1.13,
-      "YoY": 6.51
+      "MoM": 1.11,
+      "YoY": 6.95
     },
     "Fabricated Structural Metal Bar Joists and Rebar": {
-      "MoM": 2.68,
-      "YoY": 8.38
+      "MoM": 2.63,
+      "YoY": 9.49
     },
     "Fabricated Structural Metal for Bridges": {
       "MoM": 1.21,
@@ -101442,56 +101442,56 @@
       "YoY": 9.44
     },
     "Final Demand Construction": {
-      "MoM": -0.47,
-      "YoY": 1.52
+      "MoM": -0.48,
+      "YoY": 1.23
     },
     "Flatt Glass": {
-      "MoM": -1.85,
-      "YoY": -0.44
+      "MoM": -1.81,
+      "YoY": -0.43
     },
     "Gypsum Building MAterials": {
       "MoM": -0.6,
       "YoY": 3.04
     },
     "Healthcare Structures": {
-      "MoM": 0.15,
-      "YoY": 1.61
+      "MoM": 0.1,
+      "YoY": 1.5
     },
     "Highways and Streets": {
-      "MoM": -0.4,
-      "YoY": 1.1
+      "MoM": -0.49,
+      "YoY": 0.99
     },
     "Industrial Structures": {
-      "MoM": -0.09,
-      "YoY": 1.74
+      "MoM": -0.18,
+      "YoY": 1.59
     },
     "Inputs to Construction Industries": {
-      "MoM": -0.25,
-      "YoY": 0.81
+      "MoM": -0.31,
+      "YoY": 0.7
     },
     "Inputs to Construction Industries, Energy": {
       "MoM": 0.22,
       "YoY": -18.74
     },
     "Inputs to Construction Industries, Goods": {
-      "MoM": -0.09,
-      "YoY": 0.14
+      "MoM": -0.16,
+      "YoY": 0.11
     },
     "Inputs to Construction Industries, Goods Less Foods": {
-      "MoM": -0.12,
-      "YoY": 2.21
+      "MoM": -0.2,
+      "YoY": 2.17
     },
     "Inputs to Construction Industries, Services": {
-      "MoM": -0.55,
-      "YoY": 2.14
+      "MoM": -0.6,
+      "YoY": 1.87
     },
     "Insulation Materials": {
       "MoM": -0.64,
       "YoY": 3.53
     },
     "Iron and Steel Scrap": {
-      "MoM": -7.94,
-      "YoY": 2.91
+      "MoM": -6.68,
+      "YoY": 4.32
     },
     "Labor Force Participation Rate": {
       "MoM": 0.16,
@@ -101499,43 +101499,43 @@
     },
     "Lumber and Plywood": {
       "MoM": -1.32,
-      "YoY": 4.9
+      "YoY": 4.91
     },
     "Mainenance and Repair Construction": {
-      "MoM": -0.34,
-      "YoY": 0.66
+      "MoM": -0.39,
+      "YoY": 0.56
     },
     "Maint & Repair of Nonres Buildings (Partial)": {
-      "MoM": 0.03,
-      "YoY": 4.56
+      "MoM": 0.02,
+      "YoY": 4.55
     },
     "Multifamily": {
-      "MoM": 0.11,
-      "YoY": 0.94
+      "MoM": -0.01,
+      "YoY": 0.76
     },
     "New Health Care Building Construction": {
-      "MoM": -0.41,
-      "YoY": 1.95
-    },
-    "New Industrial Building Construction": {
-      "MoM": -0.45,
+      "MoM": -0.48,
       "YoY": 0.31
     },
+    "New Industrial Building Construction": {
+      "MoM": -0.46,
+      "YoY": 0.3
+    },
     "New Nonresedential Construction ": {
-      "MoM": -0.12,
-      "YoY": 1.15
+      "MoM": -0.19,
+      "YoY": 1.04
     },
     "New Nonresidential Building Construction": {
-      "MoM": -0.49,
-      "YoY": 1.42
+      "MoM": -0.5,
+      "YoY": 1.12
     },
     "New Office Building Construction": {
       "MoM": -0.59,
       "YoY": 2.42
     },
     "New Residential Construction": {
-      "MoM": -0.23,
-      "YoY": 0.94
+      "MoM": -0.29,
+      "YoY": 0.82
     },
     "New School Building Construction": {
       "MoM": -0.63,
@@ -101543,30 +101543,30 @@
     },
     "New Warehouse Building Construction": {
       "MoM": -0.23,
-      "YoY": -0.2
+      "YoY": -0.23
     },
     "Nonresidential Maintenance and Repair": {
-      "MoM": -0.44,
-      "YoY": 0.52
+      "MoM": -0.49,
+      "YoY": 0.42
     },
     "Ornamental and Architectural Metal Work": {
       "MoM": 0.38,
       "YoY": 13.64
     },
     "Other Misc. Non Residential Construction": {
-      "MoM": -0.02,
-      "YoY": 0.96
+      "MoM": -0.08,
+      "YoY": 0.84
     },
     "Other Non Residential": {
-      "MoM": -0.16,
-      "YoY": 1.07
+      "MoM": -0.23,
+      "YoY": 0.95
     },
     "Paving Mixtures": {
       "MoM": -8.82,
       "YoY": 2.29
     },
     "Plastic Construction Products": {
-      "MoM": 0.46,
+      "MoM": 0.45,
       "YoY": -1.85
     },
     "Plumbing Contractors ": {
@@ -101574,40 +101574,40 @@
       "YoY": 1.39
     },
     "Power and Communications Structiors": {
-      "MoM": 0.13,
-      "YoY": 0.96
+      "MoM": 0.07,
+      "YoY": 0.9
     },
     "Precast Concrete Products": {
       "MoM": 0.53,
       "YoY": 3.1
     },
     "Prefabricated Metal Buildings": {
-      "MoM": -0.16,
+      "MoM": -0.15,
       "YoY": -1.9
     },
     "Prepared Asphalt and Tar Rooging and Siding Products": {
-      "MoM": -0.77,
-      "YoY": 0.77
+      "MoM": -0.82,
+      "YoY": 0.72
     },
     "Prestressed Concrete Products": {
       "MoM": 0.18,
       "YoY": -1.11
     },
     "Producer Price Index (PPI For Final Demand": {
-      "MoM": -0.21,
-      "YoY": 2.45
+      "MoM": -0.2,
+      "YoY": 2.39
     },
     "Ready Mixed Concrete": {
-      "MoM": 0.09,
-      "YoY": 1.4
+      "MoM": -0.62,
+      "YoY": 0.68
     },
     "Residential Maintenance and Repair": {
-      "MoM": -0.15,
-      "YoY": 0.99
+      "MoM": -0.2,
+      "YoY": 0.88
     },
     "Roofing Contractors": {
       "MoM": 0.36,
-      "YoY": 3.2
+      "YoY": 3.19
     },
     "Sheet Metal Products": {
       "MoM": 0.98,
@@ -101618,16 +101618,16 @@
       "YoY": -12.11
     },
     "Steel Mill Products": {
-      "MoM": 5.64,
-      "YoY": 1.98
+      "MoM": 5.73,
+      "YoY": 2.1
     },
     "Steel Pipe and Tube": {
       "MoM": 4.37,
       "YoY": 0.65
     },
     "Truck Transportation of Freight": {
-      "MoM": 0.87,
-      "YoY": 2.02
+      "MoM": 0.88,
+      "YoY": 0.48
     },
     "Truck and Bus (Inc Off Highway) Pneumatic Tires": {
       "MoM": 0.78,
@@ -101648,8 +101648,8 @@
       "YoY": 9.11
     },
     "Architectural Coatings": {
-      "MoM": 0.0,
-      "YoY": 0.95
+      "MoM": -0.02,
+      "YoY": 0.93
     },
     "Architectural Services": {
       "MoM": -0.0,
@@ -101660,19 +101660,19 @@
       "YoY": -9.74
     },
     "Asphalt Felts and Coatings": {
-      "MoM": 3.14,
-      "YoY": 1.91
+      "MoM": 3.15,
+      "YoY": 1.88
     },
     "Brick and Structural Clay Tile": {
       "MoM": 0.0,
       "YoY": 1.58
     },
     "Cement": {
-      "MoM": 0.09,
-      "YoY": 1.78
+      "MoM": 0.5,
+      "YoY": 1.74
     },
     "Commercial Structures": {
-      "MoM": 0.14,
+      "MoM": 0.21,
       "YoY": 2.4
     },
     "Concrete Block and Brick": {
@@ -101680,67 +101680,67 @@
       "YoY": 3.42
     },
     "Concrete Contractors": {
-      "MoM": 0.11,
-      "YoY": 2.0
+      "MoM": 0.13,
+      "YoY": 1.96
     },
     "Concrete Pipe": {
       "MoM": -0.12,
       "YoY": 7.62
     },
     "Concrete Products": {
-      "MoM": 0.67,
-      "YoY": 2.77
+      "MoM": 0.52,
+      "YoY": 2.17
     },
     "Const, Mining & Forestry Machine and Equipment. Rental and Leasing": {
-      "MoM": -0.2,
-      "YoY": 0.44
+      "MoM": 0.26,
+      "YoY": 0.18
     },
     "Construction (Partial)": {
-      "MoM": 0.18,
-      "YoY": 1.96
+      "MoM": 0.17,
+      "YoY": 1.69
     },
     "Construction Employment": {
-      "MoM": 0.07,
-      "YoY": 1.48
+      "MoM": 0.02,
+      "YoY": 1.43
     },
     "Construction MAchinery and Equipment": {
       "MoM": 0.68,
-      "YoY": 2.02
+      "YoY": 2.05
     },
     "Construction and Sand/Gravel/Crushed Stone": {
-      "MoM": 0.28,
-      "YoY": 7.27
+      "MoM": 0.3,
+      "YoY": 7.47
     },
     "Construction for Government ": {
-      "MoM": 0.15,
-      "YoY": 2.27
+      "MoM": 0.14,
+      "YoY": 2.05
     },
     "Construction for Private Capital Investment": {
-      "MoM": 0.21,
-      "YoY": 1.43
+      "MoM": 0.2,
+      "YoY": 1.11
     },
     "Consumer Price Index (CPI-U)": {
       "MoM": 0.21,
       "YoY": 2.35
     },
     "Copper Base Scrap": {
-      "MoM": 1.85,
-      "YoY": -7.53
+      "MoM": 1.61,
+      "YoY": -7.75
     },
     "Copper and Brass Mill Shapes": {
       "MoM": -1.29,
       "YoY": -1.26
     },
     "Education and Vocational Structures": {
-      "MoM": 0.13,
-      "YoY": 2.08
+      "MoM": 0.19,
+      "YoY": 2.01
     },
     "Electrical Contractors": {
-      "MoM": -0.0,
-      "YoY": 1.87
+      "MoM": -0.02,
+      "YoY": 1.79
     },
     "Engineering Services": {
-      "MoM": 0.08,
+      "MoM": 0.07,
       "YoY": 2.34
     },
     "Fabricated Steel Plate": {
@@ -101749,11 +101749,11 @@
     },
     "Fabricated Structural Metal": {
       "MoM": 0.51,
-      "YoY": 6.62
+      "YoY": 7.06
     },
     "Fabricated Structural Metal Bar Joists and Rebar": {
       "MoM": -0.02,
-      "YoY": 7.38
+      "YoY": 8.49
     },
     "Fabricated Structural Metal for Bridges": {
       "MoM": -2.14,
@@ -101764,56 +101764,56 @@
       "YoY": 8.1
     },
     "Final Demand Construction": {
-      "MoM": 0.19,
-      "YoY": 1.69
+      "MoM": 0.18,
+      "YoY": 1.4
     },
     "Flatt Glass": {
       "MoM": 0.12,
-      "YoY": -0.59
+      "YoY": -0.58
     },
     "Gypsum Building MAterials": {
-      "MoM": 0.0,
-      "YoY": 1.4
+      "MoM": -0.32,
+      "YoY": 1.07
     },
     "Healthcare Structures": {
-      "MoM": 0.16,
-      "YoY": 2.37
+      "MoM": 0.23,
+      "YoY": 2.33
     },
     "Highways and Streets": {
       "MoM": 0.37,
-      "YoY": 2.07
+      "YoY": 1.95
     },
     "Industrial Structures": {
-      "MoM": 0.13,
-      "YoY": 2.41
+      "MoM": 0.19,
+      "YoY": 2.31
     },
     "Inputs to Construction Industries": {
-      "MoM": 0.08,
-      "YoY": 1.78
+      "MoM": 0.13,
+      "YoY": 1.71
     },
     "Inputs to Construction Industries, Energy": {
       "MoM": 0.2,
       "YoY": -11.35
     },
     "Inputs to Construction Industries, Goods": {
-      "MoM": 0.29,
-      "YoY": 1.35
+      "MoM": 0.3,
+      "YoY": 1.33
     },
     "Inputs to Construction Industries, Goods Less Foods": {
-      "MoM": 0.29,
-      "YoY": 2.63
+      "MoM": 0.31,
+      "YoY": 2.61
     },
     "Inputs to Construction Industries, Services": {
-      "MoM": -0.32,
-      "YoY": 2.63
+      "MoM": -0.21,
+      "YoY": 2.47
     },
     "Insulation Materials": {
-      "MoM": 0.56,
-      "YoY": 3.5
+      "MoM": 0.51,
+      "YoY": 3.45
     },
     "Iron and Steel Scrap": {
-      "MoM": -8.02,
-      "YoY": -4.94
+      "MoM": -5.12,
+      "YoY": -0.6
     },
     "Labor Force Participation Rate": {
       "MoM": -0.32,
@@ -101824,132 +101824,132 @@
       "YoY": 5.42
     },
     "Mainenance and Repair Construction": {
-      "MoM": 0.06,
-      "YoY": 1.68
+      "MoM": 0.12,
+      "YoY": 1.65
     },
     "Maint & Repair of Nonres Buildings (Partial)": {
-      "MoM": 0.07,
-      "YoY": 4.62
+      "MoM": 0.04,
+      "YoY": 4.58
     },
     "Multifamily": {
-      "MoM": 0.16,
-      "YoY": 2.1
+      "MoM": 0.21,
+      "YoY": 1.97
     },
     "New Health Care Building Construction": {
       "MoM": 0.0,
-      "YoY": 1.92
+      "YoY": 0.28
     },
     "New Industrial Building Construction": {
       "MoM": 0.41,
       "YoY": 0.28
     },
     "New Nonresedential Construction ": {
-      "MoM": 0.19,
-      "YoY": 2.02
+      "MoM": 0.22,
+      "YoY": 1.94
     },
     "New Nonresidential Building Construction": {
       "MoM": 0.19,
-      "YoY": 1.6
+      "YoY": 1.3
     },
     "New Office Building Construction": {
-      "MoM": 0.42,
-      "YoY": 2.81
+      "MoM": 0.41,
+      "YoY": 2.8
     },
     "New Residential Construction": {
-      "MoM": -0.01,
-      "YoY": 1.92
+      "MoM": 0.06,
+      "YoY": 1.88
     },
     "New School Building Construction": {
-      "MoM": 0.13,
-      "YoY": 1.98
+      "MoM": 0.11,
+      "YoY": 1.96
     },
     "New Warehouse Building Construction": {
       "MoM": -0.03,
-      "YoY": -0.22
+      "YoY": -0.25
     },
     "Nonresidential Maintenance and Repair": {
-      "MoM": 0.11,
-      "YoY": 1.57
+      "MoM": 0.18,
+      "YoY": 1.54
     },
     "Ornamental and Architectural Metal Work": {
-      "MoM": -0.37,
-      "YoY": 9.59
+      "MoM": -0.35,
+      "YoY": 9.62
     },
     "Other Misc. Non Residential Construction": {
-      "MoM": 0.25,
-      "YoY": 2.06
+      "MoM": 0.29,
+      "YoY": 1.98
     },
     "Other Non Residential": {
-      "MoM": 0.25,
-      "YoY": 2.04
+      "MoM": 0.26,
+      "YoY": 1.94
     },
     "Paving Mixtures": {
-      "MoM": -1.97,
-      "YoY": 1.41
+      "MoM": -1.98,
+      "YoY": 1.4
     },
     "Plastic Construction Products": {
-      "MoM": -0.04,
-      "YoY": -1.58
+      "MoM": -0.02,
+      "YoY": -1.56
     },
     "Plumbing Contractors ": {
-      "MoM": 0.35,
-      "YoY": 1.76
+      "MoM": 0.32,
+      "YoY": 1.73
     },
     "Power and Communications Structiors": {
-      "MoM": 0.14,
-      "YoY": 1.89
+      "MoM": 0.15,
+      "YoY": 1.84
     },
     "Precast Concrete Products": {
-      "MoM": 1.48,
-      "YoY": 4.94
+      "MoM": 1.43,
+      "YoY": 4.9
     },
     "Prefabricated Metal Buildings": {
-      "MoM": 0.92,
-      "YoY": -0.67
+      "MoM": 0.91,
+      "YoY": -0.68
     },
     "Prepared Asphalt and Tar Rooging and Siding Products": {
-      "MoM": 3.74,
-      "YoY": 1.77
+      "MoM": 3.75,
+      "YoY": 1.74
     },
     "Prestressed Concrete Products": {
       "MoM": 0.03,
       "YoY": 0.15
     },
     "Producer Price Index (PPI For Final Demand": {
-      "MoM": 0.23,
+      "MoM": 0.29,
       "YoY": 2.73
     },
     "Ready Mixed Concrete": {
-      "MoM": 0.59,
-      "YoY": 1.81
+      "MoM": 0.35,
+      "YoY": 0.85
     },
     "Residential Maintenance and Repair": {
-      "MoM": -0.06,
-      "YoY": 1.83
+      "MoM": 0.0,
+      "YoY": 1.79
     },
     "Roofing Contractors": {
-      "MoM": 0.06,
-      "YoY": 3.55
+      "MoM": 0.03,
+      "YoY": 3.51
     },
     "Sheet Metal Products": {
-      "MoM": 0.19,
-      "YoY": 2.37
+      "MoM": 0.62,
+      "YoY": 2.81
     },
     "Stainless and Alloy Steel Scrap": {
       "MoM": 6.16,
       "YoY": -8.57
     },
     "Steel Mill Products": {
-      "MoM": 7.46,
-      "YoY": 9.23
+      "MoM": 7.62,
+      "YoY": 9.52
     },
     "Steel Pipe and Tube": {
       "MoM": 1.27,
       "YoY": 1.99
     },
     "Truck Transportation of Freight": {
-      "MoM": 0.49,
-      "YoY": 2.35
+      "MoM": 0.31,
+      "YoY": 0.61
     },
     "Truck and Bus (Inc Off Highway) Pneumatic Tires": {
       "MoM": -0.99,
@@ -101962,15 +101962,15 @@
   },
   "2025-06": {
     "#2 Diesel Fuel": {
-      "MoM": -1.09,
-      "YoY": -7.09
+      "MoM": -0.84,
+      "YoY": -6.85
     },
     "Aluminum Mill Shapes": {
-      "MoM": -0.31,
-      "YoY": 6.31
+      "MoM": -0.22,
+      "YoY": 6.41
     },
     "Architectural Coatings": {
-      "MoM": -0.16,
+      "MoM": -0.14,
       "YoY": 0.79
     },
     "Architectural Services": {
@@ -101982,88 +101982,88 @@
       "YoY": -11.57
     },
     "Asphalt Felts and Coatings": {
-      "MoM": -0.01,
-      "YoY": 2.32
+      "MoM": 0.01,
+      "YoY": 2.31
     },
     "Brick and Structural Clay Tile": {
       "MoM": 0.0,
       "YoY": 1.3
     },
     "Cement": {
-      "MoM": 0.0,
-      "YoY": 1.96
+      "MoM": 0.09,
+      "YoY": 2.01
     },
     "Commercial Structures": {
-      "MoM": 0.25,
-      "YoY": 2.75
+      "MoM": 0.34,
+      "YoY": 2.85
     },
     "Concrete Block and Brick": {
       "MoM": 0.01,
       "YoY": 3.16
     },
     "Concrete Contractors": {
-      "MoM": -0.02,
-      "YoY": 1.86
+      "MoM": 0.07,
+      "YoY": 1.91
     },
     "Concrete Pipe": {
-      "MoM": 0.0,
-      "YoY": 10.26
+      "MoM": -0.61,
+      "YoY": 9.58
     },
     "Concrete Products": {
-      "MoM": -0.18,
-      "YoY": 2.98
+      "MoM": -0.0,
+      "YoY": 2.56
     },
     "Const, Mining & Forestry Machine and Equipment. Rental and Leasing": {
-      "MoM": 0.0,
-      "YoY": -0.17
+      "MoM": -0.0,
+      "YoY": -0.43
     },
     "Construction (Partial)": {
-      "MoM": 0.55,
-      "YoY": 2.21
+      "MoM": 0.14,
+      "YoY": 1.52
     },
     "Construction Employment": {
-      "MoM": 0.18,
-      "YoY": 1.48
+      "MoM": 0.04,
+      "YoY": 1.28
     },
     "Construction MAchinery and Equipment": {
-      "MoM": 0.68,
-      "YoY": 2.66
+      "MoM": 0.96,
+      "YoY": 2.97
     },
     "Construction and Sand/Gravel/Crushed Stone": {
-      "MoM": 0.31,
-      "YoY": 7.49
+      "MoM": 0.32,
+      "YoY": 7.7
     },
     "Construction for Government ": {
-      "MoM": 0.41,
-      "YoY": 2.46
+      "MoM": 0.08,
+      "YoY": 1.88
     },
     "Construction for Private Capital Investment": {
-      "MoM": 0.2,
-      "YoY": 1.26
+      "MoM": 0.17,
+      "YoY": 0.91
     },
     "Consumer Price Index (CPI-U)": {
       "MoM": 0.34,
       "YoY": 2.67
     },
     "Copper Base Scrap": {
-      "MoM": 2.77,
-      "YoY": -0.25
+      "MoM": 3.51,
+      "YoY": 0.23
     },
     "Copper and Brass Mill Shapes": {
       "MoM": 1.14,
       "YoY": -2.16
     },
     "Education and Vocational Structures": {
-      "MoM": 0.2,
+      "MoM": 0.27,
       "YoY": 2.39
     },
     "Electrical Contractors": {
-      "MoM": 2.44,
-      "YoY": 4.3
+      "MoM": 0.07,
+      "YoY": 1.8
     },
     "Engineering Services": {
-      "MoM": 0.24,
-      "YoY": 2.49
+      "MoM": 0.22,
+      "YoY": 2.46
     },
     "Fabricated Steel Plate": {
       "MoM": 0.76,
@@ -102071,214 +102071,528 @@
     },
     "Fabricated Structural Metal": {
       "MoM": 1.05,
-      "YoY": 8.93
+      "YoY": 9.38
     },
     "Fabricated Structural Metal Bar Joists and Rebar": {
-      "MoM": -0.85,
-      "YoY": 8.32
-    },
-    "Fabricated Structural Metal for Bridges": {
-      "MoM": 22.02,
-      "YoY": 22.5
+      "MoM": -0.83,
+      "YoY": 9.46
     },
     "Fabricated Structural Metal for Non-Industrial Buildings": {
       "MoM": -0.8,
       "YoY": 9.4
     },
     "Final Demand Construction": {
-      "MoM": 0.27,
-      "YoY": 1.63
+      "MoM": 0.14,
+      "YoY": 1.2
     },
     "Flatt Glass": {
-      "MoM": 0.23,
-      "YoY": 0.11
+      "MoM": 0.21,
+      "YoY": 0.09
     },
     "Gypsum Building MAterials": {
-      "MoM": 0.0,
-      "YoY": 1.4
+      "MoM": -0.61,
+      "YoY": 0.45
     },
     "Healthcare Structures": {
-      "MoM": 0.26,
-      "YoY": 2.69
+      "MoM": 0.38,
+      "YoY": 2.76
     },
     "Highways and Streets": {
-      "MoM": 0.08,
-      "YoY": 2.37
+      "MoM": 0.23,
+      "YoY": 2.41
     },
     "Industrial Structures": {
-      "MoM": 0.21,
-      "YoY": 2.81
+      "MoM": 0.35,
+      "YoY": 2.86
     },
     "Inputs to Construction Industries": {
-      "MoM": 0.36,
-      "YoY": 2.24
+      "MoM": 0.5,
+      "YoY": 2.32
     },
     "Inputs to Construction Industries, Energy": {
-      "MoM": 0.4,
-      "YoY": -8.13
+      "MoM": 0.74,
+      "YoY": -7.83
     },
     "Inputs to Construction Industries, Goods": {
-      "MoM": 0.21,
-      "YoY": 2.07
+      "MoM": 0.25,
+      "YoY": 2.09
     },
     "Inputs to Construction Industries, Goods Less Foods": {
-      "MoM": 0.19,
-      "YoY": 3.07
+      "MoM": 0.2,
+      "YoY": 3.05
     },
     "Inputs to Construction Industries, Services": {
-      "MoM": 0.65,
-      "YoY": 2.59
+      "MoM": 1.0,
+      "YoY": 2.78
     },
     "Insulation Materials": {
-      "MoM": -0.89,
-      "YoY": 0.99
+      "MoM": -0.58,
+      "YoY": 1.25
     },
     "Iron and Steel Scrap": {
-      "MoM": -0.33,
-      "YoY": -1.57
+      "MoM": -1.38,
+      "YoY": 1.84
     },
     "Labor Force Participation Rate": {
       "MoM": -0.16,
       "YoY": -0.48
     },
     "Lumber and Plywood": {
-      "MoM": -1.1,
-      "YoY": 4.77
+      "MoM": -1.27,
+      "YoY": 4.59
     },
     "Mainenance and Repair Construction": {
-      "MoM": 0.44,
-      "YoY": 2.29
+      "MoM": 0.58,
+      "YoY": 2.4
     },
     "Maint & Repair of Nonres Buildings (Partial)": {
-      "MoM": 3.28,
-      "YoY": 7.96
+      "MoM": 0.14,
+      "YoY": 4.64
     },
     "Multifamily": {
-      "MoM": 0.72,
+      "MoM": 0.85,
       "YoY": 2.82
     },
     "New Health Care Building Construction": {
       "MoM": 0.12,
-      "YoY": 2.0
+      "YoY": 0.36
     },
     "New Industrial Building Construction": {
       "MoM": 0.6,
-      "YoY": 0.81
+      "YoY": 0.8
     },
     "New Nonresedential Construction ": {
-      "MoM": 0.16,
-      "YoY": 2.33
+      "MoM": 0.3,
+      "YoY": 2.39
     },
     "New Nonresidential Building Construction": {
-      "MoM": 0.17,
-      "YoY": 1.43
+      "MoM": 0.14,
+      "YoY": 1.1
     },
     "New Office Building Construction": {
-      "MoM": 0.32,
-      "YoY": 2.05
+      "MoM": 0.25,
+      "YoY": 1.97
     },
     "New Residential Construction": {
-      "MoM": 0.72,
-      "YoY": 2.6
+      "MoM": 0.85,
+      "YoY": 2.69
     },
     "New School Building Construction": {
-      "MoM": 0.02,
-      "YoY": 1.88
+      "MoM": 0.01,
+      "YoY": 1.85
     },
     "New Warehouse Building Construction": {
-      "MoM": -0.08,
-      "YoY": -0.22
+      "MoM": -0.11,
+      "YoY": -0.28
     },
     "Nonresidential Maintenance and Repair": {
-      "MoM": 0.31,
-      "YoY": 2.07
+      "MoM": 0.43,
+      "YoY": 2.17
     },
     "Ornamental and Architectural Metal Work": {
       "MoM": -0.27,
-      "YoY": 9.21
+      "YoY": 9.24
     },
     "Other Misc. Non Residential Construction": {
-      "MoM": 0.13,
-      "YoY": 2.26
+      "MoM": 0.26,
+      "YoY": 2.3
     },
     "Other Non Residential": {
-      "MoM": 0.14,
-      "YoY": 2.31
+      "MoM": 0.28,
+      "YoY": 2.36
     },
     "Paving Mixtures": {
-      "MoM": 0.16,
-      "YoY": 0.96
+      "MoM": 0.12,
+      "YoY": 0.91
     },
     "Plastic Construction Products": {
-      "MoM": -0.35,
-      "YoY": -1.74
+      "MoM": -0.15,
+      "YoY": -1.54
     },
     "Plumbing Contractors ": {
-      "MoM": -0.1,
-      "YoY": 1.51
+      "MoM": -0.16,
+      "YoY": 1.42
     },
     "Power and Communications Structiors": {
-      "MoM": 0.17,
-      "YoY": 2.16
+      "MoM": 0.34,
+      "YoY": 2.29
     },
     "Precast Concrete Products": {
-      "MoM": 0.17,
-      "YoY": 4.92
+      "MoM": 0.07,
+      "YoY": 4.77
     },
     "Prefabricated Metal Buildings": {
-      "MoM": 1.11,
-      "YoY": 0.53
+      "MoM": 1.08,
+      "YoY": 0.49
     },
     "Prepared Asphalt and Tar Rooging and Siding Products": {
-      "MoM": -0.02,
-      "YoY": 2.45
+      "MoM": 0.01,
+      "YoY": 2.44
     },
     "Prestressed Concrete Products": {
       "MoM": 0.28,
       "YoY": 0.84
     },
     "Producer Price Index (PPI For Final Demand": {
-      "MoM": 0.19,
-      "YoY": 2.34
+      "MoM": 0.21,
+      "YoY": 2.37
     },
     "Ready Mixed Concrete": {
-      "MoM": -0.37,
-      "YoY": 2.01
+      "MoM": -0.01,
+      "YoY": 1.41
     },
     "Residential Maintenance and Repair": {
-      "MoM": 0.63,
-      "YoY": 2.63
+      "MoM": 0.81,
+      "YoY": 2.78
     },
     "Roofing Contractors": {
-      "MoM": 0.65,
-      "YoY": 4.23
+      "MoM": 0.46,
+      "YoY": 3.98
     },
     "Sheet Metal Products": {
-      "MoM": 1.23,
-      "YoY": 3.55
+      "MoM": 1.16,
+      "YoY": 3.93
     },
     "Stainless and Alloy Steel Scrap": {
       "MoM": -2.6,
       "YoY": -6.61
     },
     "Steel Mill Products": {
-      "MoM": -5.48,
-      "YoY": 5.11
+      "MoM": -5.32,
+      "YoY": 5.57
     },
     "Steel Pipe and Tube": {
       "MoM": 0.46,
       "YoY": 4.33
     },
     "Truck Transportation of Freight": {
-      "MoM": -0.55,
-      "YoY": 2.06
+      "MoM": -0.62,
+      "YoY": 0.26
     },
     "Truck and Bus (Inc Off Highway) Pneumatic Tires": {
-      "MoM": -0.33,
-      "YoY": 1.83
+      "MoM": -0.1,
+      "YoY": 2.07
     },
     "Unemployment Rate": {
       "MoM": -2.38,
+      "YoY": 0.0
+    }
+  },
+  "2025-07": {
+    "#2 Diesel Fuel": {
+      "MoM": 11.07,
+      "YoY": -7.17
+    },
+    "Aluminum Mill Shapes": {
+      "MoM": 7.43,
+      "YoY": 13.66
+    },
+    "Architectural Coatings": {
+      "MoM": 0.0,
+      "YoY": 0.81
+    },
+    "Architectural Services": {
+      "MoM": 0.01,
+      "YoY": 0.95
+    },
+    "Asphalt (At Refinery)": {
+      "MoM": -1.93,
+      "YoY": -13.65
+    },
+    "Asphalt Felts and Coatings": {
+      "MoM": -0.58,
+      "YoY": 1.38
+    },
+    "Brick and Structural Clay Tile": {
+      "MoM": 0.03,
+      "YoY": 1.26
+    },
+    "Cement": {
+      "MoM": -0.14,
+      "YoY": 1.72
+    },
+    "Commercial Structures": {
+      "MoM": 0.54,
+      "YoY": 3.27
+    },
+    "Concrete Block and Brick": {
+      "MoM": 0.07,
+      "YoY": 3.33
+    },
+    "Concrete Contractors": {
+      "MoM": 2.33,
+      "YoY": 4.08
+    },
+    "Concrete Pipe": {
+      "MoM": -0.28,
+      "YoY": 7.59
+    },
+    "Concrete Products": {
+      "MoM": -0.17,
+      "YoY": 2.09
+    },
+    "Const, Mining & Forestry Machine and Equipment. Rental and Leasing": {
+      "MoM": 0.47,
+      "YoY": 0.31
+    },
+    "Construction (Partial)": {
+      "MoM": 0.57,
+      "YoY": 1.39
+    },
+    "Construction Employment": {
+      "MoM": 0.02,
+      "YoY": 1.17
+    },
+    "Construction MAchinery and Equipment": {
+      "MoM": 0.35,
+      "YoY": 3.15
+    },
+    "Construction and Sand/Gravel/Crushed Stone": {
+      "MoM": 0.2,
+      "YoY": 7.11
+    },
+    "Construction for Government ": {
+      "MoM": 0.57,
+      "YoY": 1.36
+    },
+    "Construction for Private Capital Investment": {
+      "MoM": 0.65,
+      "YoY": 0.95
+    },
+    "Consumer Price Index (CPI-U)": {
+      "MoM": 0.15,
+      "YoY": 2.7
+    },
+    "Copper Base Scrap": {
+      "MoM": 3.17,
+      "YoY": 1.21
+    },
+    "Copper and Brass Mill Shapes": {
+      "MoM": 5.7,
+      "YoY": 6.85
+    },
+    "Education and Vocational Structures": {
+      "MoM": 0.49,
+      "YoY": 2.76
+    },
+    "Electrical Contractors": {
+      "MoM": -0.12,
+      "YoY": 0.47
+    },
+    "Engineering Services": {
+      "MoM": 0.04,
+      "YoY": 2.89
+    },
+    "Fabricated Steel Plate": {
+      "MoM": 0.59,
+      "YoY": 14.25
+    },
+    "Fabricated Structural Metal": {
+      "MoM": -1.06,
+      "YoY": 8.1
+    },
+    "Fabricated Structural Metal Bar Joists and Rebar": {
+      "MoM": -0.47,
+      "YoY": 8.89
+    },
+    "Fabricated Structural Metal for Non-Industrial Buildings": {
+      "MoM": -0.9,
+      "YoY": 8.63
+    },
+    "Final Demand Construction": {
+      "MoM": 0.63,
+      "YoY": 1.08
+    },
+    "Flatt Glass": {
+      "MoM": 3.08,
+      "YoY": 2.77
+    },
+    "Gypsum Building MAterials": {
+      "MoM": -0.04,
+      "YoY": 0.33
+    },
+    "Healthcare Structures": {
+      "MoM": 0.46,
+      "YoY": 3.12
+    },
+    "Highways and Streets": {
+      "MoM": 0.32,
+      "YoY": 2.35
+    },
+    "Industrial Structures": {
+      "MoM": 0.59,
+      "YoY": 3.17
+    },
+    "Inputs to Construction Industries": {
+      "MoM": 0.38,
+      "YoY": 2.48
+    },
+    "Inputs to Construction Industries, Energy": {
+      "MoM": 4.14,
+      "YoY": -9.01
+    },
+    "Inputs to Construction Industries, Goods": {
+      "MoM": 0.41,
+      "YoY": 2.22
+    },
+    "Inputs to Construction Industries, Goods Less Foods": {
+      "MoM": 0.08,
+      "YoY": 3.38
+    },
+    "Inputs to Construction Industries, Services": {
+      "MoM": 0.34,
+      "YoY": 2.97
+    },
+    "Insulation Materials": {
+      "MoM": -0.84,
+      "YoY": 0.35
+    },
+    "Iron and Steel Scrap": {
+      "MoM": -0.17,
+      "YoY": 1.42
+    },
+    "Labor Force Participation Rate": {
+      "MoM": -0.16,
+      "YoY": -0.8
+    },
+    "Lumber and Plywood": {
+      "MoM": -0.81,
+      "YoY": 5.08
+    },
+    "Mainenance and Repair Construction": {
+      "MoM": 0.34,
+      "YoY": 2.37
+    },
+    "Maint & Repair of Nonres Buildings (Partial)": {
+      "MoM": 0.07,
+      "YoY": 4.46
+    },
+    "Multifamily": {
+      "MoM": 0.09,
+      "YoY": 2.89
+    },
+    "New Health Care Building Construction": {
+      "MoM": 0.48,
+      "YoY": 0.57
+    },
+    "New Industrial Building Construction": {
+      "MoM": 1.01,
+      "YoY": 1.75
+    },
+    "New Nonresedential Construction ": {
+      "MoM": 0.47,
+      "YoY": 2.62
+    },
+    "New Nonresidential Building Construction": {
+      "MoM": 0.64,
+      "YoY": 0.97
+    },
+    "New Office Building Construction": {
+      "MoM": 0.33,
+      "YoY": 1.05
+    },
+    "New Residential Construction": {
+      "MoM": 0.17,
+      "YoY": 2.79
+    },
+    "New School Building Construction": {
+      "MoM": 0.7,
+      "YoY": 1.1
+    },
+    "New Warehouse Building Construction": {
+      "MoM": 0.99,
+      "YoY": 0.6
+    },
+    "Nonresidential Maintenance and Repair": {
+      "MoM": 0.39,
+      "YoY": 2.26
+    },
+    "Ornamental and Architectural Metal Work": {
+      "MoM": 0.0,
+      "YoY": 9.2
+    },
+    "Other Misc. Non Residential Construction": {
+      "MoM": 0.48,
+      "YoY": 2.58
+    },
+    "Other Non Residential": {
+      "MoM": 0.44,
+      "YoY": 2.53
+    },
+    "Paving Mixtures": {
+      "MoM": 0.18,
+      "YoY": 0.31
+    },
+    "Plastic Construction Products": {
+      "MoM": -0.26,
+      "YoY": -1.72
+    },
+    "Plumbing Contractors ": {
+      "MoM": 0.27,
+      "YoY": 1.46
+    },
+    "Power and Communications Structiors": {
+      "MoM": 0.64,
+      "YoY": 2.68
+    },
+    "Precast Concrete Products": {
+      "MoM": 0.59,
+      "YoY": 5.39
+    },
+    "Prefabricated Metal Buildings": {
+      "MoM": -0.92,
+      "YoY": 0.57
+    },
+    "Prepared Asphalt and Tar Rooging and Siding Products": {
+      "MoM": -0.69,
+      "YoY": 1.33
+    },
+    "Prestressed Concrete Products": {
+      "MoM": 0.26,
+      "YoY": 0.99
+    },
+    "Producer Price Index (PPI For Final Demand": {
+      "MoM": 0.86,
+      "YoY": 3.29
+    },
+    "Ready Mixed Concrete": {
+      "MoM": -0.49,
+      "YoY": 0.51
+    },
+    "Residential Maintenance and Repair": {
+      "MoM": 0.21,
+      "YoY": 2.68
+    },
+    "Roofing Contractors": {
+      "MoM": 1.32,
+      "YoY": 4.55
+    },
+    "Sheet Metal Products": {
+      "MoM": 0.04,
+      "YoY": 4.5
+    },
+    "Stainless and Alloy Steel Scrap": {
+      "MoM": -2.39,
+      "YoY": -6.85
+    },
+    "Steel Mill Products": {
+      "MoM": -0.48,
+      "YoY": 8.84
+    },
+    "Steel Pipe and Tube": {
+      "MoM": -0.72,
+      "YoY": 3.75
+    },
+    "Truck Transportation of Freight": {
+      "MoM": 0.98,
+      "YoY": -0.64
+    },
+    "Truck and Bus (Inc Off Highway) Pneumatic Tires": {
+      "MoM": 3.5,
+      "YoY": 4.06
+    },
+    "Unemployment Rate": {
+      "MoM": 2.44,
       "YoY": 0.0
     }
   }
