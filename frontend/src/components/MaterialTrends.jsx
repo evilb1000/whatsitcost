@@ -162,6 +162,7 @@ export default function MaterialTrends() {
                         mom: last.mom_growth,
                         yoy: last.yoy_growth,
                         trend: recentValues,
+                        latestDate: last.date, // Add the latest date
                         category: getCategory(raw.series_name),
                     };
                 });
@@ -195,6 +196,34 @@ return (
         <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-slate-800">
             Latest Fed Pricing Adjustment Data For The Construction Industry
         </h1>
+        
+        {/* Latest BLS Month Display */}
+        {!loading && materials.length > 0 && (
+            <div className="text-center mb-4">
+                <p className="text-lg sm:text-xl text-slate-700 font-semibold">
+                    Latest BLS Month: {(() => {
+                        // Find the latest month from all materials
+                        let latestMonth = null;
+                        materials.forEach(material => {
+                            if (material.latestDate) {
+                                const month = new Date(material.latestDate);
+                                if (!latestMonth || month > latestMonth) {
+                                    latestMonth = month;
+                                }
+                            }
+                        });
+                        
+                        if (latestMonth) {
+                            return latestMonth.toLocaleDateString('en-US', { 
+                                year: 'numeric', 
+                                month: 'long' 
+                            });
+                        }
+                        return 'N/A';
+                    })()}
+                </p>
+            </div>
+        )}
 
         {loading ? (
             <p className="text-gray-600 text-lg sm:text-xl text-center">
