@@ -206,9 +206,13 @@ return (
                         let latestMonth = null;
                         materials.forEach(material => {
                             if (material.latestDate) {
-                                const month = new Date(material.latestDate);
-                                if (!latestMonth || month > latestMonth) {
-                                    latestMonth = month;
+                                // Parse YYYY-MM format (e.g., "2025-07")
+                                const [year, month] = material.latestDate.split('-');
+                                if (year && month) {
+                                    const monthDate = new Date(parseInt(year), parseInt(month) - 1, 1);
+                                    if (!latestMonth || monthDate > latestMonth) {
+                                        latestMonth = monthDate;
+                                    }
                                 }
                             }
                         });
