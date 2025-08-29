@@ -15,15 +15,12 @@ from GPT_Tools.functions import (
     get_spikes,
     get_volatility
 )
+
+# == cluster logic
 from GPT_Tools.material_clusters import CLUSTERS
 def resolve_cluster(name):
     return CLUSTERS.get(name.lower(), [])
-
-
-# == this is your prompt logic. no scripts go in here for output. only for discerning input.
-from GPT_Tools.material_clusters import CLUSTERS
-def resolve_cluster(name):
-    return CLUSTERS.get(name.lower(), [])
+#== entry point for prompt resolution
 
 def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
     print("📥 Starting resolve_prompt_with_gpt")
@@ -486,4 +483,9 @@ from explain_data import explain_data
 class ExplainRequest(BaseModel):
     material: str
     metric: str
+
+# Add this at the end to run the server
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
