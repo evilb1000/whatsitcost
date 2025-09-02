@@ -18,6 +18,7 @@ from GPT_Tools.functions import (
 
 # == cluster logic
 from GPT_Tools.material_clusters import CLUSTERS
+from material_map import get_material_map
 def resolve_cluster(name):
     return CLUSTERS.get(name.lower(), [])
 #== entry point for prompt resolution
@@ -197,6 +198,24 @@ for name, dataset in [
     all_keys.update(dataset.keys())
 
 material_list = sorted(all_keys)
+alias_map = get_material_map() or {}
+
+# Common loose aliases → canonical material names (best-effort, non-exhaustive)
+ALIASES = {
+    "diesel": "#2 Diesel Fuel",
+    "diesel fuel": "#2 Diesel Fuel",
+    "aluminum shapes": "Aluminum Mill Shapes",
+    "aluminum mill": "Aluminum Mill Shapes",
+    "aluminium": "Aluminum Mill Shapes",
+    "asphalt": "Asphalt (At Refinery)",
+    "cement": "Cement",
+    "flat glass": "Flatt Glass",
+    "glass": "Flatt Glass",
+    "rebar": "Fabricated Structural Metal Bar Joists and Rebar",
+    "steel": "Steel Mill Products",
+    "ppi": "Producer Price Index (PPI For Final Demand",
+    "cpi": "Consumer Price Index (CPI-U)",
+}
 print(f"🧠 Final material list contains {len(material_list)} materials")
 
 
@@ -370,19 +389,34 @@ async def run_gpt(query: GPTQuery):
         ]
         if any(t in query.prompt.lower() for t in viz_triggers):
             print("🖼️ Visualization intent detected — preparing chart data")
-            # Collect up to 4 materials mentioned in the prompt
+            # Collect up to 4 materials mentioned in the prompt (with alias support)
             lowered = query.prompt.lower()
             matched = []
+            # 1) Exact substring matches
             for m in material_list:
                 if m.lower() in lowered:
                     matched.append(m)
                 if len(matched) >= 4:
                     break
-            # If none matched and GPT available, try GPT resolver once
-            if not matched and client is not None:
-                intent = resolve_prompt_with_gpt(query.prompt, material_list)
-                if intent.get("material"):
-                    matched = [intent["material"]]
+            # 2) Alias approximate matches (always run hardcoded ALIASES)
+            if len(matched) < 4:
+                for alias, canonical in ALIASES.items():
+                    if len(matched) >= 4:
+                        break
+                    if canonical in matched:
+                        continue
+                    if alias in lowered and canonical in material_list:
+                        matched.append(canonical)
+            # 3) Try keys from material_map.json (treat keys as aliases if not exact canonical names)
+            if len(matched) < 4 and alias_map:
+                for alias, series_id in alias_map.items():
+                    if len(matched) >= 4:
+                        break
+                    if alias in matched:
+                        continue
+                    if alias in material_list and alias.lower() in lowered:
+                        matched.append(alias)
+            # Do NOT call GPT for viz matching; rely on aliases to avoid API dependency
             if not matched:
                 raise HTTPException(status_code=400, detail="Could not determine material(s) for the chart.")
 
