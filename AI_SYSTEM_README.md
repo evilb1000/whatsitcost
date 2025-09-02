@@ -39,6 +39,49 @@ This document explains the current AI functionality end-to-end without proposing
 5. Backend calls GPT-4 again with a system prompt and the tool output to produce the final fluent answer.
 6. Response returned as `{ response: string }` to the frontend.
 
+### AI Callable Functions
+
+The backend uses helpers in `GPT_Tools/functions.py` to fetch and shape data before GPT-4 drafts the final response.
+
+| Function | Trigger (intent/metric) | Inputs | Returns | Usage in AI flow |
+|---|---|---|---|---|
+| `get_latest_trend_entry` | Material + specific metric/date; general trend lookup | `material: str`, `dataset: dict`, `date: str = "latest"`, `field: str \| None` | Single record or specific field for the given month | Provides core month-specific values used in the final narrative |
+| `get_trend_mom_summary` | Material + `mom`/`yoy` summary for a month | `material: str`, `dataset: dict`, `date: str` | `{ Date, MoM, YoY }` for that material/date | Supplies concise MoM/YoY pair included in the model’s summary |
+| `get_momentum` | Metric resolved to `momentum` | `material: str`, `dataset: dict`, `date: str \| None` | 3-month averages; if date provided, monthly MoM/YoY | Adds medium-horizon momentum context to GPT prompt |
+| `get_spikes` | Metric resolved to `spike` | `material: str`, `dataset: dict` | `{ spike_months: [...] }` or note | Highlights outlier movement months to reference in answer |
+| `get_volatility` | Metric resolved to `volatility` | `material: str`, `dataset: dict` | `{ volatility_score }` or note | Optional volatility signal if dataset present |
+
+Details:
+- `get_latest_trend_entry`
+  - Trigger: General material/month lookup or when a specific `field` (e.g., MoM/YoY key) is needed.
+  - Inputs: `material`, `dataset`, optional `date` (defaults `latest`), optional `field`.
+  - Returns: The matched record for the month or the specific field.
+  - Usage: Forms the backbone of the numeric evidence provided to GPT-4.
+
+- `get_trend_mom_summary`
+  - Trigger: When the intent requires MoM/YoY for a given month.
+  - Inputs: `material`, `dataset`, `date`.
+  - Returns: `{ Date, MoM, YoY }`.
+  - Usage: Fed to GPT-4 as a compact summary for the narrative.
+
+- `get_momentum`
+  - Trigger: `metric == "momentum"`.
+  - Inputs: `material`, `dataset`, optional `date`.
+  - Returns: 3-month average MoM/YoY; if `date` provided, adds that month’s MoM/YoY.
+  - Usage: Gives multi-month context for trend direction.
+
+- `get_spikes`
+  - Trigger: `metric == "spike"`.
+  - Inputs: `material`, `dataset`.
+  - Returns: List of spike months (or a note if none).
+  - Usage: Lets GPT-4 call out standout months.
+
+- `get_volatility`
+  - Trigger: `metric == "volatility"`.
+  - Inputs: `material`, `dataset`.
+  - Returns: `{ volatility_score }` or note.
+  - Usage: Optional volatility signal if data available.
+
 ### Executive Summary Path
 - Trigger: Broad/snapshot-style prompts with no material match.
 - Data source: `latest_snapshot.json` (already loaded in memory).
@@ -52,6 +95,7 @@ This document explains the current AI functionality end-to-end without proposing
 ### Resolve-Intent Endpoint (auxiliary)
 - `POST /resolve-intent` (in `main.py`) -> uses `resolve_intent.py`.
 - `resolve_intent.py` calls GPT-4 with a material list from `material_map.py`, returning `{ material, metric }` where `metric` ∈ { `yoy`, `mom`, `rolling_12mo`, `rolling_3yr`, `spike`, `trendline` }.
+- This intent resolution determines which of the above AI callable functions is ultimately invoked.
 
 ### Environment and Secrets
 - OpenAI key read from `GPT_KEY` (also supports `OPENAI_API_KEY` per README examples).
