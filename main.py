@@ -95,6 +95,10 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
         { "role": "user", "content": prompt }
     ]
 
+    if client is None:
+        print("⚠️ No GPT key present; cannot resolve via GPT")
+        raise HTTPException(status_code=400, detail="GPT key not configured for intent resolution.")
+
     print("📡 Sending prompt to GPT...")
     response = client.chat.completions.create(
         model="gpt-4",
@@ -130,7 +134,9 @@ class GPTQuery(BaseModel):
 
 # === CONFIG ===
 BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main/AIBrain/JSONS"
-client = OpenAI(api_key=os.getenv("GPT_KEY"))
+# Allow running without GPT in local/dev
+_gpt_key = os.getenv("GPT_KEY") or os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=_gpt_key) if _gpt_key else None
 
 app = FastAPI(title="Material Trends API")
 
@@ -267,6 +273,59 @@ def get_correlation(base: str, target: str):
         raise HTTPException(status_code=404, detail="Correlation data not found")
     return base_data[target]
 
+# === Visualization helpers and endpoint ===
+def parse_months_from_prompt(prompt: str) -> int:
+    """
+    Extract a timeframe from the prompt. Supports phrases like:
+    - "18 months" → 18
+    - "2 years" → 24
+    Defaults to 24 months if not detected.
+    """
+    p = prompt.lower()
+    # Months explicit
+    import re
+    m = re.search(r"(\d+)\s*month", p)
+    if m:
+        try:
+            return max(1, int(m.group(1)))
+        except Exception:
+            pass
+    # Years → months
+    y = re.search(r"(\d+)\s*year", p)
+    if y:
+        try:
+            return max(1, int(y.group(1)) * 12)
+        except Exception:
+            pass
+    return 24
+
+
+def build_mom_series(material: str, months: int):
+    """
+    Build a sequence of {date, value} for MoM over the last N months from trendlines_by_material.
+    Skips entries with null MoM.
+    """
+    records = trendlines_by_material.get(material)
+    if not records:
+        raise HTTPException(status_code=404, detail=f"Material '{material}' not found")
+
+    # Keep entries that have Date and MoM
+    clean = [r for r in records if r.get("Date") and (r.get("MoM") is not None)]
+    if not clean:
+        raise HTTPException(status_code=404, detail=f"No MoM data for material '{material}'")
+
+    # Sort by Date and slice
+    clean = sorted(clean, key=lambda r: r["Date"])  # YYYY-MM sorts lexicographically
+    points = clean[-months:]
+    return [{"date": r["Date"], "value": r["MoM"]} for r in points]
+
+
+@app.get("/mom-series/{material}")
+def get_mom_series(material: str, months: int = 24):
+    print(f"📈 Building MoM series for {material} over last {months} months")
+    points = build_mom_series(material, months)
+    return {"material": material, "metric": "MoM", "months": months, "points": points}
+
 # === GPT Chat Endpoint ===
 
 class GPTRequest(BaseModel):
@@ -277,7 +336,34 @@ async def run_gpt(query: GPTQuery):
     print(f"🧠 GPT Prompt received: {query.prompt}")
 
     try:
+        # Visualization intent: detect chart requests and return chart data payload
+        viz_triggers = ["chart", "graph", "plot", "visual", "visualize", "visualisation", "visualization"]
+        if any(t in query.prompt.lower() for t in viz_triggers):
+            print("🖼️ Visualization intent detected — preparing chart data")
+            # First try simple substring match to avoid GPT dependency in local/dev
+            target_material = next((m for m in material_list if m.lower() in query.prompt.lower()), None)
+            if not target_material and client is not None:
+                intent = resolve_prompt_with_gpt(query.prompt, material_list)
+                target_material = intent.get("material")
+            if not target_material:
+                raise HTTPException(status_code=400, detail="Could not determine a material for the chart.")
+
+            months = parse_months_from_prompt(query.prompt)
+            series = build_mom_series(target_material, months)
+            return {
+                "chartData": {
+                    "type": "line",
+                    "metric": "MoM",
+                    "material": target_material,
+                    "months": months,
+                    "points": series,
+                    "title": f"{target_material} — MoM over last {months} months"
+                }
+            }
+
         # Step 1: Resolve material, metric, date
+        if client is None:
+            raise HTTPException(status_code=400, detail="GPT key not configured. Set GPT_KEY or OPENAI_API_KEY.")
         intent = resolve_prompt_with_gpt(query.prompt, material_list)
         # ✨ EXECUTIVE SUMMARY BYPASS (no material → snapshot summary)
         if intent.get("material") is None:

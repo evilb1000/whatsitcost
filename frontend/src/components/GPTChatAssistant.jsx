@@ -8,7 +8,9 @@ export default function GPTChatAssistant() {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
   const [disclaimerAcknowledged, setDisclaimerAcknowledged] = useState(false);
 
-  const BACKEND_BASE = "https://whatsitcost.onrender.com";
+  const BACKEND_BASE = typeof window !== "undefined" && window.location.hostname === "localhost"
+    ? "http://localhost:8000"
+    : "https://whatsitcost.onrender.com";
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -41,7 +43,12 @@ export default function GPTChatAssistant() {
       const data = await response.json();
       console.log("🧠 Received response from backend:", data);
 
-      if (typeof data.response === "string") {
+      if (data.chartData) {
+        setMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: { type: "chart", payload: data.chartData } },
+        ]);
+      } else if (typeof data.response === "string") {
         setMessages((prev) => [...prev, { role: "assistant", content: data.response }]);
       } else {
         console.error("❌ Malformed GPT response:", data);
@@ -211,20 +218,43 @@ export default function GPTChatAssistant() {
                 gap: "10px",
               }}
             >
-              {messages.map((msg, i) => (
-                <div
-                  key={i}
-                  style={{
-                    backgroundColor: msg.role === "user" ? "#e0f2fe" : "#f1f5f9",
-                    padding: "10px 14px",
-                    borderRadius: "10px",
-                    alignSelf: msg.role === "user" ? "flex-end" : "flex-start",
-                    maxWidth: "80%",
-                  }}
-                >
-                  {msg.content}
-                </div>
-              ))}
+              {messages.map((msg, i) => {
+                const isUser = msg.role === "user";
+                const baseStyle = {
+                  backgroundColor: isUser ? "#e0f2fe" : "#f1f5f9",
+                  padding: "10px 14px",
+                  borderRadius: "10px",
+                  alignSelf: isUser ? "flex-end" : "flex-start",
+                  maxWidth: "80%",
+                };
+
+                if (typeof msg.content === "string") {
+                  return (
+                    <div key={i} style={baseStyle}>
+                      {msg.content}
+                    </div>
+                  );
+                }
+
+                if (msg.content?.type === "chart") {
+                  const { title, points, metric, material } = msg.content.payload || {};
+                  return (
+                    <div key={i} style={{ ...baseStyle, width: "100%", maxWidth: "100%" }}>
+                      <div style={{ fontWeight: "bold", marginBottom: "6px" }}>{title || `${material} — ${metric}`}</div>
+                      <div style={{ width: "100%", overflowX: "auto" }}>
+                        {/* Simple inline SVG line chart (no extra deps) */}
+                        <MiniLineChart data={points || []} height={160} />
+                      </div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <div key={i} style={baseStyle}>
+                    {JSON.stringify(msg.content)}
+                  </div>
+                );
+              })}
             </div>
 
             <div style={{ display: "flex", gap: "10px" }}>
@@ -259,5 +289,49 @@ export default function GPTChatAssistant() {
         </div>
       )}
     </>
+  );
+}
+
+function MiniLineChart({ data, width = 560, height = 160, padding = 16 }) {
+  // Guard
+  if (!Array.isArray(data) || data.length === 0) {
+    return <div style={{ fontStyle: "italic", color: "#64748b" }}>No data for chart.</div>;
+  }
+
+  // Map to x,y in SVG space
+  const xs = data.map((_, i) => i);
+  const ys = data.map((d) => Number(d.value));
+
+  const minY = Math.min(...ys);
+  const maxY = Math.max(...ys);
+  const ySpan = maxY - minY || 1;
+
+  const innerW = width - padding * 2;
+  const innerH = height - padding * 2;
+
+  const pointsStr = data
+    .map((d, i) => {
+      const x = padding + (i / Math.max(1, data.length - 1)) * innerW;
+      const y = padding + (1 - (Number(d.value) - minY) / ySpan) * innerH;
+      return `${x},${y}`;
+    })
+    .join(" ");
+
+  // Horizontal zero line if 0 within range
+  const showZero = minY <= 0 && maxY >= 0;
+  const zeroY = padding + (1 - (0 - minY) / ySpan) * innerH;
+
+  return (
+    <svg width={width} height={height} style={{ background: "white", borderRadius: 8, border: "1px solid #e2e8f0" }}>
+      <polyline fill="none" stroke="#2563eb" strokeWidth="2" points={pointsStr} />
+      {showZero && <line x1={padding} x2={width - padding} y1={zeroY} y2={zeroY} stroke="#e2e8f0" strokeDasharray="4 4" />}
+      {/* Simple axes labels: first and last date */}
+      <text x={padding} y={height - 4} fontSize="10" fill="#64748b">
+        {data[0]?.date}
+      </text>
+      <text x={width - padding} y={height - 4} fontSize="10" fill="#64748b" textAnchor="end">
+        {data[data.length - 1]?.date}
+      </text>
+    </svg>
   );
 }

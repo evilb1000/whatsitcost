@@ -5,7 +5,8 @@ import json
 from openai import OpenAI
 from material_map import get_material_map
 
-client = OpenAI(api_key=os.getenv("GPT_KEY"))
+_gpt_key = os.getenv("GPT_KEY") or os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=_gpt_key) if _gpt_key else None
 
 # === Load material map ===
 material_map = get_material_map()
@@ -13,6 +14,9 @@ material_list = list(material_map.keys())
 
 def resolve_intent(user_input: str) -> dict:
     try:
+        if client is None:
+            print("⚠️ resolve_intent: No GPT key configured; returning empty result")
+            return {}
         system_prompt = (
             "You are an intent resolver for a construction materials AI system.\n"
             "You will be given a user input. Your job is to extract:\n"
