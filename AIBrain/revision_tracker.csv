@@ -1,0 +1,81 @@
+series_id,date_ym,value_latest,is_prelim,series_name,run_tag
+CES2000000001,2019-12,7527.0000000000,False,Construction Employment,2025-08-18
+CUUR0000SA0,2019-12,256.9740000000,False,Consumer Price Index (CPI-U),2025-08-18
+LNS11300000,2019-12,63.3000000000,False,Labor Force Participation Rate,2025-08-18
+LNS14000000,2019-12,3.6000000000,False,Unemployment Rate,2025-08-18
+PCU23811X23811X,2019-12,136.8000000000,False,Concrete Contractors,2025-08-18
+PCU23816X23816X,2019-12,138.8000000000,False,Roofing Contractors,2025-08-18
+PCU23821X23821X,2019-12,129.3000000000,False,Electrical Contractors,2025-08-18
+PCU23822X23822X,2019-12,137.6000000000,False,Plumbing Contractors ,2025-08-18
+WPU057303,2019-12,231.1000000000,False,#2 Diesel Fuel,2025-08-18
+WPU058102,2019-12,170.6000000000,False,Asphalt (At Refinery),2025-08-18
+WPU062101,2019-12,347.6000000000,False,Architectural Coatings,2025-08-18
+WPU07120105,2019-12,148.4000000000,False,Truck and Bus (Inc Off Highway) Pneumatic Tires,2025-08-18
+WPU0721,2019-12,228.8000000000,False,Plastic Construction Products,2025-08-18
+WPU1012,2019-12,381.2000000000,False,Iron and Steel Scrap,2025-08-18
+WPU101212,2019-12,336.3000000000,False,Stainless and Alloy Steel Scrap,2025-08-18
+WPU1017,2019-12,187.4000000000,False,Steel Mill Products,2025-08-18
+WPU101706,2019-12,269.0000000000,False,Steel Pipe and Tube,2025-08-18
+WPU102301,2019-12,400.9000000000,False,Copper Base Scrap,2025-08-18
+WPU102501,2019-12,191.7000000000,False,Aluminum Mill Shapes,2025-08-18
+WPU102502,2019-12,386.7000000000,False,Copper and Brass Mill Shapes,2025-08-18
+WPU1073,2019-12,217.3000000000,False,Sheet Metal Products,2025-08-18
+WPU107405,2019-12,227.7000000000,False,Fabricated Structural Metal,2025-08-18
+WPU1074051,2019-12,215.2000000000,False,Fabricated Structural Metal Bar Joists and Rebar,2025-08-18
+WPU10740514,2019-12,121.7000000000,False,Fabricated Structural Metal for Non-Industrial Buildings,2025-08-18
+WPU10740553,2019-12,104.2000000000,False,Fabricated Structural Metal for Bridges,2025-08-18
+WPU107408,2019-12,302.2000000000,False,Ornamental and Architectural Metal Work,2025-08-18
+WPU1076,2019-12,219.5000000000,False,Fabricated Steel Plate,2025-08-18
+WPU1079,2019-12,337.6000000000,False,Prefabricated Metal Buildings,2025-08-18
+WPU112,2019-12,234.2000000000,False,Construction MAchinery and Equipment,2025-08-18
+WPU1311,2019-12,137.3000000000,False,Flatt Glass,2025-08-18
+WPU1321,2019-12,351.8000000000,False,Construction and Sand/Gravel/Crushed Stone,2025-08-18
+WPU1322,2019-12,258.0000000000,False,Cement,2025-08-18
+WPU133,2019-12,273.5000000000,False,Concrete Products,2025-08-18
+WPU1331,2019-12,272.4000000000,False,Concrete Block and Brick,2025-08-18
+WPU1332,2019-12,242.6000000000,False,Concrete Pipe,2025-08-18
+WPU1333,2019-12,278.8000000000,False,Ready Mixed Concrete,2025-08-18
+WPU1334,2019-12,281.1000000000,False,Precast Concrete Products,2025-08-18
+WPU1335,2019-12,236.5000000000,False,Prestressed Concrete Products,2025-08-18
+WPU1342,2019-12,202.1000000000,False,Brick and Structural Clay Tile,2025-08-18
+WPU136,2019-12,246.8000000000,False,Asphalt Felts and Coatings,2025-08-18
+WPU1361,2019-12,247.0000000000,False,Prepared Asphalt and Tar Rooging and Siding Products,2025-08-18
+WPU13710102,2019-12,234.6000000000,False,Gypsum Building MAterials,2025-08-18
+WPU1392,2019-12,193.5000000000,False,Insulation Materials,2025-08-18
+WPU1394,2019-12,311.6000000000,False,Paving Mixtures,2025-08-18
+WPU3012,2019-12,125.8000000000,False,Truck Transportation of Freight,2025-08-18
+WPU443,2019-12,98.8000000000,False,"Const, Mining & Forestry Machine and Equipment. Rental and Leasing",2025-08-18
+WPU4531,2019-12,106.1000000000,False,Architectural Services,2025-08-18
+WPU4532,2019-12,120.3000000000,False,Engineering Services,2025-08-18
+WPU80,2019-12,123.9000000000,False,Construction (Partial),2025-08-18
+WPU801,2019-12,126.6000000000,False,New Nonresidential Building Construction,2025-08-18
+WPU801101,2019-12,162.0000000000,False,New Warehouse Building Construction,2025-08-18
+WPU801102,2019-12,172.1000000000,False,New School Building Construction,2025-08-18
+WPU801103,2019-12,144.7000000000,False,New Office Building Construction,2025-08-18
+WPU801104,2019-12,137.7000000000,False,New Industrial Building Construction,2025-08-18
+WPU801105,2019-12,117.9000000000,False,New Health Care Building Construction,2025-08-18
+WPU802,2019-12,121.3000000000,False,Maint & Repair of Nonres Buildings (Partial),2025-08-18
+WPUFD4,2019-12,118.4000000000,False,Producer Price Index (PPI For Final Demand,2025-08-18
+WPUFD43,2019-12,128.9000000000,False,Final Demand Construction,2025-08-18
+WPUFD431,2019-12,129.0000000000,False,Construction for Private Capital Investment,2025-08-18
+WPUFD432,2019-12,128.4000000000,False,Construction for Government ,2025-08-18
+WPUIP230000,2019-12,110.1000000000,False,Inputs to Construction Industries,2025-08-18
+WPUIP2300001,2019-12,229.9000000000,False,"Inputs to Construction Industries, Goods",2025-08-18
+WPUIP23000012,2019-12,93.5000000000,False,"Inputs to Construction Industries, Energy",2025-08-18
+WPUIP23000013,2019-12,109.4000000000,False,"Inputs to Construction Industries, Goods Less Foods",2025-08-18
+WPUIP2300002,2019-12,114.2000000000,False,"Inputs to Construction Industries, Services",2025-08-18
+WPUIP231100,2019-12,110.4000000000,False,New Residential Construction,2025-08-18
+WPUIP231120,2019-12,111.2000000000,False,Multifamily,2025-08-18
+WPUIP231200,2019-12,109.7000000000,False,New Nonresedential Construction ,2025-08-18
+WPUIP231211,2019-12,110.7000000000,False,Commercial Structures,2025-08-18
+WPUIP231212,2019-12,110.3000000000,False,Healthcare Structures,2025-08-18
+WPUIP231220,2019-12,111.1000000000,False,Industrial Structures,2025-08-18
+WPUIP231230,2019-12,109.4000000000,False,Other Non Residential,2025-08-18
+WPUIP231231,2019-12,109.4000000000,False,Highways and Streets,2025-08-18
+WPUIP231232,2019-12,108.6000000000,False,Power and Communications Structiors,2025-08-18
+WPUIP231233,2019-12,110.4000000000,False,Education and Vocational Structures,2025-08-18
+WPUIP231234,2019-12,109.3000000000,False,Other Misc. Non Residential Construction,2025-08-18
+WPUIP232000,2019-12,109.0000000000,False,Mainenance and Repair Construction,2025-08-18
+WPUIP232100,2019-12,109.5000000000,False,Residential Maintenance and Repair,2025-08-18
+WPUIP232200,2019-12,108.8000000000,False,Nonresidential Maintenance and Repair,2025-08-18
+WPUSI004011,2019-12,207.2000000000,False,Lumber and Plywood,2025-08-18

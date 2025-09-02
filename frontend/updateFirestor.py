@@ -46,7 +46,7 @@ for series_id, group in latest_36.groupby("series_id"):
     name = group["series_name"].iloc[0]
     for _, row in group.sort_values("Date").iterrows():
         data.append({
-            "date": row["Date"].strftime("%Y-%m"),
+            "date": row["Date"].strftime("%Y-%m-%d"),  # Use full date format for proper parsing
             "value": row["value"],
             "mom_growth": None if pd.isna(row["mom_growth"]) else round(row["mom_growth"], 2),
             "yoy_growth": None if pd.isna(row["yoy_growth"]) else round(row["yoy_growth"], 2)
