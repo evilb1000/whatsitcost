@@ -95,6 +95,10 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
         { "role": "user", "content": prompt }
     ]
 
+    if client is None:
+        print("⚠️ No GPT key present; cannot resolve via GPT")
+        raise HTTPException(status_code=400, detail="GPT key not configured for intent resolution.")
+
     print("📡 Sending prompt to GPT...")
     response = client.chat.completions.create(
         model="gpt-4",
@@ -130,7 +134,9 @@ class GPTQuery(BaseModel):
 
 # === CONFIG ===
 BASE_URL = "https://raw.githubusercontent.com/evilb1000/whatsitcost/main/AIBrain/JSONS"
-client = OpenAI(api_key=os.getenv("GPT_KEY"))
+# Allow running without GPT in local/dev
+_gpt_key = os.getenv("GPT_KEY") or os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=_gpt_key) if _gpt_key else None
 
 app = FastAPI(title="Material Trends API")
 
@@ -334,13 +340,11 @@ async def run_gpt(query: GPTQuery):
         viz_triggers = ["chart", "graph", "plot", "visual", "visualize", "visualisation", "visualization"]
         if any(t in query.prompt.lower() for t in viz_triggers):
             print("🖼️ Visualization intent detected — preparing chart data")
-            # Reuse intent resolution to pick a material name or cluster
-            intent = resolve_prompt_with_gpt(query.prompt, material_list)
-            target_material = intent.get("material")
-            if not target_material:
-                # Fallback: try to find a material token directly
-                # Use the first material that appears in prompt
-                target_material = next((m for m in material_list if m.lower() in query.prompt.lower()), None)
+            # First try simple substring match to avoid GPT dependency in local/dev
+            target_material = next((m for m in material_list if m.lower() in query.prompt.lower()), None)
+            if not target_material and client is not None:
+                intent = resolve_prompt_with_gpt(query.prompt, material_list)
+                target_material = intent.get("material")
             if not target_material:
                 raise HTTPException(status_code=400, detail="Could not determine a material for the chart.")
 
@@ -358,6 +362,8 @@ async def run_gpt(query: GPTQuery):
             }
 
         # Step 1: Resolve material, metric, date
+        if client is None:
+            raise HTTPException(status_code=400, detail="GPT key not configured. Set GPT_KEY or OPENAI_API_KEY.")
         intent = resolve_prompt_with_gpt(query.prompt, material_list)
         # ✨ EXECUTIVE SUMMARY BYPASS (no material → snapshot summary)
         if intent.get("material") is None:

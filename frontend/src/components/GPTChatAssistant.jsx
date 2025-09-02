@@ -8,7 +8,9 @@ export default function GPTChatAssistant() {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
   const [disclaimerAcknowledged, setDisclaimerAcknowledged] = useState(false);
 
-  const BACKEND_BASE = "https://whatsitcost.onrender.com";
+  const BACKEND_BASE = typeof window !== "undefined" && window.location.hostname === "localhost"
+    ? "http://localhost:8000"
+    : "https://whatsitcost.onrender.com";
 
   const handleSend = async () => {
     if (!input.trim()) return;
