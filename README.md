@@ -146,11 +146,49 @@ firebase deploy
 - Check backend logs for API errors
 - Ensure backend is accessible from frontend
 
+### Automated Pipeline Issues
+- **Import errors**: Check Python path in `GPT_Tools/cluster_JSON_creator.py`
+- **Firestore sync fails**: Ensure `firebase-admin` is installed: `pip install firebase-admin`
+- **Pipeline stops mid-way**: Check individual script outputs for specific errors
+- **Data not updating**: Verify `theBehemoth.csv` has fresh data before running pipeline
+
+## 🔄 Automated Data Pipeline
+
+The platform features a fully automated data synchronization pipeline that ensures your frontend always displays the latest market data:
+
+### Pipeline Steps (Automated)
+1. **BLS Data Scraping** - Fresh data from Bureau of Labor Statistics
+2. **Data Processing** - CSV to JSON conversion with trend analysis
+3. **Cluster Analysis** - Material categorization and grouping
+4. **Executive Summary** - Market snapshot generation
+5. **🔥 Firestore Sync** - **Automatic frontend data update**
+
+### Run the Full Pipeline
+```bash
+# One command updates everything from BLS to frontend
+python Scrapers/master_updater.py
+```
+
+### Git Integration
+The pipeline automatically commits changes with descriptive messages:
+```bash
+🧠 Auto-sync: BLS JSONs + Exec Summary + Firestore [auto-sync-20250829-1124]
+```
+
+**What happens automatically:**
+- ✅ Scrapes fresh BLS data for all 558+ series
+- ✅ Processes data into analysis-ready JSONs
+- ✅ Updates Firestore with latest 36 observations per series
+- ✅ Commits changes to Git with descriptive messages
+- ✅ Pushes to GitHub for backup and collaboration
+
+**No more manual Firestore updates!** Your frontend automatically stays in sync with the latest market data.
+
 ## 📊 Data Sources
 
-- **BLS API**: Economic data and material prices
-- **GitHub**: JSON storage for processed market data
-- **Firestore**: Frontend data persistence
+- **BLS API**: Economic data and material prices (automated daily scraping)
+- **GitHub**: JSON storage for processed market data + version control
+- **Firestore**: Frontend data persistence (automatically synchronized)
 
 ## 🤝 Contributing
 
@@ -174,6 +212,9 @@ For issues or questions:
 - **Responsive web interface** with Tailwind CSS
 - **Firebase hosting** for scalability
 - **Render backend** for reliability
+- **🔥 Automated data synchronization** - Frontend always shows latest BLS month
+- **📅 Latest BLS Month Display** - Shows current data freshness (e.g., "Latest BLS Month: July 2025")
+- **🔄 Zero-touch updates** - Run one command, everything stays in sync
 
 ---
 

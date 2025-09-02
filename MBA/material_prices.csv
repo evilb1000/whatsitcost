@@ -61,9 +61,11 @@ Material,Series ID,Year,Month,Value
 #2 Diesel Fuel,WPU057303,2024,12,294.577
 #2 Diesel Fuel,WPU057303,2025,1,305.53
 #2 Diesel Fuel,WPU057303,2025,2,312.948
-#2 Diesel Fuel,WPU057303,2025,3,289.495
-#2 Diesel Fuel,WPU057303,2025,4,285.711
-#2 Diesel Fuel,WPU057303,2025,5,290.958
+#2 Diesel Fuel,WPU057303,2025,3,290.379
+#2 Diesel Fuel,WPU057303,2025,4,287.0
+#2 Diesel Fuel,WPU057303,2025,5,288.303
+#2 Diesel Fuel,WPU057303,2025,6,285.872
+#2 Diesel Fuel,WPU057303,2025,7,317.523
 Aluminum Mill Shapes,WPU102501,2020,1,192.3
 Aluminum Mill Shapes,WPU102501,2020,2,187.9
 Aluminum Mill Shapes,WPU102501,2020,3,185.7
@@ -125,10 +127,12 @@ Aluminum Mill Shapes,WPU102501,2024,10,238.838
 Aluminum Mill Shapes,WPU102501,2024,11,244.677
 Aluminum Mill Shapes,WPU102501,2024,12,246.625
 Aluminum Mill Shapes,WPU102501,2025,1,246.908
-Aluminum Mill Shapes,WPU102501,2025,2,249.521
-Aluminum Mill Shapes,WPU102501,2025,3,261.553
-Aluminum Mill Shapes,WPU102501,2025,4,265.916
-Aluminum Mill Shapes,WPU102501,2025,5,256.327
+Aluminum Mill Shapes,WPU102501,2025,2,249.608
+Aluminum Mill Shapes,WPU102501,2025,3,262.064
+Aluminum Mill Shapes,WPU102501,2025,4,266.68
+Aluminum Mill Shapes,WPU102501,2025,5,257.072
+Aluminum Mill Shapes,WPU102501,2025,6,256.513
+Aluminum Mill Shapes,WPU102501,2025,7,275.575
 Architectural Coatings,WPU062101,2020,1,346.9
 Architectural Coatings,WPU062101,2020,2,347.0
 Architectural Coatings,WPU062101,2020,3,344.0
@@ -193,7 +197,9 @@ Architectural Coatings,WPU062101,2025,1,511.403
 Architectural Coatings,WPU062101,2025,2,511.403
 Architectural Coatings,WPU062101,2025,3,511.403
 Architectural Coatings,WPU062101,2025,4,514.465
-Architectural Coatings,WPU062101,2025,5,514.465
+Architectural Coatings,WPU062101,2025,5,514.36
+Architectural Coatings,WPU062101,2025,6,513.615
+Architectural Coatings,WPU062101,2025,7,513.615
 Architectural Services,WPU4531,2020,1,106.3
 Architectural Services,WPU4531,2020,2,106.5
 Architectural Services,WPU4531,2020,3,106.6
@@ -258,7 +264,9 @@ Architectural Services,WPU4531,2025,1,116.251
 Architectural Services,WPU4531,2025,2,116.251
 Architectural Services,WPU4531,2025,3,116.324
 Architectural Services,WPU4531,2025,4,116.605
-Architectural Services,WPU4531,2025,5,116.605
+Architectural Services,WPU4531,2025,5,116.604
+Architectural Services,WPU4531,2025,6,116.623
+Architectural Services,WPU4531,2025,7,116.635
 Asphalt (At Refinery),WPU058102,2020,1,193.0
 Asphalt (At Refinery),WPU058102,2020,2,196.5
 Asphalt (At Refinery),WPU058102,2020,3,191.8
@@ -323,7 +331,9 @@ Asphalt (At Refinery),WPU058102,2025,1,251.72
 Asphalt (At Refinery),WPU058102,2025,2,248.99
 Asphalt (At Refinery),WPU058102,2025,3,240.792
 Asphalt (At Refinery),WPU058102,2025,4,255.819
-Asphalt (At Refinery),WPU058102,2025,5,249.208
+Asphalt (At Refinery),WPU058102,2025,5,249.19
+Asphalt (At Refinery),WPU058102,2025,6,246.203
+Asphalt (At Refinery),WPU058102,2025,7,241.455
 Asphalt Felts and Coatings,WPU136,2020,1,247.7
 Asphalt Felts and Coatings,WPU136,2020,2,245.6
 Asphalt Felts and Coatings,WPU136,2020,3,249.5
@@ -387,8 +397,10 @@ Asphalt Felts and Coatings,WPU136,2024,12,343.182
 Asphalt Felts and Coatings,WPU136,2025,1,342.579
 Asphalt Felts and Coatings,WPU136,2025,2,340.025
 Asphalt Felts and Coatings,WPU136,2025,3,339.488
-Asphalt Felts and Coatings,WPU136,2025,4,338.146
-Asphalt Felts and Coatings,WPU136,2025,5,348.726
+Asphalt Felts and Coatings,WPU136,2025,4,337.932
+Asphalt Felts and Coatings,WPU136,2025,5,348.573
+Asphalt Felts and Coatings,WPU136,2025,6,348.608
+Asphalt Felts and Coatings,WPU136,2025,7,346.572
 Brick and Structural Clay Tile,WPU1342,2020,1,202.9
 Brick and Structural Clay Tile,WPU1342,2020,2,202.9
 Brick and Structural Clay Tile,WPU1342,2020,3,203.0
@@ -451,9 +463,11 @@ Brick and Structural Clay Tile,WPU1342,2024,11,265.766
 Brick and Structural Clay Tile,WPU1342,2024,12,265.766
 Brick and Structural Clay Tile,WPU1342,2025,1,267.98
 Brick and Structural Clay Tile,WPU1342,2025,2,267.98
-Brick and Structural Clay Tile,WPU1342,2025,3,268.525
-Brick and Structural Clay Tile,WPU1342,2025,4,269.031
-Brick and Structural Clay Tile,WPU1342,2025,5,269.031
+Brick and Structural Clay Tile,WPU1342,2025,3,268.514
+Brick and Structural Clay Tile,WPU1342,2025,4,269.011
+Brick and Structural Clay Tile,WPU1342,2025,5,269.011
+Brick and Structural Clay Tile,WPU1342,2025,6,269.011
+Brick and Structural Clay Tile,WPU1342,2025,7,269.095
 Cement,WPU1322,2020,1,257.2
 Cement,WPU1322,2020,2,256.8
 Cement,WPU1322,2020,3,256.9
@@ -516,9 +530,11 @@ Cement,WPU1322,2024,11,353.147
 Cement,WPU1322,2024,12,352.969
 Cement,WPU1322,2025,1,356.916
 Cement,WPU1322,2025,2,356.485
-Cement,WPU1322,2025,3,358.41
-Cement,WPU1322,2025,4,360.658
-Cement,WPU1322,2025,5,361.147
+Cement,WPU1322,2025,3,358.244
+Cement,WPU1322,2025,4,358.744
+Cement,WPU1322,2025,5,360.521
+Cement,WPU1322,2025,6,360.85
+Cement,WPU1322,2025,7,360.358
 Commercial Structures,WPUIP231211,2020,1,110.9
 Commercial Structures,WPUIP231211,2020,2,110.4
 Commercial Structures,WPUIP231211,2020,3,109.8
@@ -580,10 +596,12 @@ Commercial Structures,WPUIP231211,2024,10,152.688
 Commercial Structures,WPUIP231211,2024,11,152.446
 Commercial Structures,WPUIP231211,2024,12,152.447
 Commercial Structures,WPUIP231211,2025,1,153.925
-Commercial Structures,WPUIP231211,2025,2,154.594
-Commercial Structures,WPUIP231211,2025,3,156.188
-Commercial Structures,WPUIP231211,2025,4,156.372
-Commercial Structures,WPUIP231211,2025,5,156.924
+Commercial Structures,WPUIP231211,2025,2,154.586
+Commercial Structures,WPUIP231211,2025,3,156.029
+Commercial Structures,WPUIP231211,2025,4,156.2
+Commercial Structures,WPUIP231211,2025,5,156.528
+Commercial Structures,WPUIP231211,2025,6,157.059
+Commercial Structures,WPUIP231211,2025,7,157.914
 Concrete Block and Brick,WPU1331,2020,1,272.5
 Concrete Block and Brick,WPU1331,2020,2,273.6
 Concrete Block and Brick,WPU1331,2020,3,273.8
@@ -647,8 +665,10 @@ Concrete Block and Brick,WPU1331,2024,12,382.898
 Concrete Block and Brick,WPU1331,2025,1,391.371
 Concrete Block and Brick,WPU1331,2025,2,391.575
 Concrete Block and Brick,WPU1331,2025,3,393.347
-Concrete Block and Brick,WPU1331,2025,4,394.254
-Concrete Block and Brick,WPU1331,2025,5,394.254
+Concrete Block and Brick,WPU1331,2025,4,394.092
+Concrete Block and Brick,WPU1331,2025,5,394.092
+Concrete Block and Brick,WPU1331,2025,6,394.114
+Concrete Block and Brick,WPU1331,2025,7,394.409
 Concrete Contractors,PCU23811X23811X,2020,1,137.4
 Concrete Contractors,PCU23811X23811X,2020,2,137.6
 Concrete Contractors,PCU23811X23811X,2020,3,137.7
@@ -710,10 +730,12 @@ Concrete Contractors,PCU23811X23811X,2024,10,180.74
 Concrete Contractors,PCU23811X23811X,2024,11,180.741
 Concrete Contractors,PCU23811X23811X,2024,12,180.687
 Concrete Contractors,PCU23811X23811X,2025,1,181.016
-Concrete Contractors,PCU23811X23811X,2025,2,181.25
-Concrete Contractors,PCU23811X23811X,2025,3,181.341
-Concrete Contractors,PCU23811X23811X,2025,4,182.071
-Concrete Contractors,PCU23811X23811X,2025,5,182.234
+Concrete Contractors,PCU23811X23811X,2025,2,181.249
+Concrete Contractors,PCU23811X23811X,2025,3,181.166
+Concrete Contractors,PCU23811X23811X,2025,4,181.966
+Concrete Contractors,PCU23811X23811X,2025,5,182.2
+Concrete Contractors,PCU23811X23811X,2025,6,182.322
+Concrete Contractors,PCU23811X23811X,2025,7,186.573
 Concrete Pipe,WPU1332,2020,1,252.7
 Concrete Pipe,WPU1332,2020,2,241.5
 Concrete Pipe,WPU1332,2020,3,248.5
@@ -779,6 +801,8 @@ Concrete Pipe,WPU1332,2025,2,404.832
 Concrete Pipe,WPU1332,2025,3,397.38
 Concrete Pipe,WPU1332,2025,4,397.916
 Concrete Pipe,WPU1332,2025,5,397.425
+Concrete Pipe,WPU1332,2025,6,394.982
+Concrete Pipe,WPU1332,2025,7,393.88
 Concrete Products,WPU133,2020,1,276.4
 Concrete Products,WPU133,2020,2,277.3
 Concrete Products,WPU133,2020,3,279.0
@@ -841,9 +865,11 @@ Concrete Products,WPU133,2024,11,387.839
 Concrete Products,WPU133,2024,12,387.378
 Concrete Products,WPU133,2025,1,391.79
 Concrete Products,WPU133,2025,2,392.073
-Concrete Products,WPU133,2025,3,392.004
-Concrete Products,WPU133,2025,4,393.146
-Concrete Products,WPU133,2025,5,394.155
+Concrete Products,WPU133,2025,3,391.727
+Concrete Products,WPU133,2025,4,390.809
+Concrete Products,WPU133,2025,5,392.849
+Concrete Products,WPU133,2025,6,392.836
+Concrete Products,WPU133,2025,7,392.186
 "Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2020,1,99.1
 "Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2020,2,98.8
 "Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2020,3,99.3
@@ -906,9 +932,11 @@ Concrete Products,WPU133,2025,5,394.155
 "Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2024,12,105.542
 "Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,1,105.49
 "Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,2,105.446
-"Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,3,105.121
-"Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,4,105.771
-"Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,5,105.558
+"Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,3,104.728
+"Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,4,105.005
+"Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,5,105.283
+"Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,6,105.281
+"Const, Mining & Forestry Machine and Equipment. Rental and Leasing",WPU443,2025,7,105.771
 Construction (Partial),WPU80,2020,1,124.6
 Construction (Partial),WPU80,2020,2,124.7
 Construction (Partial),WPU80,2020,3,124.3
@@ -970,10 +998,12 @@ Construction (Partial),WPU80,2024,10,166.36
 Construction (Partial),WPU80,2024,11,166.369
 Construction (Partial),WPU80,2024,12,166.615
 Construction (Partial),WPU80,2025,1,167.979
-Construction (Partial),WPU80,2025,2,168.019
-Construction (Partial),WPU80,2025,3,168.792
-Construction (Partial),WPU80,2025,4,168.097
-Construction (Partial),WPU80,2025,5,168.508
+Construction (Partial),WPU80,2025,2,167.77
+Construction (Partial),WPU80,2025,3,168.077
+Construction (Partial),WPU80,2025,4,167.348
+Construction (Partial),WPU80,2025,5,167.63
+Construction (Partial),WPU80,2025,6,167.865
+Construction (Partial),WPU80,2025,7,168.826
 Construction Employment,CES2000000001,2020,1,7575.0
 Construction Employment,CES2000000001,2020,2,7610.0
 Construction Employment,CES2000000001,2020,3,7541.0
@@ -1037,8 +1067,10 @@ Construction Employment,CES2000000001,2024,12,8289.0
 Construction Employment,CES2000000001,2025,1,8286.0
 Construction Employment,CES2000000001,2025,2,8298.0
 Construction Employment,CES2000000001,2025,3,8303.0
-Construction Employment,CES2000000001,2025,4,8310.0
-Construction Employment,CES2000000001,2025,5,8314.0
+Construction Employment,CES2000000001,2025,4,8303.0
+Construction Employment,CES2000000001,2025,5,8305.0
+Construction Employment,CES2000000001,2025,6,8308.0
+Construction Employment,CES2000000001,2025,7,8310.0
 Construction MAchinery and Equipment,WPU112,2020,1,236.3
 Construction MAchinery and Equipment,WPU112,2020,2,236.5
 Construction MAchinery and Equipment,WPU112,2020,3,236.5
@@ -1100,10 +1132,12 @@ Construction MAchinery and Equipment,WPU112,2024,10,307.294
 Construction MAchinery and Equipment,WPU112,2024,11,307.945
 Construction MAchinery and Equipment,WPU112,2024,12,307.7
 Construction MAchinery and Equipment,WPU112,2025,1,307.768
-Construction MAchinery and Equipment,WPU112,2025,2,308.354
-Construction MAchinery and Equipment,WPU112,2025,3,308.742
-Construction MAchinery and Equipment,WPU112,2025,4,311.22
-Construction MAchinery and Equipment,WPU112,2025,5,313.321
+Construction MAchinery and Equipment,WPU112,2025,2,308.355
+Construction MAchinery and Equipment,WPU112,2025,3,308.74
+Construction MAchinery and Equipment,WPU112,2025,4,311.284
+Construction MAchinery and Equipment,WPU112,2025,5,313.391
+Construction MAchinery and Equipment,WPU112,2025,6,316.406
+Construction MAchinery and Equipment,WPU112,2025,7,317.516
 Construction and Sand/Gravel/Crushed Stone,WPU1321,2020,1,359.2
 Construction and Sand/Gravel/Crushed Stone,WPU1321,2020,2,360.7
 Construction and Sand/Gravel/Crushed Stone,WPU1321,2020,3,362.1
@@ -1165,10 +1199,12 @@ Construction and Sand/Gravel/Crushed Stone,WPU1321,2024,10,499.677
 Construction and Sand/Gravel/Crushed Stone,WPU1321,2024,11,499.723
 Construction and Sand/Gravel/Crushed Stone,WPU1321,2024,12,500.486
 Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,1,520.421
-Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,2,522.819
-Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,3,522.365
-Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,4,523.94
-Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,5,524.783
+Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,2,523.539
+Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,3,522.392
+Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,4,523.949
+Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,5,525.524
+Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,6,527.198
+Construction and Sand/Gravel/Crushed Stone,WPU1321,2025,7,528.251
 Construction for Government ,WPUFD432,2020,1,129.2
 Construction for Government ,WPUFD432,2020,2,129.3
 Construction for Government ,WPUFD432,2020,3,129.0
@@ -1230,10 +1266,12 @@ Construction for Government ,WPUFD432,2024,10,170.027
 Construction for Government ,WPUFD432,2024,11,170.075
 Construction for Government ,WPUFD432,2024,12,170.257
 Construction for Government ,WPUFD432,2025,1,171.695
-Construction for Government ,WPUFD432,2025,2,171.879
-Construction for Government ,WPUFD432,2025,3,172.495
-Construction for Government ,WPUFD432,2025,4,171.622
-Construction for Government ,WPUFD432,2025,5,172.184
+Construction for Government ,WPUFD432,2025,2,171.667
+Construction for Government ,WPUFD432,2025,3,171.893
+Construction for Government ,WPUFD432,2025,4,170.992
+Construction for Government ,WPUFD432,2025,5,171.223
+Construction for Government ,WPUFD432,2025,6,171.353
+Construction for Government ,WPUFD432,2025,7,172.328
 Construction for Private Capital Investment,WPUFD431,2020,1,129.7
 Construction for Private Capital Investment,WPUFD431,2020,2,129.9
 Construction for Private Capital Investment,WPUFD431,2020,3,129.8
@@ -1295,10 +1333,12 @@ Construction for Private Capital Investment,WPUFD431,2024,10,180.411
 Construction for Private Capital Investment,WPUFD431,2024,11,180.398
 Construction for Private Capital Investment,WPUFD431,2024,12,180.723
 Construction for Private Capital Investment,WPUFD431,2025,1,181.954
-Construction for Private Capital Investment,WPUFD431,2025,2,182.028
-Construction for Private Capital Investment,WPUFD431,2025,3,182.4
-Construction for Private Capital Investment,WPUFD431,2025,4,181.602
-Construction for Private Capital Investment,WPUFD431,2025,5,182.021
+Construction for Private Capital Investment,WPUFD431,2025,2,181.7
+Construction for Private Capital Investment,WPUFD431,2025,3,181.451
+Construction for Private Capital Investment,WPUFD431,2025,4,180.614
+Construction for Private Capital Investment,WPUFD431,2025,5,180.982
+Construction for Private Capital Investment,WPUFD431,2025,6,181.287
+Construction for Private Capital Investment,WPUFD431,2025,7,182.464
 Consumer Price Index (CPI-U),CUUR0000SA0,2020,1,257.971
 Consumer Price Index (CPI-U),CUUR0000SA0,2020,2,258.678
 Consumer Price Index (CPI-U),CUUR0000SA0,2020,3,258.115
@@ -1364,6 +1404,8 @@ Consumer Price Index (CPI-U),CUUR0000SA0,2025,2,319.082
 Consumer Price Index (CPI-U),CUUR0000SA0,2025,3,319.799
 Consumer Price Index (CPI-U),CUUR0000SA0,2025,4,320.795
 Consumer Price Index (CPI-U),CUUR0000SA0,2025,5,321.465
+Consumer Price Index (CPI-U),CUUR0000SA0,2025,6,322.561
+Consumer Price Index (CPI-U),CUUR0000SA0,2025,7,323.048
 Copper Base Scrap,WPU102301,2020,1,414.7
 Copper Base Scrap,WPU102301,2020,2,388.4
 Copper Base Scrap,WPU102301,2020,3,369.0
@@ -1428,7 +1470,9 @@ Copper Base Scrap,WPU102301,2025,1,653.567
 Copper Base Scrap,WPU102301,2025,2,669.057
 Copper Base Scrap,WPU102301,2025,3,700.656
 Copper Base Scrap,WPU102301,2025,4,650.684
-Copper Base Scrap,WPU102301,2025,5,662.723
+Copper Base Scrap,WPU102301,2025,5,661.141
+Copper Base Scrap,WPU102301,2025,6,684.33
+Copper Base Scrap,WPU102301,2025,7,706.018
 Copper and Brass Mill Shapes,WPU102502,2020,1,392.8
 Copper and Brass Mill Shapes,WPU102502,2020,2,378.4
 Copper and Brass Mill Shapes,WPU102502,2020,3,372.8
@@ -1494,6 +1538,8 @@ Copper and Brass Mill Shapes,WPU102502,2025,2,657.853
 Copper and Brass Mill Shapes,WPU102502,2025,3,627.556
 Copper and Brass Mill Shapes,WPU102502,2025,4,638.404
 Copper and Brass Mill Shapes,WPU102502,2025,5,630.2
+Copper and Brass Mill Shapes,WPU102502,2025,6,637.408
+Copper and Brass Mill Shapes,WPU102502,2025,7,673.742
 Education and Vocational Structures,WPUIP231233,2020,1,110.7
 Education and Vocational Structures,WPUIP231233,2020,2,110.3
 Education and Vocational Structures,WPUIP231233,2020,3,110.0
@@ -1555,10 +1601,12 @@ Education and Vocational Structures,WPUIP231233,2024,10,151.538
 Education and Vocational Structures,WPUIP231233,2024,11,151.411
 Education and Vocational Structures,WPUIP231233,2024,12,151.502
 Education and Vocational Structures,WPUIP231233,2025,1,152.871
-Education and Vocational Structures,WPUIP231233,2025,2,153.434
-Education and Vocational Structures,WPUIP231233,2025,3,154.787
-Education and Vocational Structures,WPUIP231233,2025,4,154.968
-Education and Vocational Structures,WPUIP231233,2025,5,155.378
+Education and Vocational Structures,WPUIP231233,2025,2,153.452
+Education and Vocational Structures,WPUIP231233,2025,3,154.636
+Education and Vocational Structures,WPUIP231233,2025,4,154.767
+Education and Vocational Structures,WPUIP231233,2025,5,155.063
+Education and Vocational Structures,WPUIP231233,2025,6,155.481
+Education and Vocational Structures,WPUIP231233,2025,7,156.242
 Electrical Contractors,PCU23821X23821X,2020,1,129.9
 Electrical Contractors,PCU23821X23821X,2020,2,130.2
 Electrical Contractors,PCU23821X23821X,2020,3,130.2
@@ -1620,10 +1668,12 @@ Electrical Contractors,PCU23821X23821X,2024,10,170.659
 Electrical Contractors,PCU23821X23821X,2024,11,170.511
 Electrical Contractors,PCU23821X23821X,2024,12,170.64
 Electrical Contractors,PCU23821X23821X,2025,1,171.141
-Electrical Contractors,PCU23821X23821X,2025,2,171.067
-Electrical Contractors,PCU23821X23821X,2025,3,171.29
-Electrical Contractors,PCU23821X23821X,2025,4,171.89
-Electrical Contractors,PCU23821X23821X,2025,5,171.894
+Electrical Contractors,PCU23821X23821X,2025,2,171.064
+Electrical Contractors,PCU23821X23821X,2025,3,171.274
+Electrical Contractors,PCU23821X23821X,2025,4,171.751
+Electrical Contractors,PCU23821X23821X,2025,5,171.72
+Electrical Contractors,PCU23821X23821X,2025,6,171.832
+Electrical Contractors,PCU23821X23821X,2025,7,171.631
 Engineering Services,WPU4532,2020,1,121.4
 Engineering Services,WPU4532,2020,2,121.4
 Engineering Services,WPU4532,2020,3,121.3
@@ -1687,8 +1737,10 @@ Engineering Services,WPU4532,2024,12,139.66
 Engineering Services,WPU4532,2025,1,141.575
 Engineering Services,WPU4532,2025,2,142.24
 Engineering Services,WPU4532,2025,3,142.249
-Engineering Services,WPU4532,2025,4,142.699
-Engineering Services,WPU4532,2025,5,142.86
+Engineering Services,WPU4532,2025,4,142.7
+Engineering Services,WPU4532,2025,5,142.803
+Engineering Services,WPU4532,2025,6,143.118
+Engineering Services,WPU4532,2025,7,143.175
 Fabricated Steel Plate,WPU1076,2020,1,219.1
 Fabricated Steel Plate,WPU1076,2020,2,219.1
 Fabricated Steel Plate,WPU1076,2020,3,219.1
@@ -1754,6 +1806,8 @@ Fabricated Steel Plate,WPU1076,2025,2,372.812
 Fabricated Steel Plate,WPU1076,2025,3,372.812
 Fabricated Steel Plate,WPU1076,2025,4,372.812
 Fabricated Steel Plate,WPU1076,2025,5,372.812
+Fabricated Steel Plate,WPU1076,2025,6,375.655
+Fabricated Steel Plate,WPU1076,2025,7,377.889
 Fabricated Structural Metal,WPU107405,2020,1,227.0
 Fabricated Structural Metal,WPU107405,2020,2,228.8
 Fabricated Structural Metal,WPU107405,2020,3,228.5
@@ -1815,10 +1869,12 @@ Fabricated Structural Metal,WPU107405,2024,10,332.189
 Fabricated Structural Metal,WPU107405,2024,11,332.466
 Fabricated Structural Metal,WPU107405,2024,12,332.41
 Fabricated Structural Metal,WPU107405,2025,1,332.294
-Fabricated Structural Metal,WPU107405,2025,2,338.798
-Fabricated Structural Metal,WPU107405,2025,3,349.101
-Fabricated Structural Metal,WPU107405,2025,4,353.432
-Fabricated Structural Metal,WPU107405,2025,5,355.177
+Fabricated Structural Metal,WPU107405,2025,2,338.479
+Fabricated Structural Metal,WPU107405,2025,3,349.438
+Fabricated Structural Metal,WPU107405,2025,4,353.326
+Fabricated Structural Metal,WPU107405,2025,5,355.135
+Fabricated Structural Metal,WPU107405,2025,6,358.863
+Fabricated Structural Metal,WPU107405,2025,7,355.06
 Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2020,1,215.6
 Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2020,2,215.8
 Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2020,3,215.6
@@ -1880,10 +1936,12 @@ Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2024,10,279.119
 Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2024,11,277.807
 Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2024,12,275.97
 Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,1,276.259
-Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,2,284.591
-Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,3,304.547
-Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,4,313.543
-Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,5,313.168
+Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,2,283.896
+Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,3,305.284
+Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,4,313.315
+Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,5,313.242
+Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,6,310.628
+Fabricated Structural Metal Bar Joists and Rebar,WPU1074051,2025,7,309.179
 Fabricated Structural Metal for Bridges,WPU10740553,2020,1,100.0
 Fabricated Structural Metal for Bridges,WPU10740553,2020,2,107.1
 Fabricated Structural Metal for Bridges,WPU10740553,2020,3,104.6
@@ -2010,10 +2068,12 @@ Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2024,10,147
 Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2024,11,146.452
 Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2024,12,145.328
 Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,1,145.045
-Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,2,150.42
-Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,3,163.053
-Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,4,168.184
-Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,5,168.003
+Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,2,150.837
+Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,3,162.332
+Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,4,167.009
+Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,5,167.033
+Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,6,165.692
+Fabricated Structural Metal for Non-Industrial Buildings,WPU10740514,2025,7,164.193
 Final Demand Construction,WPUFD43,2020,1,129.6
 Final Demand Construction,WPUFD43,2020,2,129.7
 Final Demand Construction,WPUFD43,2020,3,129.6
@@ -2075,10 +2135,12 @@ Final Demand Construction,WPUFD43,2024,10,176.736
 Final Demand Construction,WPUFD43,2024,11,176.743
 Final Demand Construction,WPUFD43,2024,12,177.022
 Final Demand Construction,WPUFD43,2025,1,178.316
-Final Demand Construction,WPUFD43,2025,2,178.425
-Final Demand Construction,WPUFD43,2025,3,178.875
-Final Demand Construction,WPUFD43,2025,4,178.054
-Final Demand Construction,WPUFD43,2025,5,178.518
+Final Demand Construction,WPUFD43,2025,2,178.135
+Final Demand Construction,WPUFD43,2025,3,178.038
+Final Demand Construction,WPUFD43,2025,4,177.183
+Final Demand Construction,WPUFD43,2025,5,177.505
+Final Demand Construction,WPUFD43,2025,6,177.754
+Final Demand Construction,WPUFD43,2025,7,178.865
 Flatt Glass,WPU1311,2020,1,137.9
 Flatt Glass,WPU1311,2020,2,139.1
 Flatt Glass,WPU1311,2020,3,139.1
@@ -2141,9 +2203,11 @@ Flatt Glass,WPU1311,2024,11,173.616
 Flatt Glass,WPU1311,2024,12,173.938
 Flatt Glass,WPU1311,2025,1,174.907
 Flatt Glass,WPU1311,2025,2,175.162
-Flatt Glass,WPU1311,2025,3,175.255
-Flatt Glass,WPU1311,2025,4,171.938
-Flatt Glass,WPU1311,2025,5,172.261
+Flatt Glass,WPU1311,2025,3,175.164
+Flatt Glass,WPU1311,2025,4,171.996
+Flatt Glass,WPU1311,2025,5,172.208
+Flatt Glass,WPU1311,2025,6,172.571
+Flatt Glass,WPU1311,2025,7,177.884
 Gypsum Building MAterials,WPU13710102,2020,1,243.2
 Gypsum Building MAterials,WPU13710102,2020,2,241.8
 Gypsum Building MAterials,WPU13710102,2020,3,242.9
@@ -2208,7 +2272,9 @@ Gypsum Building MAterials,WPU13710102,2025,1,367.23
 Gypsum Building MAterials,WPU13710102,2025,2,372.31
 Gypsum Building MAterials,WPU13710102,2025,3,373.859
 Gypsum Building MAterials,WPU13710102,2025,4,371.633
-Gypsum Building MAterials,WPU13710102,2025,5,371.633
+Gypsum Building MAterials,WPU13710102,2025,5,370.428
+Gypsum Building MAterials,WPU13710102,2025,6,368.154
+Gypsum Building MAterials,WPU13710102,2025,7,368.001
 Healthcare Structures,WPUIP231212,2020,1,110.6
 Healthcare Structures,WPUIP231212,2020,2,110.1
 Healthcare Structures,WPUIP231212,2020,3,109.6
@@ -2270,10 +2336,12 @@ Healthcare Structures,WPUIP231212,2024,10,151.815
 Healthcare Structures,WPUIP231212,2024,11,151.644
 Healthcare Structures,WPUIP231212,2024,12,151.708
 Healthcare Structures,WPUIP231212,2025,1,153.317
-Healthcare Structures,WPUIP231212,2025,2,153.937
-Healthcare Structures,WPUIP231212,2025,3,155.335
-Healthcare Structures,WPUIP231212,2025,4,155.525
-Healthcare Structures,WPUIP231212,2025,5,155.978
+Healthcare Structures,WPUIP231212,2025,2,153.952
+Healthcare Structures,WPUIP231212,2025,3,155.193
+Healthcare Structures,WPUIP231212,2025,4,155.346
+Healthcare Structures,WPUIP231212,2025,5,155.705
+Healthcare Structures,WPUIP231212,2025,6,156.289
+Healthcare Structures,WPUIP231212,2025,7,157.005
 Highways and Streets,WPUIP231231,2020,1,109.9
 Highways and Streets,WPUIP231231,2020,2,109.1
 Highways and Streets,WPUIP231231,2020,3,107.6
@@ -2336,9 +2404,11 @@ Highways and Streets,WPUIP231231,2024,11,146.851
 Highways and Streets,WPUIP231231,2024,12,146.735
 Highways and Streets,WPUIP231231,2025,1,149.076
 Highways and Streets,WPUIP231231,2025,2,149.674
-Highways and Streets,WPUIP231231,2025,3,150.694
-Highways and Streets,WPUIP231231,2025,4,150.059
-Highways and Streets,WPUIP231231,2025,5,150.876
+Highways and Streets,WPUIP231231,2025,3,150.567
+Highways and Streets,WPUIP231231,2025,4,149.824
+Highways and Streets,WPUIP231231,2025,5,150.372
+Highways and Streets,WPUIP231231,2025,6,150.712
+Highways and Streets,WPUIP231231,2025,7,151.2
 Industrial Structures,WPUIP231220,2020,1,111.5
 Industrial Structures,WPUIP231220,2020,2,110.7
 Industrial Structures,WPUIP231220,2020,3,109.8
@@ -2400,10 +2470,12 @@ Industrial Structures,WPUIP231220,2024,10,151.259
 Industrial Structures,WPUIP231220,2024,11,150.912
 Industrial Structures,WPUIP231220,2024,12,150.893
 Industrial Structures,WPUIP231220,2025,1,153.061
-Industrial Structures,WPUIP231220,2025,2,153.546
-Industrial Structures,WPUIP231220,2025,3,155.391
-Industrial Structures,WPUIP231220,2025,4,155.187
-Industrial Structures,WPUIP231220,2025,5,156.016
+Industrial Structures,WPUIP231220,2025,2,153.515
+Industrial Structures,WPUIP231220,2025,3,155.146
+Industrial Structures,WPUIP231220,2025,4,154.869
+Industrial Structures,WPUIP231220,2025,5,155.156
+Industrial Structures,WPUIP231220,2025,6,155.696
+Industrial Structures,WPUIP231220,2025,7,156.607
 Inputs to Construction Industries,WPUIP230000,2020,1,110.7
 Inputs to Construction Industries,WPUIP230000,2020,2,110.1
 Inputs to Construction Industries,WPUIP230000,2020,3,109.5
@@ -2465,10 +2537,12 @@ Inputs to Construction Industries,WPUIP230000,2024,10,149.67
 Inputs to Construction Industries,WPUIP230000,2024,11,149.248
 Inputs to Construction Industries,WPUIP230000,2024,12,149.328
 Inputs to Construction Industries,WPUIP230000,2025,1,151.499
-Inputs to Construction Industries,WPUIP230000,2025,2,152.152
-Inputs to Construction Industries,WPUIP230000,2025,3,153.346
-Inputs to Construction Industries,WPUIP230000,2025,4,152.917
-Inputs to Construction Industries,WPUIP230000,2025,5,153.321
+Inputs to Construction Industries,WPUIP230000,2025,2,152.264
+Inputs to Construction Industries,WPUIP230000,2025,3,153.378
+Inputs to Construction Industries,WPUIP230000,2025,4,152.9
+Inputs to Construction Industries,WPUIP230000,2025,5,153.094
+Inputs to Construction Industries,WPUIP230000,2025,6,153.859
+Inputs to Construction Industries,WPUIP230000,2025,7,154.448
 "Inputs to Construction Industries, Energy",WPUIP23000012,2020,1,92.8
 "Inputs to Construction Industries, Energy",WPUIP23000012,2020,2,87.2
 "Inputs to Construction Industries, Energy",WPUIP23000012,2020,3,74.5
@@ -2530,10 +2604,12 @@ Inputs to Construction Industries,WPUIP230000,2025,5,153.321
 "Inputs to Construction Industries, Energy",WPUIP23000012,2024,11,119.596
 "Inputs to Construction Industries, Energy",WPUIP23000012,2024,12,116.105
 "Inputs to Construction Industries, Energy",WPUIP23000012,2025,1,121.452
-"Inputs to Construction Industries, Energy",WPUIP23000012,2025,2,124.259
-"Inputs to Construction Industries, Energy",WPUIP23000012,2025,3,119.612
-"Inputs to Construction Industries, Energy",WPUIP23000012,2025,4,119.999
-"Inputs to Construction Industries, Energy",WPUIP23000012,2025,5,121.042
+"Inputs to Construction Industries, Energy",WPUIP23000012,2025,2,124.268
+"Inputs to Construction Industries, Energy",WPUIP23000012,2025,3,119.763
+"Inputs to Construction Industries, Energy",WPUIP23000012,2025,4,120.023
+"Inputs to Construction Industries, Energy",WPUIP23000012,2025,5,120.266
+"Inputs to Construction Industries, Energy",WPUIP23000012,2025,6,121.155
+"Inputs to Construction Industries, Energy",WPUIP23000012,2025,7,126.165
 "Inputs to Construction Industries, Goods",WPUIP2300001,2020,1,231.0
 "Inputs to Construction Industries, Goods",WPUIP2300001,2020,2,229.7
 "Inputs to Construction Industries, Goods",WPUIP2300001,2020,3,226.5
@@ -2595,10 +2671,12 @@ Inputs to Construction Industries,WPUIP230000,2025,5,153.321
 "Inputs to Construction Industries, Goods",WPUIP2300001,2024,11,318.477
 "Inputs to Construction Industries, Goods",WPUIP2300001,2024,12,317.948
 "Inputs to Construction Industries, Goods",WPUIP2300001,2025,1,322.139
-"Inputs to Construction Industries, Goods",WPUIP2300001,2025,2,323.954
-"Inputs to Construction Industries, Goods",WPUIP2300001,2025,3,325.265
-"Inputs to Construction Industries, Goods",WPUIP2300001,2025,4,325.082
-"Inputs to Construction Industries, Goods",WPUIP2300001,2025,5,325.79
+"Inputs to Construction Industries, Goods",WPUIP2300001,2025,2,323.964
+"Inputs to Construction Industries, Goods",WPUIP2300001,2025,3,325.305
+"Inputs to Construction Industries, Goods",WPUIP2300001,2025,4,324.77
+"Inputs to Construction Industries, Goods",WPUIP2300001,2025,5,325.742
+"Inputs to Construction Industries, Goods",WPUIP2300001,2025,6,326.547
+"Inputs to Construction Industries, Goods",WPUIP2300001,2025,7,327.876
 "Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2020,1,110.1
 "Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2020,2,110.5
 "Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2020,3,111.1
@@ -2660,10 +2738,12 @@ Inputs to Construction Industries,WPUIP230000,2025,5,153.321
 "Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2024,11,153.837
 "Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2024,12,153.956
 "Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,1,155.551
-"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,2,156.185
-"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,3,157.404
-"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,4,157.263
-"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,5,157.517
+"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,2,156.189
+"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,3,157.408
+"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,4,157.097
+"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,5,157.58
+"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,6,157.902
+"Inputs to Construction Industries, Goods Less Foods",WPUIP23000013,2025,7,158.027
 "Inputs to Construction Industries, Services",WPUIP2300002,2020,1,114.8
 "Inputs to Construction Industries, Services",WPUIP2300002,2020,2,114.3
 "Inputs to Construction Industries, Services",WPUIP2300002,2020,3,114.7
@@ -2725,10 +2805,12 @@ Inputs to Construction Industries,WPUIP230000,2025,5,153.321
 "Inputs to Construction Industries, Services",WPUIP2300002,2024,11,147.812
 "Inputs to Construction Industries, Services",WPUIP2300002,2024,12,148.536
 "Inputs to Construction Industries, Services",WPUIP2300002,2025,1,151.094
-"Inputs to Construction Industries, Services",WPUIP2300002,2025,2,151.35
-"Inputs to Construction Industries, Services",WPUIP2300002,2025,3,153.674
-"Inputs to Construction Industries, Services",WPUIP2300002,2025,4,152.575
-"Inputs to Construction Industries, Services",WPUIP2300002,2025,5,153.117
+"Inputs to Construction Industries, Services",WPUIP2300002,2025,2,151.674
+"Inputs to Construction Industries, Services",WPUIP2300002,2025,3,153.731
+"Inputs to Construction Industries, Services",WPUIP2300002,2025,4,152.811
+"Inputs to Construction Industries, Services",WPUIP2300002,2025,5,152.488
+"Inputs to Construction Industries, Services",WPUIP2300002,2025,6,154.006
+"Inputs to Construction Industries, Services",WPUIP2300002,2025,7,154.524
 Insulation Materials,WPU1392,2020,1,193.3
 Insulation Materials,WPU1392,2020,2,195.0
 Insulation Materials,WPU1392,2020,3,196.7
@@ -2790,10 +2872,12 @@ Insulation Materials,WPU1392,2024,10,286.632
 Insulation Materials,WPU1392,2024,11,285.167
 Insulation Materials,WPU1392,2024,12,286.2
 Insulation Materials,WPU1392,2025,1,287.811
-Insulation Materials,WPU1392,2025,2,288.688
-Insulation Materials,WPU1392,2025,3,289.908
-Insulation Materials,WPU1392,2025,4,288.036
-Insulation Materials,WPU1392,2025,5,289.68
+Insulation Materials,WPU1392,2025,2,288.652
+Insulation Materials,WPU1392,2025,3,289.677
+Insulation Materials,WPU1392,2025,4,287.836
+Insulation Materials,WPU1392,2025,5,289.29
+Insulation Materials,WPU1392,2025,6,287.613
+Insulation Materials,WPU1392,2025,7,285.186
 Iron and Steel Scrap,WPU1012,2020,1,428.5
 Iron and Steel Scrap,WPU1012,2020,2,398.0
 Iron and Steel Scrap,WPU1012,2020,3,402.9
@@ -2857,8 +2941,10 @@ Iron and Steel Scrap,WPU1012,2024,12,514.749
 Iron and Steel Scrap,WPU1012,2025,1,530.866
 Iron and Steel Scrap,WPU1012,2025,2,574.367
 Iron and Steel Scrap,WPU1012,2025,3,607.858
-Iron and Steel Scrap,WPU1012,2025,4,559.972
-Iron and Steel Scrap,WPU1012,2025,5,511.875
+Iron and Steel Scrap,WPU1012,2025,4,567.259
+Iron and Steel Scrap,WPU1012,2025,5,538.243
+Iron and Steel Scrap,WPU1012,2025,6,530.821
+Iron and Steel Scrap,WPU1012,2025,7,529.915
 Labor Force Participation Rate,LNS11300000,2020,1,63.3
 Labor Force Participation Rate,LNS11300000,2020,2,63.3
 Labor Force Participation Rate,LNS11300000,2020,3,62.6
@@ -2924,6 +3010,8 @@ Labor Force Participation Rate,LNS11300000,2025,2,62.4
 Labor Force Participation Rate,LNS11300000,2025,3,62.5
 Labor Force Participation Rate,LNS11300000,2025,4,62.6
 Labor Force Participation Rate,LNS11300000,2025,5,62.4
+Labor Force Participation Rate,LNS11300000,2025,6,62.3
+Labor Force Participation Rate,LNS11300000,2025,7,62.2
 Lumber and Plywood,WPUSI004011,2020,1,206.9
 Lumber and Plywood,WPUSI004011,2020,2,211.7
 Lumber and Plywood,WPUSI004011,2020,3,218.8
@@ -2987,8 +3075,10 @@ Lumber and Plywood,WPUSI004011,2024,12,266.755
 Lumber and Plywood,WPUSI004011,2025,1,265.046
 Lumber and Plywood,WPUSI004011,2025,2,270.148
 Lumber and Plywood,WPUSI004011,2025,3,278.301
-Lumber and Plywood,WPUSI004011,2025,4,274.618
-Lumber and Plywood,WPUSI004011,2025,5,271.093
+Lumber and Plywood,WPUSI004011,2025,4,274.637
+Lumber and Plywood,WPUSI004011,2025,5,270.848
+Lumber and Plywood,WPUSI004011,2025,6,267.402
+Lumber and Plywood,WPUSI004011,2025,7,265.233
 Mainenance and Repair Construction,WPUIP232000,2020,1,109.6
 Mainenance and Repair Construction,WPUIP232000,2020,2,109.1
 Mainenance and Repair Construction,WPUIP232000,2020,3,108.2
@@ -3050,10 +3140,12 @@ Mainenance and Repair Construction,WPUIP232000,2024,10,146.517
 Mainenance and Repair Construction,WPUIP232000,2024,11,145.971
 Mainenance and Repair Construction,WPUIP232000,2024,12,146.067
 Mainenance and Repair Construction,WPUIP232000,2025,1,148.445
-Mainenance and Repair Construction,WPUIP232000,2025,2,149.164
-Mainenance and Repair Construction,WPUIP232000,2025,3,150.068
-Mainenance and Repair Construction,WPUIP232000,2025,4,149.495
-Mainenance and Repair Construction,WPUIP232000,2025,5,149.89
+Mainenance and Repair Construction,WPUIP232000,2025,2,149.307
+Mainenance and Repair Construction,WPUIP232000,2025,3,150.174
+Mainenance and Repair Construction,WPUIP232000,2025,4,149.59
+Mainenance and Repair Construction,WPUIP232000,2025,5,149.766
+Mainenance and Repair Construction,WPUIP232000,2025,6,150.638
+Mainenance and Repair Construction,WPUIP232000,2025,7,151.143
 Maint & Repair of Nonres Buildings (Partial),WPU802,2020,1,122.2
 Maint & Repair of Nonres Buildings (Partial),WPU802,2020,2,122.3
 Maint & Repair of Nonres Buildings (Partial),WPU802,2020,3,120.9
@@ -3115,10 +3207,12 @@ Maint & Repair of Nonres Buildings (Partial),WPU802,2024,10,154.186
 Maint & Repair of Nonres Buildings (Partial),WPU802,2024,11,154.222
 Maint & Repair of Nonres Buildings (Partial),WPU802,2024,12,154.306
 Maint & Repair of Nonres Buildings (Partial),WPU802,2025,1,156.897
-Maint & Repair of Nonres Buildings (Partial),WPU802,2025,2,156.354
-Maint & Repair of Nonres Buildings (Partial),WPU802,2025,3,160.275
-Maint & Repair of Nonres Buildings (Partial),WPU802,2025,4,160.339
-Maint & Repair of Nonres Buildings (Partial),WPU802,2025,5,160.482
+Maint & Repair of Nonres Buildings (Partial),WPU802,2025,2,156.352
+Maint & Repair of Nonres Buildings (Partial),WPU802,2025,3,160.267
+Maint & Repair of Nonres Buildings (Partial),WPU802,2025,4,160.296
+Maint & Repair of Nonres Buildings (Partial),WPU802,2025,5,160.36
+Maint & Repair of Nonres Buildings (Partial),WPU802,2025,6,160.586
+Maint & Repair of Nonres Buildings (Partial),WPU802,2025,7,160.705
 Multifamily,WPUIP231120,2020,1,111.7
 Multifamily,WPUIP231120,2020,2,111.2
 Multifamily,WPUIP231120,2020,3,110.9
@@ -3180,10 +3274,12 @@ Multifamily,WPUIP231120,2024,10,149.921
 Multifamily,WPUIP231120,2024,11,149.68
 Multifamily,WPUIP231120,2024,12,149.937
 Multifamily,WPUIP231120,2025,1,151.385
-Multifamily,WPUIP231120,2025,2,152.1
-Multifamily,WPUIP231120,2025,3,153.461
-Multifamily,WPUIP231120,2025,4,153.604
-Multifamily,WPUIP231120,2025,5,154.005
+Multifamily,WPUIP231120,2025,2,152.373
+Multifamily,WPUIP231120,2025,3,153.721
+Multifamily,WPUIP231120,2025,4,153.712
+Multifamily,WPUIP231120,2025,5,154.035
+Multifamily,WPUIP231120,2025,6,155.348
+Multifamily,WPUIP231120,2025,7,155.487
 New Health Care Building Construction,WPU801105,2020,1,118.6
 New Health Care Building Construction,WPU801105,2020,2,119.0
 New Health Care Building Construction,WPU801105,2020,3,118.9
@@ -3245,10 +3341,12 @@ New Health Care Building Construction,WPU801105,2024,10,158.015
 New Health Care Building Construction,WPU801105,2024,11,158.023
 New Health Care Building Construction,WPU801105,2024,12,158.648
 New Health Care Building Construction,WPU801105,2025,1,161.868
-New Health Care Building Construction,WPU801105,2025,2,162.709
-New Health Care Building Construction,WPU801105,2025,3,163.471
-New Health Care Building Construction,WPU801105,2025,4,162.858
-New Health Care Building Construction,WPU801105,2025,5,162.858
+New Health Care Building Construction,WPU801105,2025,2,161.15
+New Health Care Building Construction,WPU801105,2025,3,159.099
+New Health Care Building Construction,WPU801105,2025,4,158.341
+New Health Care Building Construction,WPU801105,2025,5,158.341
+New Health Care Building Construction,WPU801105,2025,6,158.528
+New Health Care Building Construction,WPU801105,2025,7,159.295
 New Industrial Building Construction,WPU801104,2020,1,138.4
 New Industrial Building Construction,WPU801104,2020,2,138.4
 New Industrial Building Construction,WPU801104,2020,3,138.4
@@ -3310,10 +3408,12 @@ New Industrial Building Construction,WPU801104,2024,10,192.178
 New Industrial Building Construction,WPU801104,2024,11,192.307
 New Industrial Building Construction,WPU801104,2024,12,192.704
 New Industrial Building Construction,WPU801104,2025,1,193.168
-New Industrial Building Construction,WPU801104,2025,2,193.498
-New Industrial Building Construction,WPU801104,2025,3,193.585
-New Industrial Building Construction,WPU801104,2025,4,192.745
-New Industrial Building Construction,WPU801104,2025,5,193.605
+New Industrial Building Construction,WPU801104,2025,2,193.561
+New Industrial Building Construction,WPU801104,2025,3,193.648
+New Industrial Building Construction,WPU801104,2025,4,192.766
+New Industrial Building Construction,WPU801104,2025,5,193.562
+New Industrial Building Construction,WPU801104,2025,6,194.731
+New Industrial Building Construction,WPU801104,2025,7,196.703
 New Nonresedential Construction ,WPUIP231200,2020,1,110.1
 New Nonresedential Construction ,WPUIP231200,2020,2,109.4
 New Nonresedential Construction ,WPUIP231200,2020,3,108.5
@@ -3375,10 +3475,12 @@ New Nonresedential Construction ,WPUIP231200,2024,10,150.301
 New Nonresedential Construction ,WPUIP231200,2024,11,149.963
 New Nonresedential Construction ,WPUIP231200,2024,12,149.922
 New Nonresedential Construction ,WPUIP231200,2025,1,151.824
-New Nonresedential Construction ,WPUIP231200,2025,2,152.473
-New Nonresedential Construction ,WPUIP231200,2025,3,153.78
-New Nonresedential Construction ,WPUIP231200,2025,4,153.556
-New Nonresedential Construction ,WPUIP231200,2025,5,154.131
+New Nonresedential Construction ,WPUIP231200,2025,2,152.485
+New Nonresedential Construction ,WPUIP231200,2025,3,153.654
+New Nonresedential Construction ,WPUIP231200,2025,4,153.365
+New Nonresedential Construction ,WPUIP231200,2025,5,153.704
+New Nonresedential Construction ,WPUIP231200,2025,6,154.161
+New Nonresedential Construction ,WPUIP231200,2025,7,154.886
 New Nonresidential Building Construction,WPU801,2020,1,127.2
 New Nonresidential Building Construction,WPU801,2020,2,127.4
 New Nonresidential Building Construction,WPU801,2020,3,127.3
@@ -3440,10 +3542,12 @@ New Nonresidential Building Construction,WPU801,2024,10,175.09
 New Nonresidential Building Construction,WPU801,2024,11,175.095
 New Nonresidential Building Construction,WPU801,2024,12,175.377
 New Nonresidential Building Construction,WPU801,2025,1,176.608
-New Nonresidential Building Construction,WPU801,2025,2,176.739
-New Nonresidential Building Construction,WPU801,2025,3,177.059
-New Nonresidential Building Construction,WPU801,2025,4,176.217
-New Nonresidential Building Construction,WPU801,2025,5,176.687
+New Nonresidential Building Construction,WPU801,2025,2,176.442
+New Nonresidential Building Construction,WPU801,2025,3,176.205
+New Nonresidential Building Construction,WPU801,2025,4,175.329
+New Nonresidential Building Construction,WPU801,2025,5,175.657
+New Nonresidential Building Construction,WPU801,2025,6,175.902
+New Nonresidential Building Construction,WPU801,2025,7,177.032
 New Office Building Construction,WPU801103,2020,1,145.3
 New Office Building Construction,WPU801103,2020,2,145.5
 New Office Building Construction,WPU801103,2020,3,145.5
@@ -3508,7 +3612,9 @@ New Office Building Construction,WPU801103,2025,1,210.675
 New Office Building Construction,WPU801103,2025,2,210.071
 New Office Building Construction,WPU801103,2025,3,210.372
 New Office Building Construction,WPU801103,2025,4,209.129
-New Office Building Construction,WPU801103,2025,5,210.014
+New Office Building Construction,WPU801103,2025,5,209.994
+New Office Building Construction,WPU801103,2025,6,210.512
+New Office Building Construction,WPU801103,2025,7,211.2
 New Residential Construction,WPUIP231100,2020,1,111.1
 New Residential Construction,WPUIP231100,2020,2,110.7
 New Residential Construction,WPUIP231100,2020,3,110.3
@@ -3570,10 +3676,12 @@ New Residential Construction,WPUIP231100,2024,10,148.199
 New Residential Construction,WPUIP231100,2024,11,147.77
 New Residential Construction,WPUIP231100,2024,12,148.036
 New Residential Construction,WPUIP231100,2025,1,150.187
-New Residential Construction,WPUIP231100,2025,2,150.932
-New Residential Construction,WPUIP231100,2025,3,152.205
-New Residential Construction,WPUIP231100,2025,4,151.81
-New Residential Construction,WPUIP231100,2025,5,152.079
+New Residential Construction,WPUIP231100,2025,2,151.172
+New Residential Construction,WPUIP231100,2025,3,152.433
+New Residential Construction,WPUIP231100,2025,4,151.988
+New Residential Construction,WPUIP231100,2025,5,152.081
+New Residential Construction,WPUIP231100,2025,6,153.373
+New Residential Construction,WPUIP231100,2025,7,153.641
 New School Building Construction,WPU801102,2020,1,173.3
 New School Building Construction,WPU801102,2020,2,173.4
 New School Building Construction,WPU801102,2020,3,173.2
@@ -3635,10 +3743,12 @@ New School Building Construction,WPU801102,2024,10,228.288
 New School Building Construction,WPU801102,2024,11,228.391
 New School Building Construction,WPU801102,2024,12,228.506
 New School Building Construction,WPU801102,2025,1,229.774
-New School Building Construction,WPU801102,2025,2,230.216
-New School Building Construction,WPU801102,2025,3,230.306
-New School Building Construction,WPU801102,2025,4,228.877
-New School Building Construction,WPU801102,2025,5,229.859
+New School Building Construction,WPU801102,2025,2,230.215
+New School Building Construction,WPU801102,2025,3,230.292
+New School Building Construction,WPU801102,2025,4,228.852
+New School Building Construction,WPU801102,2025,5,229.109
+New School Building Construction,WPU801102,2025,6,229.13
+New School Building Construction,WPU801102,2025,7,230.743
 New Warehouse Building Construction,WPU801101,2020,1,162.6
 New Warehouse Building Construction,WPU801101,2020,2,162.8
 New Warehouse Building Construction,WPU801101,2020,3,162.8
@@ -3701,9 +3811,11 @@ New Warehouse Building Construction,WPU801101,2024,11,232.847
 New Warehouse Building Construction,WPU801101,2024,12,233.174
 New Warehouse Building Construction,WPU801101,2025,1,233.27
 New Warehouse Building Construction,WPU801101,2025,2,233.289
-New Warehouse Building Construction,WPU801101,2025,3,233.807
-New Warehouse Building Construction,WPU801101,2025,4,233.261
-New Warehouse Building Construction,WPU801101,2025,5,233.199
+New Warehouse Building Construction,WPU801101,2025,3,233.741
+New Warehouse Building Construction,WPU801101,2025,4,233.193
+New Warehouse Building Construction,WPU801101,2025,5,233.131
+New Warehouse Building Construction,WPU801101,2025,6,232.878
+New Warehouse Building Construction,WPU801101,2025,7,235.179
 Nonresidential Maintenance and Repair,WPUIP232200,2020,1,109.4
 Nonresidential Maintenance and Repair,WPUIP232200,2020,2,108.8
 Nonresidential Maintenance and Repair,WPUIP232200,2020,3,107.8
@@ -3765,10 +3877,12 @@ Nonresidential Maintenance and Repair,WPUIP232200,2024,10,146.722
 Nonresidential Maintenance and Repair,WPUIP232200,2024,11,146.157
 Nonresidential Maintenance and Repair,WPUIP232200,2024,12,146.095
 Nonresidential Maintenance and Repair,WPUIP232200,2025,1,148.663
-Nonresidential Maintenance and Repair,WPUIP232200,2025,2,149.357
-Nonresidential Maintenance and Repair,WPUIP232200,2025,3,150.493
-Nonresidential Maintenance and Repair,WPUIP232200,2025,4,149.78
-Nonresidential Maintenance and Repair,WPUIP232200,2025,5,150.222
+Nonresidential Maintenance and Repair,WPUIP232200,2025,2,149.486
+Nonresidential Maintenance and Repair,WPUIP232200,2025,3,150.561
+Nonresidential Maintenance and Repair,WPUIP232200,2025,4,149.822
+Nonresidential Maintenance and Repair,WPUIP232200,2025,5,150.094
+Nonresidential Maintenance and Repair,WPUIP232200,2025,6,150.743
+Nonresidential Maintenance and Repair,WPUIP232200,2025,7,151.334
 Ornamental and Architectural Metal Work,WPU107408,2020,1,305.4
 Ornamental and Architectural Metal Work,WPU107408,2020,2,304.7
 Ornamental and Architectural Metal Work,WPU107408,2020,3,311.0
@@ -3833,7 +3947,9 @@ Ornamental and Architectural Metal Work,WPU107408,2025,1,572.025
 Ornamental and Architectural Metal Work,WPU107408,2025,2,580.901
 Ornamental and Architectural Metal Work,WPU107408,2025,3,623.472
 Ornamental and Architectural Metal Work,WPU107408,2025,4,625.861
-Ornamental and Architectural Metal Work,WPU107408,2025,5,623.567
+Ornamental and Architectural Metal Work,WPU107408,2025,5,623.694
+Ornamental and Architectural Metal Work,WPU107408,2025,6,621.993
+Ornamental and Architectural Metal Work,WPU107408,2025,7,621.993
 Other Misc. Non Residential Construction,WPUIP231234,2020,1,109.6
 Other Misc. Non Residential Construction,WPUIP231234,2020,2,108.9
 Other Misc. Non Residential Construction,WPUIP231234,2020,3,107.7
@@ -3895,10 +4011,12 @@ Other Misc. Non Residential Construction,WPUIP231234,2024,10,149.189
 Other Misc. Non Residential Construction,WPUIP231234,2024,11,148.953
 Other Misc. Non Residential Construction,WPUIP231234,2024,12,148.938
 Other Misc. Non Residential Construction,WPUIP231234,2025,1,150.769
-Other Misc. Non Residential Construction,WPUIP231234,2025,2,151.469
-Other Misc. Non Residential Construction,WPUIP231234,2025,3,152.639
-Other Misc. Non Residential Construction,WPUIP231234,2025,4,152.534
-Other Misc. Non Residential Construction,WPUIP231234,2025,5,153.097
+Other Misc. Non Residential Construction,WPUIP231234,2025,2,151.508
+Other Misc. Non Residential Construction,WPUIP231234,2025,3,152.541
+Other Misc. Non Residential Construction,WPUIP231234,2025,4,152.412
+Other Misc. Non Residential Construction,WPUIP231234,2025,5,152.853
+Other Misc. Non Residential Construction,WPUIP231234,2025,6,153.246
+Other Misc. Non Residential Construction,WPUIP231234,2025,7,153.989
 Other Non Residential,WPUIP231230,2020,1,109.7
 Other Non Residential,WPUIP231230,2020,2,109.1
 Other Non Residential,WPUIP231230,2020,3,108.0
@@ -3960,10 +4078,12 @@ Other Non Residential,WPUIP231230,2024,10,149.435
 Other Non Residential,WPUIP231230,2024,11,149.069
 Other Non Residential,WPUIP231230,2024,12,149.02
 Other Non Residential,WPUIP231230,2025,1,150.995
-Other Non Residential,WPUIP231230,2025,2,151.695
-Other Non Residential,WPUIP231230,2025,3,152.871
-Other Non Residential,WPUIP231230,2025,4,152.568
-Other Non Residential,WPUIP231230,2025,5,153.192
+Other Non Residential,WPUIP231230,2025,2,151.715
+Other Non Residential,WPUIP231230,2025,3,152.764
+Other Non Residential,WPUIP231230,2025,4,152.411
+Other Non Residential,WPUIP231230,2025,5,152.81
+Other Non Residential,WPUIP231230,2025,6,153.236
+Other Non Residential,WPUIP231230,2025,7,153.913
 Paving Mixtures,WPU1394,2020,1,334.6
 Paving Mixtures,WPU1394,2020,2,336.6
 Paving Mixtures,WPU1394,2020,3,330.7
@@ -4025,10 +4145,12 @@ Paving Mixtures,WPU1394,2024,10,399.422
 Paving Mixtures,WPU1394,2024,11,397.656
 Paving Mixtures,WPU1394,2024,12,398.938
 Paving Mixtures,WPU1394,2025,1,447.779
-Paving Mixtures,WPU1394,2025,2,449.761
-Paving Mixtures,WPU1394,2025,3,450.635
-Paving Mixtures,WPU1394,2025,4,409.155
-Paving Mixtures,WPU1394,2025,5,399.938
+Paving Mixtures,WPU1394,2025,2,449.759
+Paving Mixtures,WPU1394,2025,3,450.652
+Paving Mixtures,WPU1394,2025,4,410.89
+Paving Mixtures,WPU1394,2025,5,402.761
+Paving Mixtures,WPU1394,2025,6,403.26
+Paving Mixtures,WPU1394,2025,7,403.992
 Plastic Construction Products,WPU0721,2020,1,229.3
 Plastic Construction Products,WPU0721,2020,2,228.9
 Plastic Construction Products,WPU0721,2020,3,231.3
@@ -4091,9 +4213,11 @@ Plastic Construction Products,WPU0721,2024,11,340.217
 Plastic Construction Products,WPU0721,2024,12,340.324
 Plastic Construction Products,WPU0721,2025,1,340.761
 Plastic Construction Products,WPU0721,2025,2,337.422
-Plastic Construction Products,WPU0721,2025,3,337.255
-Plastic Construction Products,WPU0721,2025,4,338.818
-Plastic Construction Products,WPU0721,2025,5,338.678
+Plastic Construction Products,WPU0721,2025,3,337.27
+Plastic Construction Products,WPU0721,2025,4,338.789
+Plastic Construction Products,WPU0721,2025,5,338.716
+Plastic Construction Products,WPU0721,2025,6,338.196
+Plastic Construction Products,WPU0721,2025,7,337.301
 Plumbing Contractors ,PCU23822X23822X,2020,1,138.8
 Plumbing Contractors ,PCU23822X23822X,2020,2,138.9
 Plumbing Contractors ,PCU23822X23822X,2020,3,137.0
@@ -4157,8 +4281,10 @@ Plumbing Contractors ,PCU23822X23822X,2024,12,176.749
 Plumbing Contractors ,PCU23822X23822X,2025,1,178.524
 Plumbing Contractors ,PCU23822X23822X,2025,2,179.304
 Plumbing Contractors ,PCU23822X23822X,2025,3,182.258
-Plumbing Contractors ,PCU23822X23822X,2025,4,179.807
-Plumbing Contractors ,PCU23822X23822X,2025,5,181.06
+Plumbing Contractors ,PCU23822X23822X,2025,4,179.801
+Plumbing Contractors ,PCU23822X23822X,2025,5,180.385
+Plumbing Contractors ,PCU23822X23822X,2025,6,180.093
+Plumbing Contractors ,PCU23822X23822X,2025,7,180.587
 Power and Communications Structiors,WPUIP231232,2020,1,108.9
 Power and Communications Structiors,WPUIP231232,2020,2,108.1
 Power and Communications Structiors,WPUIP231232,2020,3,106.8
@@ -4220,10 +4346,12 @@ Power and Communications Structiors,WPUIP231232,2024,10,146.237
 Power and Communications Structiors,WPUIP231232,2024,11,145.897
 Power and Communications Structiors,WPUIP231232,2024,12,145.715
 Power and Communications Structiors,WPUIP231232,2025,1,147.371
-Power and Communications Structiors,WPUIP231232,2025,2,148.164
-Power and Communications Structiors,WPUIP231232,2025,3,149.415
-Power and Communications Structiors,WPUIP231232,2025,4,149.508
-Power and Communications Structiors,WPUIP231232,2025,5,150.021
+Power and Communications Structiors,WPUIP231232,2025,2,148.192
+Power and Communications Structiors,WPUIP231232,2025,3,149.362
+Power and Communications Structiors,WPUIP231232,2025,4,149.466
+Power and Communications Structiors,WPUIP231232,2025,5,149.694
+Power and Communications Structiors,WPUIP231232,2025,6,150.201
+Power and Communications Structiors,WPUIP231232,2025,7,151.163
 Precast Concrete Products,WPU1334,2020,1,283.7
 Precast Concrete Products,WPU1334,2020,2,283.5
 Precast Concrete Products,WPU1334,2020,3,285.2
@@ -4288,7 +4416,9 @@ Precast Concrete Products,WPU1334,2025,1,399.881
 Precast Concrete Products,WPU1334,2025,2,402.569
 Precast Concrete Products,WPU1334,2025,3,404.168
 Precast Concrete Products,WPU1334,2025,4,406.329
-Precast Concrete Products,WPU1334,2025,5,409.651
+Precast Concrete Products,WPU1334,2025,5,412.152
+Precast Concrete Products,WPU1334,2025,6,412.441
+Precast Concrete Products,WPU1334,2025,7,414.886
 Prefabricated Metal Buildings,WPU1079,2020,1,341.3
 Prefabricated Metal Buildings,WPU1079,2020,2,341.4
 Prefabricated Metal Buildings,WPU1079,2020,3,345.9
@@ -4351,9 +4481,11 @@ Prefabricated Metal Buildings,WPU1079,2024,11,540.817
 Prefabricated Metal Buildings,WPU1079,2024,12,542.418
 Prefabricated Metal Buildings,WPU1079,2025,1,541.629
 Prefabricated Metal Buildings,WPU1079,2025,2,543.641
-Prefabricated Metal Buildings,WPU1079,2025,3,548.607
-Prefabricated Metal Buildings,WPU1079,2025,4,547.747
-Prefabricated Metal Buildings,WPU1079,2025,5,552.783
+Prefabricated Metal Buildings,WPU1079,2025,3,548.586
+Prefabricated Metal Buildings,WPU1079,2025,4,547.749
+Prefabricated Metal Buildings,WPU1079,2025,5,552.75
+Prefabricated Metal Buildings,WPU1079,2025,6,558.696
+Prefabricated Metal Buildings,WPU1079,2025,7,553.537
 Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2020,1,248.0
 Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2020,2,245.6
 Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2020,3,250.2
@@ -4417,8 +4549,10 @@ Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2024,12,352.495
 Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2025,1,351.626
 Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2025,2,348.518
 Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2025,3,347.865
-Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2025,4,345.234
-Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2025,5,358.106
+Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2025,4,345.02
+Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2025,5,357.967
+Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2025,6,358.009
+Prepared Asphalt and Tar Rooging and Siding Products,WPU1361,2025,7,355.532
 Prestressed Concrete Products,WPU1335,2020,1,238.8
 Prestressed Concrete Products,WPU1335,2020,2,237.7
 Prestressed Concrete Products,WPU1335,2020,3,237.7
@@ -4484,6 +4618,8 @@ Prestressed Concrete Products,WPU1335,2025,2,363.209
 Prestressed Concrete Products,WPU1335,2025,3,364.478
 Prestressed Concrete Products,WPU1335,2025,4,365.118
 Prestressed Concrete Products,WPU1335,2025,5,365.211
+Prestressed Concrete Products,WPU1335,2025,6,366.237
+Prestressed Concrete Products,WPU1335,2025,7,367.183
 Producer Price Index (PPI For Final Demand,WPUFD4,2020,1,119.0
 Producer Price Index (PPI For Final Demand,WPUFD4,2020,2,118.4
 Producer Price Index (PPI For Final Demand,WPUFD4,2020,3,118.1
@@ -4545,10 +4681,12 @@ Producer Price Index (PPI For Final Demand,WPUFD4,2024,10,146.291
 Producer Price Index (PPI For Final Demand,WPUFD4,2024,11,145.994
 Producer Price Index (PPI For Final Demand,WPUFD4,2024,12,146.189
 Producer Price Index (PPI For Final Demand,WPUFD4,2025,1,147.604
-Producer Price Index (PPI For Final Demand,WPUFD4,2025,2,148.194
-Producer Price Index (PPI For Final Demand,WPUFD4,2025,3,148.492
-Producer Price Index (PPI For Final Demand,WPUFD4,2025,4,148.207
-Producer Price Index (PPI For Final Demand,WPUFD4,2025,5,148.294
+Producer Price Index (PPI For Final Demand,WPUFD4,2025,2,148.169
+Producer Price Index (PPI For Final Demand,WPUFD4,2025,3,148.319
+Producer Price Index (PPI For Final Demand,WPUFD4,2025,4,148.023
+Producer Price Index (PPI For Final Demand,WPUFD4,2025,5,148.45
+Producer Price Index (PPI For Final Demand,WPUFD4,2025,6,148.759
+Producer Price Index (PPI For Final Demand,WPUFD4,2025,7,150.039
 Ready Mixed Concrete,WPU1333,2020,1,281.6
 Ready Mixed Concrete,WPU1333,2020,2,284.3
 Ready Mixed Concrete,WPU1333,2020,3,285.9
@@ -4611,9 +4749,11 @@ Ready Mixed Concrete,WPU1333,2024,11,387.459
 Ready Mixed Concrete,WPU1333,2024,12,385.931
 Ready Mixed Concrete,WPU1333,2025,1,390.311
 Ready Mixed Concrete,WPU1333,2025,2,389.524
-Ready Mixed Concrete,WPU1333,2025,3,388.96
-Ready Mixed Concrete,WPU1333,2025,4,389.863
-Ready Mixed Concrete,WPU1333,2025,5,390.399
+Ready Mixed Concrete,WPU1333,2025,3,388.511
+Ready Mixed Concrete,WPU1333,2025,4,386.098
+Ready Mixed Concrete,WPU1333,2025,5,387.457
+Ready Mixed Concrete,WPU1333,2025,6,387.412
+Ready Mixed Concrete,WPU1333,2025,7,385.5
 Residential Maintenance and Repair,WPUIP232100,2020,1,110.0
 Residential Maintenance and Repair,WPUIP232100,2020,2,109.6
 Residential Maintenance and Repair,WPUIP232100,2020,3,108.9
@@ -4675,10 +4815,12 @@ Residential Maintenance and Repair,WPUIP232100,2024,10,145.552
 Residential Maintenance and Repair,WPUIP232100,2024,11,145.162
 Residential Maintenance and Repair,WPUIP232100,2024,12,145.385
 Residential Maintenance and Repair,WPUIP232100,2025,1,147.319
-Residential Maintenance and Repair,WPUIP232100,2025,2,148.293
-Residential Maintenance and Repair,WPUIP232100,2025,3,149.1
-Residential Maintenance and Repair,WPUIP232100,2025,4,148.788
-Residential Maintenance and Repair,WPUIP232100,2025,5,149.059
+Residential Maintenance and Repair,WPUIP232100,2025,2,148.51
+Residential Maintenance and Repair,WPUIP232100,2025,3,149.341
+Residential Maintenance and Repair,WPUIP232100,2025,4,149.04
+Residential Maintenance and Repair,WPUIP232100,2025,5,149.047
+Residential Maintenance and Repair,WPUIP232100,2025,6,150.258
+Residential Maintenance and Repair,WPUIP232100,2025,7,150.573
 Roofing Contractors,PCU23816X23816X,2020,1,139.5
 Roofing Contractors,PCU23816X23816X,2020,2,139.5
 Roofing Contractors,PCU23816X23816X,2020,3,139.9
@@ -4741,9 +4883,11 @@ Roofing Contractors,PCU23816X23816X,2024,11,212.92
 Roofing Contractors,PCU23816X23816X,2024,12,212.901
 Roofing Contractors,PCU23816X23816X,2025,1,216.343
 Roofing Contractors,PCU23816X23816X,2025,2,215.078
-Roofing Contractors,PCU23816X23816X,2025,3,214.834
-Roofing Contractors,PCU23816X23816X,2025,4,215.601
-Roofing Contractors,PCU23816X23816X,2025,5,215.74
+Roofing Contractors,PCU23816X23816X,2025,3,214.81
+Roofing Contractors,PCU23816X23816X,2025,4,215.591
+Roofing Contractors,PCU23816X23816X,2025,5,215.65
+Roofing Contractors,PCU23816X23816X,2025,6,216.635
+Roofing Contractors,PCU23816X23816X,2025,7,219.494
 Sheet Metal Products,WPU1073,2020,1,217.6
 Sheet Metal Products,WPU1073,2020,2,217.7
 Sheet Metal Products,WPU1073,2020,3,217.4
@@ -4806,9 +4950,11 @@ Sheet Metal Products,WPU1073,2024,11,319.544
 Sheet Metal Products,WPU1073,2024,12,318.485
 Sheet Metal Products,WPU1073,2025,1,320.099
 Sheet Metal Products,WPU1073,2025,2,322.178
-Sheet Metal Products,WPU1073,2025,3,327.0
-Sheet Metal Products,WPU1073,2025,4,330.577
-Sheet Metal Products,WPU1073,2025,5,330.714
+Sheet Metal Products,WPU1073,2025,3,326.934
+Sheet Metal Products,WPU1073,2025,4,330.144
+Sheet Metal Products,WPU1073,2025,5,332.19
+Sheet Metal Products,WPU1073,2025,6,336.039
+Sheet Metal Products,WPU1073,2025,7,336.16
 Stainless and Alloy Steel Scrap,WPU101212,2020,1,365.1
 Stainless and Alloy Steel Scrap,WPU101212,2020,2,348.7
 Stainless and Alloy Steel Scrap,WPU101212,2020,3,356.3
@@ -4874,6 +5020,8 @@ Stainless and Alloy Steel Scrap,WPU101212,2025,2,436.044
 Stainless and Alloy Steel Scrap,WPU101212,2025,3,432.729
 Stainless and Alloy Steel Scrap,WPU101212,2025,4,415.492
 Stainless and Alloy Steel Scrap,WPU101212,2025,5,441.083
+Stainless and Alloy Steel Scrap,WPU101212,2025,6,429.621
+Stainless and Alloy Steel Scrap,WPU101212,2025,7,419.372
 Steel Mill Products,WPU1017,2020,1,187.3
 Steel Mill Products,WPU1017,2020,2,187.4
 Steel Mill Products,WPU1017,2020,3,188.7
@@ -4936,9 +5084,11 @@ Steel Mill Products,WPU1017,2024,11,278.339
 Steel Mill Products,WPU1017,2024,12,266.511
 Steel Mill Products,WPU1017,2025,1,261.563
 Steel Mill Products,WPU1017,2025,2,268.865
-Steel Mill Products,WPU1017,2025,3,287.267
-Steel Mill Products,WPU1017,2025,4,303.488
-Steel Mill Products,WPU1017,2025,5,324.966
+Steel Mill Products,WPU1017,2025,3,287.362
+Steel Mill Products,WPU1017,2025,4,303.829
+Steel Mill Products,WPU1017,2025,5,326.977
+Steel Mill Products,WPU1017,2025,6,309.595
+Steel Mill Products,WPU1017,2025,7,308.102
 Steel Pipe and Tube,WPU101706,2020,1,270.3
 Steel Pipe and Tube,WPU101706,2020,2,271.3
 Steel Pipe and Tube,WPU101706,2020,3,272.3
@@ -5002,8 +5152,10 @@ Steel Pipe and Tube,WPU101706,2024,12,358.102
 Steel Pipe and Tube,WPU101706,2025,1,353.394
 Steel Pipe and Tube,WPU101706,2025,2,350.787
 Steel Pipe and Tube,WPU101706,2025,3,363.775
-Steel Pipe and Tube,WPU101706,2025,4,379.773
-Steel Pipe and Tube,WPU101706,2025,5,384.878
+Steel Pipe and Tube,WPU101706,2025,4,379.684
+Steel Pipe and Tube,WPU101706,2025,5,384.521
+Steel Pipe and Tube,WPU101706,2025,6,386.295
+Steel Pipe and Tube,WPU101706,2025,7,383.521
 Truck Transportation of Freight,WPU3012,2020,1,126.0
 Truck Transportation of Freight,WPU3012,2020,2,125.6
 Truck Transportation of Freight,WPU3012,2020,3,124.7
@@ -5065,10 +5217,12 @@ Truck Transportation of Freight,WPU3012,2024,10,149.78
 Truck Transportation of Freight,WPU3012,2024,11,149.248
 Truck Transportation of Freight,WPU3012,2024,12,151.456
 Truck Transportation of Freight,WPU3012,2025,1,154.042
-Truck Transportation of Freight,WPU3012,2025,2,154.038
-Truck Transportation of Freight,WPU3012,2025,3,152.374
-Truck Transportation of Freight,WPU3012,2025,4,153.719
-Truck Transportation of Freight,WPU3012,2025,5,153.839
+Truck Transportation of Freight,WPU3012,2025,2,154.047
+Truck Transportation of Freight,WPU3012,2025,3,150.201
+Truck Transportation of Freight,WPU3012,2025,4,151.53
+Truck Transportation of Freight,WPU3012,2025,5,151.997
+Truck Transportation of Freight,WPU3012,2025,6,151.053
+Truck Transportation of Freight,WPU3012,2025,7,152.531
 Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2020,1,146.5
 Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2020,2,147.7
 Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2020,3,147.3
@@ -5130,10 +5284,12 @@ Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2024,10,185.754
 Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2024,11,185.744
 Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2024,12,185.871
 Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,1,188.05
-Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,2,186.596
-Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,3,186.262
-Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,4,186.546
-Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,5,186.776
+Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,2,187.477
+Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,3,187.591
+Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,4,189.058
+Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,5,187.179
+Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,6,186.986
+Truck and Bus (Inc Off Highway) Pneumatic Tires,WPU07120105,2025,7,193.53
 Unemployment Rate,LNS14000000,2020,1,3.6
 Unemployment Rate,LNS14000000,2020,2,3.5
 Unemployment Rate,LNS14000000,2020,3,4.4
@@ -5199,3 +5355,5 @@ Unemployment Rate,LNS14000000,2025,2,4.1
 Unemployment Rate,LNS14000000,2025,3,4.2
 Unemployment Rate,LNS14000000,2025,4,4.2
 Unemployment Rate,LNS14000000,2025,5,4.2
+Unemployment Rate,LNS14000000,2025,6,4.1
+Unemployment Rate,LNS14000000,2025,7,4.2
