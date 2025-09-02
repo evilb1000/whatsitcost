@@ -172,8 +172,8 @@ export default function GPTChatAssistant() {
               backgroundColor: "rgba(255, 255, 255, 0.85)",
               borderRadius: "16px",
               width: "100%",
-              maxWidth: "600px",
-              height: "80vh",
+              maxWidth: "960px",
+              height: "88vh",
               padding: "24px",
               boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
               fontSize: "18px",
@@ -237,13 +237,17 @@ export default function GPTChatAssistant() {
                 }
 
                 if (msg.content?.type === "chart") {
-                  const { title, points, metric, material } = msg.content.payload || {};
+                  const { title, points, metric, material, series } = msg.content.payload || {};
                   return (
                     <div key={i} style={{ ...baseStyle, width: "100%", maxWidth: "100%" }}>
                       <div style={{ fontWeight: "bold", marginBottom: "6px" }}>{title || `${material} — ${metric}`}</div>
                       <div style={{ width: "100%", overflowX: "auto" }}>
                         {/* Simple inline SVG line chart (no extra deps) */}
-                        <MiniLineChart data={points || []} height={160} />
+                        {Array.isArray(series) && series.length > 0 ? (
+                          <MiniMultiLineChart series={series} height={200} />
+                        ) : (
+                          <MiniLineChart data={points || []} height={160} />
+                        )}
                       </div>
                     </div>
                   );
@@ -292,7 +296,7 @@ export default function GPTChatAssistant() {
   );
 }
 
-function MiniLineChart({ data, width = 560, height = 160, padding = 16 }) {
+function MiniLineChart({ data, width = 600, height = 180, padding = 56 }) {
   // Guard
   if (!Array.isArray(data) || data.length === 0) {
     return <div style={{ fontStyle: "italic", color: "#64748b" }}>No data for chart.</div>;
@@ -321,11 +325,33 @@ function MiniLineChart({ data, width = 560, height = 160, padding = 16 }) {
   const showZero = minY <= 0 && maxY >= 0;
   const zeroY = padding + (1 - (0 - minY) / ySpan) * innerH;
 
+  // Y axis ticks
+  const numTicks = 5;
+  const tickVals = Array.from({ length: numTicks }, (_, i) => minY + (i * ySpan) / (numTicks - 1));
+  const yToSvg = (v) => padding + (1 - (v - minY) / ySpan) * innerH;
+
   return (
     <svg width={width} height={height} style={{ background: "white", borderRadius: 8, border: "1px solid #e2e8f0" }}>
+      {/* Y grid and ticks */}
+      {tickVals.map((tv, i) => (
+        <g key={i}>
+          <line x1={padding} x2={width - padding} y1={yToSvg(tv)} y2={yToSvg(tv)} stroke="#eef2f7" />
+          <text x={padding - 12} y={yToSvg(tv) + 3} fontSize="10" fill="#64748b" textAnchor="end">
+            {Number(tv).toFixed(2)}%
+          </text>
+        </g>
+      ))}
+
+      {/* Zero line emphasis */}
+      {showZero && <line x1={padding} x2={width - padding} y1={zeroY} y2={zeroY} stroke="#cbd5e1" strokeDasharray="4 4" />}
+
+      {/* Data line */}
       <polyline fill="none" stroke="#2563eb" strokeWidth="2" points={pointsStr} />
-      {showZero && <line x1={padding} x2={width - padding} y1={zeroY} y2={zeroY} stroke="#e2e8f0" strokeDasharray="4 4" />}
-      {/* Simple axes labels: first and last date */}
+
+      {/* Axis label */}
+      <text x={padding} y={padding - 6} fontSize="10" fill="#64748b">MoM (%)</text>
+
+      {/* X labels: first and last date */}
       <text x={padding} y={height - 4} fontSize="10" fill="#64748b">
         {data[0]?.date}
       </text>
@@ -333,5 +359,80 @@ function MiniLineChart({ data, width = 560, height = 160, padding = 16 }) {
         {data[data.length - 1]?.date}
       </text>
     </svg>
+  );
+}
+
+function MiniMultiLineChart({ series, width = 720, height = 220, padding = 56 }) {
+  const colors = ["#2563eb", "#16a34a", "#dc2626", "#7c3aed"];
+  const clean = (series || []).filter((s) => Array.isArray(s.points) && s.points.length > 0);
+  if (clean.length === 0) {
+    return <div style={{ fontStyle: "italic", color: "#64748b" }}>No data for chart.</div>;
+  }
+
+  // Determine global min/max across all series
+  const allValues = clean.flatMap((s) => s.points.map((p) => Number(p.value)));
+  const minY = Math.min(...allValues);
+  const maxY = Math.max(...allValues);
+  const ySpan = maxY - minY || 1;
+
+  const maxLen = Math.max(...clean.map((s) => s.points.length));
+  const innerW = width - padding * 2;
+  const innerH = height - padding * 2;
+
+  const toXY = (len, idx, val) => {
+    const x = padding + (idx / Math.max(1, len - 1)) * innerW;
+    const y = padding + (1 - (Number(val) - minY) / ySpan) * innerH;
+    return `${x},${y}`;
+  };
+
+  // Y axis ticks
+  const numTicks = 5;
+  const tickVals = Array.from({ length: numTicks }, (_, i) => minY + (i * ySpan) / (numTicks - 1));
+  const yToSvg = (v) => padding + (1 - (v - minY) / ySpan) * innerH;
+
+  // Legend
+  const legend = (
+    <div style={{ display: "flex", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
+      {clean.map((s, i) => (
+        <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <span style={{ width: 12, height: 12, background: colors[i % colors.length], display: "inline-block", borderRadius: 2 }} />
+          <span style={{ fontSize: 12, color: "#334155" }}>{s.material}</span>
+        </div>
+      ))}
+    </div>
+  );
+
+  // Labels (first/last date from longest series)
+  const firstDate = clean.find((s) => s.points.length === maxLen)?.points[0]?.date || clean[0].points[0].date;
+  const lastDate = clean.find((s) => s.points.length === maxLen)?.points[maxLen - 1]?.date || clean[0].points.slice(-1)[0].date;
+
+  return (
+    <div>
+      {legend}
+      <svg width={width} height={height} style={{ background: "white", borderRadius: 8, border: "1px solid #e2e8f0" }}>
+        {/* Y grid and ticks */}
+        {tickVals.map((tv, i) => (
+          <g key={i}>
+            <line x1={padding} x2={width - padding} y1={yToSvg(tv)} y2={yToSvg(tv)} stroke="#eef2f7" />
+            <text x={padding - 12} y={yToSvg(tv) + 3} fontSize="10" fill="#64748b" textAnchor="end">
+              {Number(tv).toFixed(2)}%
+            </text>
+          </g>
+        ))}
+        {clean.map((s, i) => {
+          const pts = s.points
+            .map((p, idx) => toXY(s.points.length, idx, p.value))
+            .join(" ");
+          return <polyline key={i} fill="none" stroke={colors[i % colors.length]} strokeWidth="2" points={pts} />;
+        })}
+        {minY <= 0 && maxY >= 0 && (
+          <line x1={padding} x2={width - padding} y1={padding + (1 - (0 - minY) / ySpan) * innerH} y2={padding + (1 - (0 - minY) / ySpan) * innerH} stroke="#e2e8f0" strokeDasharray="4 4" />
+        )}
+        {/* Axis label */}
+        <text x={padding} y={padding - 6} fontSize="10" fill="#64748b">MoM (%)</text>
+        <text x={padding} y={height - 4} fontSize="10" fill="#64748b">{firstDate}</text>
+        <text x={width - padding} y={height - 4} fontSize="10" fill="#64748b" textAnchor="end">{lastDate}</text>
+      </svg>
+    </div>
   );
 }

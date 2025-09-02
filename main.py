@@ -326,6 +326,33 @@ def get_mom_series(material: str, months: int = 24):
     points = build_mom_series(material, months)
     return {"material": material, "metric": "MoM", "months": months, "points": points}
 
+
+@app.get("/mom-series-multi")
+def get_mom_series_multi(materials: str, months: int = 24):
+    """
+    materials: comma-separated list of material names
+    months: number of months to include
+    """
+    print(f"📈 Building multi-series MoM for: {materials} over {months} months")
+    names = [m.strip() for m in materials.split(",") if m.strip()]
+    if not names:
+        raise HTTPException(status_code=400, detail="No materials provided")
+    if len(names) > 4:
+        names = names[:4]
+    series_list = []
+    for name in names:
+        # Try exact match; if not found, try case-insensitive lookup from material_list
+        key = name if name in trendlines_by_material else next((m for m in material_list if m.lower() == name.lower()), None)
+        if not key:
+            series_list.append({"material": name, "error": "Material not found"})
+            continue
+        try:
+            points = build_mom_series(key, months)
+            series_list.append({"material": key, "points": points})
+        except HTTPException as e:
+            series_list.append({"material": key, "error": e.detail})
+    return {"metric": "MoM", "months": months, "series": series_list}
+
 # === GPT Chat Endpoint ===
 
 class GPTRequest(BaseModel):
@@ -337,27 +364,44 @@ async def run_gpt(query: GPTQuery):
 
     try:
         # Visualization intent: detect chart requests and return chart data payload
-        viz_triggers = ["chart", "graph", "plot", "visual", "visualize", "visualisation", "visualization"]
+        viz_triggers = [
+            "chart", "graph", "plot", "visual", "visualize", "visualisation", "visualization",
+            "trendline", "trendlines", "trend", "trends"
+        ]
         if any(t in query.prompt.lower() for t in viz_triggers):
             print("🖼️ Visualization intent detected — preparing chart data")
-            # First try simple substring match to avoid GPT dependency in local/dev
-            target_material = next((m for m in material_list if m.lower() in query.prompt.lower()), None)
-            if not target_material and client is not None:
+            # Collect up to 4 materials mentioned in the prompt
+            lowered = query.prompt.lower()
+            matched = []
+            for m in material_list:
+                if m.lower() in lowered:
+                    matched.append(m)
+                if len(matched) >= 4:
+                    break
+            # If none matched and GPT available, try GPT resolver once
+            if not matched and client is not None:
                 intent = resolve_prompt_with_gpt(query.prompt, material_list)
-                target_material = intent.get("material")
-            if not target_material:
-                raise HTTPException(status_code=400, detail="Could not determine a material for the chart.")
+                if intent.get("material"):
+                    matched = [intent["material"]]
+            if not matched:
+                raise HTTPException(status_code=400, detail="Could not determine material(s) for the chart.")
 
             months = parse_months_from_prompt(query.prompt)
-            series = build_mom_series(target_material, months)
+            multi_series = []
+            for mat in matched:
+                try:
+                    pts = build_mom_series(mat, months)
+                    multi_series.append({"material": mat, "points": pts})
+                except HTTPException as e:
+                    multi_series.append({"material": mat, "error": e.detail, "points": []})
+            title = ", ".join(matched[:4]) + f" — MoM over last {months} months"
             return {
                 "chartData": {
                     "type": "line",
                     "metric": "MoM",
-                    "material": target_material,
                     "months": months,
-                    "points": series,
-                    "title": f"{target_material} — MoM over last {months} months"
+                    "series": multi_series,
+                    "title": title
                 }
             }
 
