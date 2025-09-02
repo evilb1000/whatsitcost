@@ -44,6 +44,7 @@ export default function GPTChatAssistant() {
       console.log("🧠 Received response from backend:", data);
 
       if (data.chartData) {
+        console.log("📊 Chart data received:", data.chartData);
         setMessages((prev) => [
           ...prev,
           { role: "assistant", content: { type: "chart", payload: data.chartData } },
@@ -167,6 +168,7 @@ export default function GPTChatAssistant() {
             zIndex: 99999,
             padding: "20px",
             boxSizing: "border-box",
+            isolation: "isolate",
           }}
         >
           <div
@@ -180,10 +182,12 @@ export default function GPTChatAssistant() {
               boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
               fontSize: "18px",
               fontFamily: "josefin-sans, sans-serif",
+              color: "#1e293b",
               display: "flex",
               flexDirection: "column",
               position: "relative",
               overflow: "hidden",
+              isolation: "isolate",
             }}
           >
             {/* ✕ Close Button */}
@@ -441,7 +445,7 @@ function MiniMultiLineChart({ series, width = "100%", height = 220, padding = 56
     const allDates = [...new Set(clean.flatMap(s => s.points.map(p => p.date)))].sort();
     
     // Create header with material names
-    const headers = ["Date", ...clean.map(s => s.material || "Material")];
+    const headers = ["Date", ...clean.map(s => s.material || "Unknown Material")];
     
     // Create rows
     const rows = allDates.map(date => {
@@ -512,7 +516,7 @@ function MiniMultiLineChart({ series, width = "100%", height = 220, padding = 56
       {clean.map((s, i) => (
         <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
           <span style={{ width: 12, height: 12, background: colors[i % colors.length], display: "inline-block", borderRadius: 2 }} />
-          <span style={{ fontSize: 12, color: "#334155" }}>{s.material}</span>
+          <span style={{ fontSize: 12, color: "#334155" }}>{s.material || "Unknown Material"}</span>
         </div>
       ))}
     </div>
