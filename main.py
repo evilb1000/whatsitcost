@@ -84,7 +84,8 @@ def resolve_prompt_with_gpt(prompt: str, materials: list) -> dict:
             "IMPORTANT:\n"
             "- Do not use 'latest' as a metric.\n"
             "- If no metric is specified, default to 'momentum'.\n"
-            "- Only use 'latest' in the 'date' field.\n\n"
+            "- Only use 'latest' in the 'date' field.\n"
+            "- Stay strictly clinical. Do not infer causes or offer explanations.\n\n"
             "Return only a valid JSON object like:\n"
             "{ \"material\": \"Asphalt (At Refinery)\", \"metric\": \"momentum\", \"date\": \"2024-11\" }\n\n"
             "Here is the list of materials:\n" +
@@ -456,9 +457,9 @@ async def run_gpt(query: GPTQuery):
                     "   - Final Demand Construction Index\n"
                     "   - Inputs to Construction Industries\n"
                     "   - For each index, include both the month-over-month (MoM) and year-over-year (YoY) percentage change.\n\n"
-                    "2. Summarize the overall market direction:\n"
-                    "   - Is the majority of material movement upward, downward, or stable?\n"
-                    "   - Use clear, declarative language to describe the market.\n\n"
+                    "2. Summarize the overall market direction (clinical statement only):\n"
+                    "   - State whether movements are mostly up, down, or stable based on counts.\n"
+                    "   - Do not speculate on causes or implications.\n\n"
                     "3. Include the percentage breakdown:\n"
                     "   - % of materials that increased\n"
                     "   - % that decreased\n"
@@ -467,11 +468,12 @@ async def run_gpt(query: GPTQuery):
                     "4. List the standout performers:\n"
                     "   - Top risers with both MoM and YoY percentage increases\n"
                     "   - Top fallers with both MoM and YoY percentage decreases\n\n"
-                    "**Formatting Instructions:**\n"
+                    "**Formatting & Style Instructions:**\n"
                     "- Structure the output as concise, readable paragraphs — do not use numbered sections or bullet points.\n"
                     "- Each of the four items above should be its own paragraph.\n"
-                    "- Use formal, analytical language suited for a financial or economic report.\n"
-                    "- Avoid vague commentary, filler, or speculative language.\n\n"
+                    "- Use formal, clinical language.\n"
+                    "- Do NOT offer reasons, implications, or commentary (e.g., 'indicating demand has gone up', 'doing well', 'due to').\n"
+                    "- Only state observed direction and percentages from the data.\n\n"
                     "Snapshot data:\n" + json.dumps(snapshot_summary, indent=2)
             )
 
@@ -501,13 +503,13 @@ async def run_gpt(query: GPTQuery):
 
             cluster_prompt = (
                 f"You are a market analyst assistant. Based on the following data for the '{material}' cluster, "
-                f"write a concise, expert-level financial summary. Your tone should be formal, analytical, and direct.\n\n"
+                f"write a concise, expert-level financial summary. Your tone must be formal and strictly clinical.\n\n"
                 f"Cluster data:\n{json.dumps(cluster_blob, indent=2)}\n\n"
                 f"**Instructions:**\n"
-                f"- Focus on both MoM and YoY changes.\n"
-                f"- Highlight any major outliers or movers within the group.\n"
-                f"- Keep it clean, structured, and free of bullet points or numbered lists.\n"
-                f"- This will be shown in a professional financial app — so avoid fluff or speculation."
+                f"- Focus only on MoM and YoY changes and magnitudes.\n"
+                f"- Highlight major outliers or movers numerically.\n"
+                f"- Do not offer reasons, implications, or commentary (no 'indicates', 'suggests', 'demand', 'doing well', 'due to').\n"
+                f"- Keep it clean, structured, and free of bullet points or numbered lists."
             )
 
             final_response = client.chat.completions.create(
@@ -569,8 +571,11 @@ async def run_gpt(query: GPTQuery):
                 {
                     "role": "system",
                     "content": (
-                        "You're a helpful economic analyst. Use the tool output below to write a clear summary of the trend.\n"
-                        "Stay professional and focused. If there's a large spike or drop, highlight it.\n"
+                        "You are a clinical economic reporting assistant. Use ONLY the provided tool output to summarize observed movements.\n"
+                        "Rules:\n"
+                        "- Do NOT explain causes, implications, or motivations.\n"
+                        "- Do NOT use speculative phrasing (e.g., 'indicates', 'suggests', 'due to', 'demand', 'supply', 'doing well').\n"
+                        "- Only state direction (up/down/stable) and magnitudes (MoM/YoY percentages).\n"
                     )
                 },
                 { "role": "user", "content": query.prompt },
