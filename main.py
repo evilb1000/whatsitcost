@@ -507,11 +507,14 @@ async def run_gpt(query: GPTQuery):
                 f"Cluster data:\n{json.dumps(cluster_blob, indent=2)}\n\n"
                 f"**Output Structure:**\n"
                 f"1) A single paragraph of 1–2 sentences summarizing observed movements across the cluster (no causes).\n"
-                f"2) A bulleted list of per-material movements formatted as: '- <Material>: MoM <x.xx>% | YoY <y.yy>%'.\n\n"
+                f"2) A vertical bulleted list with each material on its own line:\n"
+                f"   - <Material>: MoM <x.xx>% | YoY <y.yy>%\n"
+                f"   - <Material>: MoM <x.xx>% | YoY <y.yy>%\n"
+                f"   (etc.)\n\n"
                 f"**Rules:**\n"
                 f"- Focus only on MoM and YoY direction and magnitudes.\n"
                 f"- Do not offer reasons, implications, or commentary (no 'indicates', 'suggests', 'demand', 'due to').\n"
-                f"- Use hyphen bullets only; keep each bullet to one line.\n"
+                f"- Use hyphen bullets only; each bullet must be on its own line.\n"
                 f"- If a value is missing, write 'n/a'."
             )
 
