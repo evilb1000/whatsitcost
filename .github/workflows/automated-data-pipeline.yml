@@ -2,13 +2,9 @@ name: Big Alpha Kings Automated Data Pipeline
 
 on:
   schedule:
-    # Run at 4:00 PM EST on specific dates
-    # 2024-09-10, 2024-10-16, 2024-11-14, 2024-12-11
-    - cron: '0 21 10 9 *'   # Sept 10 at 4pm EST (9pm UTC)
-    - cron: '0 21 16 10 *'  # Oct 16 at 4pm EST (9pm UTC) 
-    - cron: '0 21 14 11 *'  # Nov 14 at 4pm EST (9pm UTC)
-    - cron: '0 21 11 12 *'  # Dec 11 at 4pm EST (9pm UTC)
-  
+    # Run monthly on the 15th at 21:00 UTC (~4pm/5pm ET depending on DST)
+    - cron: '0 21 15 * *'
+
   # Allow manual triggering
   workflow_dispatch:
     inputs:
@@ -55,3 +51,5 @@ jobs:
         echo "✅ Automated data pipeline completed successfully!"
         echo "🚀 AI data is now fresh and deployed!"
         echo "📅 Next scheduled run: Check workflow schedule"
+
+

@@ -2538,22 +2538,27 @@
     {
       "Date": "2025-04",
       "MoM_3yr_avg": -1.05,
-      "YoY_3yr_avg": 0.41
+      "YoY_3yr_avg": 0.42
     },
     {
       "Date": "2025-05",
-      "MoM_3yr_avg": -1.36,
-      "YoY_3yr_avg": -2.2
+      "MoM_3yr_avg": -1.35,
+      "YoY_3yr_avg": -2.19
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": -1.75,
-      "YoY_3yr_avg": -5.43
+      "MoM_3yr_avg": -1.74,
+      "YoY_3yr_avg": -5.42
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": -1.03,
-      "YoY_3yr_avg": -7.68
+      "MoM_3yr_avg": -1.04,
+      "YoY_3yr_avg": -7.67
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.78,
+      "YoY_3yr_avg": -9.41
     }
   ],
   "Aluminum Mill Shapes": [
@@ -4749,8 +4754,13 @@
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.28,
+      "MoM_3yr_avg": 0.29,
       "YoY_3yr_avg": -0.68
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.54,
+      "YoY_3yr_avg": -0.12
     }
   ],
   "Architectural Coatings": [
@@ -6931,23 +6941,28 @@
     },
     {
       "Date": "2025-04",
-      "MoM_3yr_avg": 0.15,
-      "YoY_3yr_avg": 8.15
+      "MoM_3yr_avg": 0.13,
+      "YoY_3yr_avg": 8.14
     },
     {
       "Date": "2025-05",
-      "MoM_3yr_avg": 0.13,
-      "YoY_3yr_avg": 7.3
+      "MoM_3yr_avg": 0.11,
+      "YoY_3yr_avg": 7.26
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": 0.12,
-      "YoY_3yr_avg": 6.45
+      "MoM_3yr_avg": 0.1,
+      "YoY_3yr_avg": 6.4
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.1,
-      "YoY_3yr_avg": 5.72
+      "MoM_3yr_avg": 0.08,
+      "YoY_3yr_avg": 5.65
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.07,
+      "YoY_3yr_avg": 4.91
     }
   ],
   "Architectural Services": [
@@ -7755,6 +7770,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.13,
       "YoY_3yr_avg": 1.9
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.13,
+      "YoY_3yr_avg": 1.85
     }
   ],
   "Asphalt (At Refinery)": [
@@ -9425,23 +9445,28 @@
     },
     {
       "Date": "2025-04",
-      "MoM_3yr_avg": -0.25,
-      "YoY_3yr_avg": 3.07
+      "MoM_3yr_avg": -0.29,
+      "YoY_3yr_avg": 3.04
     },
     {
       "Date": "2025-05",
-      "MoM_3yr_avg": -0.75,
-      "YoY_3yr_avg": 0.59
+      "MoM_3yr_avg": -0.77,
+      "YoY_3yr_avg": 0.54
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": -0.96,
-      "YoY_3yr_avg": -1.86
+      "MoM_3yr_avg": -0.98,
+      "YoY_3yr_avg": -1.93
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": -1.11,
+      "MoM_3yr_avg": -1.04,
       "YoY_3yr_avg": -4.25
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.82,
+      "YoY_3yr_avg": -6.08
     }
   ],
   "Asphalt Felts and Coatings": [
@@ -11632,13 +11657,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": 0.2,
-      "YoY_3yr_avg": 4.62
+      "MoM_3yr_avg": 0.21,
+      "YoY_3yr_avg": 4.63
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.19,
-      "YoY_3yr_avg": 4.16
+      "MoM_3yr_avg": 0.22,
+      "YoY_3yr_avg": 4.2
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.25,
+      "YoY_3yr_avg": 3.94
     }
   ],
   "Brick and Structural Clay Tile": [
@@ -13836,6 +13866,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.37,
       "YoY_3yr_avg": 5.73
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.35,
+      "YoY_3yr_avg": 5.49
     }
   ],
   "Cement": [
@@ -16026,13 +16061,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": 0.6,
+      "MoM_3yr_avg": 0.59,
       "YoY_3yr_avg": 8.29
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.52,
-      "YoY_3yr_avg": 8.07
+      "YoY_3yr_avg": 8.06
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.5,
+      "YoY_3yr_avg": 7.83
     }
   ],
   "Commercial Structures": [
@@ -16494,7 +16534,12 @@
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.07,
-      "YoY_3yr_avg": 2.22
+      "YoY_3yr_avg": 2.21
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.09,
+      "YoY_3yr_avg": 1.93
     }
   ],
   "Concrete Block and Brick": [
@@ -18692,6 +18737,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.51,
       "YoY_3yr_avg": 8.24
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.51,
+      "YoY_3yr_avg": 7.99
     }
   ],
   "Concrete Contractors": [
@@ -19569,6 +19619,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.18,
       "YoY_3yr_avg": 3.74
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.16,
+      "YoY_3yr_avg": 3.26
     }
   ],
   "Concrete Pipe": [
@@ -21766,6 +21821,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.66,
       "YoY_3yr_avg": 11.02
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.64,
+      "YoY_3yr_avg": 10.55
     }
   ],
   "Concrete Products": [
@@ -23963,6 +24023,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.45,
       "YoY_3yr_avg": 7.83
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.42,
+      "YoY_3yr_avg": 7.5
     }
   ],
   "Const, Mining & Forestry Machine and Equipment. Rental and Leasing": [
@@ -24770,6 +24835,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.17,
       "YoY_3yr_avg": 2.93
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.08,
+      "YoY_3yr_avg": 2.71
     }
   ],
   "Construction (Partial)": [
@@ -25556,12 +25626,17 @@
     {
       "Date": "2025-06",
       "MoM_3yr_avg": 0.27,
-      "YoY_3yr_avg": 5.89
+      "YoY_3yr_avg": 5.9
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.19,
-      "YoY_3yr_avg": 5.36
+      "YoY_3yr_avg": 5.37
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.18,
+      "YoY_3yr_avg": 4.85
     }
   ],
   "Construction Employment": [
@@ -27759,6 +27834,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.18,
       "YoY_3yr_avg": 2.81
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.17,
+      "YoY_3yr_avg": 2.69
     }
   ],
   "Construction MAchinery and Equipment": [
@@ -29954,8 +30034,13 @@
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.4,
-      "YoY_3yr_avg": 5.76
+      "MoM_3yr_avg": 0.41,
+      "YoY_3yr_avg": 5.77
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.35,
+      "YoY_3yr_avg": 5.51
     }
   ],
   "Construction and Sand/Gravel/Crushed Stone": [
@@ -32136,8 +32221,8 @@
     },
     {
       "Date": "2025-04",
-      "MoM_3yr_avg": 0.71,
-      "YoY_3yr_avg": 9.15
+      "MoM_3yr_avg": 0.7,
+      "YoY_3yr_avg": 9.14
     },
     {
       "Date": "2025-05",
@@ -32146,13 +32231,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": 0.63,
+      "MoM_3yr_avg": 0.64,
       "YoY_3yr_avg": 9.03
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.62,
       "YoY_3yr_avg": 8.92
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.6,
+      "YoY_3yr_avg": 8.76
     }
   ],
   "Construction for Government ": [
@@ -32909,17 +32999,22 @@
     {
       "Date": "2025-05",
       "MoM_3yr_avg": 0.3,
-      "YoY_3yr_avg": 6.28
+      "YoY_3yr_avg": 6.29
     },
     {
       "Date": "2025-06",
       "MoM_3yr_avg": 0.29,
-      "YoY_3yr_avg": 5.88
+      "YoY_3yr_avg": 5.89
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.2,
       "YoY_3yr_avg": 5.4
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.19,
+      "YoY_3yr_avg": 4.93
     }
   ],
   "Construction for Private Capital Investment": [
@@ -33675,7 +33770,7 @@
     },
     {
       "Date": "2025-05",
-      "MoM_3yr_avg": 0.31,
+      "MoM_3yr_avg": 0.32,
       "YoY_3yr_avg": 7.32
     },
     {
@@ -33687,6 +33782,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.17,
       "YoY_3yr_avg": 6.08
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.16,
+      "YoY_3yr_avg": 5.41
     }
   ],
   "Consumer Price Index (CPI-U)": [
@@ -35884,6 +35984,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.24,
       "YoY_3yr_avg": 3.92
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.25,
+      "YoY_3yr_avg": 3.77
     }
   ],
   "Copper Base Scrap": [
@@ -38081,6 +38186,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.85,
       "YoY_3yr_avg": 1.35
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.56,
+      "YoY_3yr_avg": 1.81
     }
   ],
   "Copper and Brass Mill Shapes": [
@@ -40278,6 +40388,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.58,
       "YoY_3yr_avg": 2.01
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.48,
+      "YoY_3yr_avg": 2.39
     }
   ],
   "Education and Vocational Structures": [
@@ -40739,7 +40854,12 @@
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.05,
-      "YoY_3yr_avg": 1.92
+      "YoY_3yr_avg": 1.91
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.08,
+      "YoY_3yr_avg": 1.63
     }
   ],
   "Electrical Contractors": [
@@ -41617,6 +41737,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.21,
       "YoY_3yr_avg": 5.36
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.2,
+      "YoY_3yr_avg": 4.94
     }
   ],
   "Engineering Services": [
@@ -42424,6 +42549,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.25,
       "YoY_3yr_avg": 3.41
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.24,
+      "YoY_3yr_avg": 3.32
     }
   ],
   "Fabricated Steel Plate": [
@@ -44621,6 +44751,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.35,
       "YoY_3yr_avg": 4.88
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.35,
+      "YoY_3yr_avg": 4.65
     }
   ],
   "Fabricated Structural Metal": [
@@ -46806,18 +46941,23 @@
     },
     {
       "Date": "2025-05",
-      "MoM_3yr_avg": -0.16,
-      "YoY_3yr_avg": 0.87
+      "MoM_3yr_avg": -0.17,
+      "YoY_3yr_avg": 0.86
     },
     {
       "Date": "2025-06",
       "MoM_3yr_avg": -0.15,
-      "YoY_3yr_avg": 0.25
+      "YoY_3yr_avg": 0.24
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": -0.14,
-      "YoY_3yr_avg": -0.21
+      "YoY_3yr_avg": -0.23
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.1,
+      "YoY_3yr_avg": -0.56
     }
   ],
   "Fabricated Structural Metal Bar Joists and Rebar": [
@@ -49008,13 +49148,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": -0.46,
-      "YoY_3yr_avg": -4.46
+      "MoM_3yr_avg": -0.45,
+      "YoY_3yr_avg": -4.45
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": -0.43,
-      "YoY_3yr_avg": -4.82
+      "MoM_3yr_avg": -0.41,
+      "YoY_3yr_avg": -4.79
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.36,
+      "YoY_3yr_avg": -4.93
     }
   ],
   "Fabricated Structural Metal for Bridges": [
@@ -50337,13 +50482,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": -0.62,
-      "YoY_3yr_avg": -6.62
+      "MoM_3yr_avg": -0.61,
+      "YoY_3yr_avg": -6.6
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": -0.6,
-      "YoY_3yr_avg": -6.97
+      "MoM_3yr_avg": -0.57,
+      "YoY_3yr_avg": -6.93
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.54,
+      "YoY_3yr_avg": -7.06
     }
   ],
   "Final Demand Construction": [
@@ -51094,23 +51244,28 @@
     },
     {
       "Date": "2025-04",
-      "MoM_3yr_avg": 0.31,
+      "MoM_3yr_avg": 0.32,
       "YoY_3yr_avg": 7.42
     },
     {
       "Date": "2025-05",
       "MoM_3yr_avg": 0.31,
-      "YoY_3yr_avg": 6.93
+      "YoY_3yr_avg": 6.94
     },
     {
       "Date": "2025-06",
       "MoM_3yr_avg": 0.3,
-      "YoY_3yr_avg": 6.43
+      "YoY_3yr_avg": 6.44
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.18,
-      "YoY_3yr_avg": 5.82
+      "YoY_3yr_avg": 5.83
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.17,
+      "YoY_3yr_avg": 5.22
     }
   ],
   "Flatt Glass": [
@@ -53308,6 +53463,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.27,
       "YoY_3yr_avg": 4.05
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.24,
+      "YoY_3yr_avg": 3.83
     }
   ],
   "Gypsum Building MAterials": [
@@ -54765,6 +54925,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.2,
       "YoY_3yr_avg": 5.54
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.11,
+      "YoY_3yr_avg": 5.0
     }
   ],
   "Healthcare Structures": [
@@ -55225,8 +55390,13 @@
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.07,
-      "YoY_3yr_avg": 2.15
+      "MoM_3yr_avg": 0.06,
+      "YoY_3yr_avg": 2.14
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.09,
+      "YoY_3yr_avg": 1.85
     }
   ],
   "Highways and Streets": [
@@ -55678,7 +55848,7 @@
     {
       "Date": "2025-05",
       "MoM_3yr_avg": -0.0,
-      "YoY_3yr_avg": 2.92
+      "YoY_3yr_avg": 2.91
     },
     {
       "Date": "2025-06",
@@ -55688,7 +55858,12 @@
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.03,
-      "YoY_3yr_avg": 2.12
+      "YoY_3yr_avg": 2.11
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.07,
+      "YoY_3yr_avg": 1.82
     }
   ],
   "Industrial Structures": [
@@ -56135,7 +56310,7 @@
     {
       "Date": "2025-04",
       "MoM_3yr_avg": 0.11,
-      "YoY_3yr_avg": 3.75
+      "YoY_3yr_avg": 3.74
     },
     {
       "Date": "2025-05",
@@ -56151,6 +56326,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.11,
       "YoY_3yr_avg": 2.63
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.14,
+      "YoY_3yr_avg": 2.39
     }
   ],
   "Inputs to Construction Industries": [
@@ -56611,8 +56791,13 @@
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.02,
-      "YoY_3yr_avg": 1.45
+      "MoM_3yr_avg": 0.01,
+      "YoY_3yr_avg": 1.44
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.06,
+      "YoY_3yr_avg": 1.18
     }
   ],
   "Inputs to Construction Industries, Energy": [
@@ -57058,7 +57243,7 @@
     },
     {
       "Date": "2025-04",
-      "MoM_3yr_avg": -0.77,
+      "MoM_3yr_avg": -0.76,
       "YoY_3yr_avg": 0.37
     },
     {
@@ -57068,13 +57253,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": -1.4,
-      "YoY_3yr_avg": -4.28
+      "MoM_3yr_avg": -1.39,
+      "YoY_3yr_avg": -4.27
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": -0.92,
       "YoY_3yr_avg": -5.97
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.64,
+      "YoY_3yr_avg": -7.19
     }
   ],
   "Inputs to Construction Industries, Goods": [
@@ -59247,6 +59437,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.01,
       "YoY_3yr_avg": 2.07
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.04,
+      "YoY_3yr_avg": 1.66
     }
   ],
   "Inputs to Construction Industries, Goods Less Foods": [
@@ -59709,6 +59904,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.14,
       "YoY_3yr_avg": 3.11
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.14,
+      "YoY_3yr_avg": 2.79
     }
   ],
   "Inputs to Construction Industries, Services": [
@@ -60164,13 +60364,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": -0.02,
-      "YoY_3yr_avg": 0.58
+      "MoM_3yr_avg": -0.03,
+      "YoY_3yr_avg": 0.57
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.05,
-      "YoY_3yr_avg": 0.55
+      "MoM_3yr_avg": 0.02,
+      "YoY_3yr_avg": 0.52
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.09,
+      "YoY_3yr_avg": 0.49
     }
   ],
   "Insulation Materials": [
@@ -62368,6 +62573,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.28,
       "YoY_3yr_avg": 6.31
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.24,
+      "YoY_3yr_avg": 5.92
     }
   ],
   "Iron and Steel Scrap": [
@@ -64565,6 +64775,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": -0.19,
       "YoY_3yr_avg": -8.44
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.04,
+      "YoY_3yr_avg": -7.69
     }
   ],
   "Labor Force Participation Rate": [
@@ -66762,6 +66977,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.0,
       "YoY_3yr_avg": 0.24
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.0,
+      "YoY_3yr_avg": 0.19
     }
   ],
   "Lumber and Plywood": [
@@ -68957,8 +69177,13 @@
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": -0.51,
-      "YoY_3yr_avg": -6.87
+      "MoM_3yr_avg": -0.5,
+      "YoY_3yr_avg": -6.86
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.4,
+      "YoY_3yr_avg": -6.9
     }
   ],
   "Mainenance and Repair Construction": [
@@ -69421,6 +69646,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.01,
       "YoY_3yr_avg": 1.35
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.06,
+      "YoY_3yr_avg": 1.1
     }
   ],
   "Maint & Repair of Nonres Buildings (Partial)": [
@@ -70223,6 +70453,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.36,
       "YoY_3yr_avg": 4.89
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.36,
+      "YoY_3yr_avg": 4.76
     }
   ],
   "Multifamily": [
@@ -70683,8 +70918,13 @@
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.05,
-      "YoY_3yr_avg": 1.18
+      "MoM_3yr_avg": 0.04,
+      "YoY_3yr_avg": 1.17
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.1,
+      "YoY_3yr_avg": 1.0
     }
   ],
   "New Health Care Building Construction": [
@@ -71280,23 +71520,28 @@
     },
     {
       "Date": "2025-04",
-      "MoM_3yr_avg": 0.3,
-      "YoY_3yr_avg": 6.97
+      "MoM_3yr_avg": 0.31,
+      "YoY_3yr_avg": 6.99
     },
     {
       "Date": "2025-05",
-      "MoM_3yr_avg": 0.3,
-      "YoY_3yr_avg": 6.56
+      "MoM_3yr_avg": 0.31,
+      "YoY_3yr_avg": 6.58
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": 0.29,
-      "YoY_3yr_avg": 6.13
+      "MoM_3yr_avg": 0.3,
+      "YoY_3yr_avg": 6.17
     },
     {
       "Date": "2025-07",
+      "MoM_3yr_avg": 0.15,
+      "YoY_3yr_avg": 5.61
+    },
+    {
+      "Date": "2025-08",
       "MoM_3yr_avg": 0.14,
-      "YoY_3yr_avg": 5.57
+      "YoY_3yr_avg": 5.04
     }
   ],
   "New Industrial Building Construction": [
@@ -72203,12 +72448,17 @@
     {
       "Date": "2025-06",
       "MoM_3yr_avg": 0.29,
-      "YoY_3yr_avg": 6.66
+      "YoY_3yr_avg": 6.65
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.15,
-      "YoY_3yr_avg": 5.93
+      "MoM_3yr_avg": 0.14,
+      "YoY_3yr_avg": 5.92
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.12,
+      "YoY_3yr_avg": 5.19
     }
   ],
   "New Nonresedential Construction ": [
@@ -72670,7 +72920,12 @@
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.03,
-      "YoY_3yr_avg": 1.91
+      "YoY_3yr_avg": 1.9
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.07,
+      "YoY_3yr_avg": 1.61
     }
   ],
   "New Nonresidential Building Construction": [
@@ -73447,7 +73702,7 @@
     {
       "Date": "2025-04",
       "MoM_3yr_avg": 0.32,
-      "YoY_3yr_avg": 7.68
+      "YoY_3yr_avg": 7.69
     },
     {
       "Date": "2025-05",
@@ -73457,12 +73712,17 @@
     {
       "Date": "2025-06",
       "MoM_3yr_avg": 0.31,
-      "YoY_3yr_avg": 6.67
+      "YoY_3yr_avg": 6.68
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.17,
       "YoY_3yr_avg": 6.03
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.16,
+      "YoY_3yr_avg": 5.39
     }
   ],
   "New Office Building Construction": [
@@ -74428,13 +74688,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": 0.39,
+      "MoM_3yr_avg": 0.38,
       "YoY_3yr_avg": 7.86
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.26,
+      "MoM_3yr_avg": 0.25,
       "YoY_3yr_avg": 7.2
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.25,
+      "YoY_3yr_avg": 6.55
     }
   ],
   "New Residential Construction": [
@@ -74895,8 +75160,13 @@
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.04,
-      "YoY_3yr_avg": 1.24
+      "MoM_3yr_avg": 0.03,
+      "YoY_3yr_avg": 1.23
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.08,
+      "YoY_3yr_avg": 1.03
     }
   ],
   "New School Building Construction": [
@@ -75883,7 +76153,7 @@
     {
       "Date": "2025-04",
       "MoM_3yr_avg": 0.32,
-      "YoY_3yr_avg": 6.99
+      "YoY_3yr_avg": 7.0
     },
     {
       "Date": "2025-05",
@@ -75893,12 +76163,17 @@
     {
       "Date": "2025-06",
       "MoM_3yr_avg": 0.32,
-      "YoY_3yr_avg": 6.23
+      "YoY_3yr_avg": 6.24
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.19,
-      "YoY_3yr_avg": 5.71
+      "YoY_3yr_avg": 5.72
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.18,
+      "YoY_3yr_avg": 5.19
     }
   ],
   "New Warehouse Building Construction": [
@@ -76950,7 +77225,7 @@
     {
       "Date": "2025-05",
       "MoM_3yr_avg": 0.19,
-      "YoY_3yr_avg": 6.96
+      "YoY_3yr_avg": 6.97
     },
     {
       "Date": "2025-06",
@@ -76961,6 +77236,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.06,
       "YoY_3yr_avg": 5.23
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.06,
+      "YoY_3yr_avg": 4.33
     }
   ],
   "Nonresidential Maintenance and Repair": [
@@ -77423,6 +77703,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": -0.01,
       "YoY_3yr_avg": 1.19
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.04,
+      "YoY_3yr_avg": 0.92
     }
   ],
   "Ornamental and Architectural Metal Work": [
@@ -79609,7 +79894,7 @@
     {
       "Date": "2025-05",
       "MoM_3yr_avg": 0.5,
-      "YoY_3yr_avg": 8.62
+      "YoY_3yr_avg": 8.63
     },
     {
       "Date": "2025-06",
@@ -79619,7 +79904,12 @@
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.45,
-      "YoY_3yr_avg": 7.42
+      "YoY_3yr_avg": 7.43
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.44,
+      "YoY_3yr_avg": 6.94
     }
   ],
   "Other Misc. Non Residential Construction": [
@@ -80080,8 +80370,13 @@
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.03,
-      "YoY_3yr_avg": 1.71
+      "MoM_3yr_avg": 0.02,
+      "YoY_3yr_avg": 1.7
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.06,
+      "YoY_3yr_avg": 1.42
     }
   ],
   "Other Non Residential": [
@@ -80543,7 +80838,12 @@
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.02,
-      "YoY_3yr_avg": 1.82
+      "YoY_3yr_avg": 1.81
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.06,
+      "YoY_3yr_avg": 1.52
     }
   ],
   "Paving Mixtures": [
@@ -82741,6 +83041,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.14,
       "YoY_3yr_avg": 5.93
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.11,
+      "YoY_3yr_avg": 5.31
     }
   ],
   "Plastic Construction Products": [
@@ -84926,18 +85231,23 @@
     },
     {
       "Date": "2025-05",
-      "MoM_3yr_avg": -0.11,
-      "YoY_3yr_avg": 2.34
+      "MoM_3yr_avg": -0.1,
+      "YoY_3yr_avg": 2.35
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": -0.15,
-      "YoY_3yr_avg": 1.56
+      "MoM_3yr_avg": -0.13,
+      "YoY_3yr_avg": 1.59
     },
     {
       "Date": "2025-07",
+      "MoM_3yr_avg": -0.17,
+      "YoY_3yr_avg": 0.93
+    },
+    {
+      "Date": "2025-08",
       "MoM_3yr_avg": -0.19,
-      "YoY_3yr_avg": 0.88
+      "YoY_3yr_avg": 0.33
     }
   ],
   "Plumbing Contractors ": [
@@ -85815,6 +86125,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.25,
       "YoY_3yr_avg": 5.39
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.25,
+      "YoY_3yr_avg": 5.03
     }
   ],
   "Power and Communications Structiors": [
@@ -86271,12 +86586,17 @@
     {
       "Date": "2025-06",
       "MoM_3yr_avg": -0.08,
-      "YoY_3yr_avg": 1.64
+      "YoY_3yr_avg": 1.65
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": -0.0,
+      "MoM_3yr_avg": -0.01,
       "YoY_3yr_avg": 1.33
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.04,
+      "YoY_3yr_avg": 1.05
     }
   ],
   "Precast Concrete Products": [
@@ -88473,7 +88793,12 @@
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.41,
-      "YoY_3yr_avg": 6.64
+      "YoY_3yr_avg": 6.63
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.4,
+      "YoY_3yr_avg": 6.36
     }
   ],
   "Prefabricated Metal Buildings": [
@@ -90671,6 +90996,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.09,
       "YoY_3yr_avg": 0.76
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.07,
+      "YoY_3yr_avg": 0.71
     }
   ],
   "Prepared Asphalt and Tar Rooging and Siding Products": [
@@ -92861,13 +93191,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": 0.22,
-      "YoY_3yr_avg": 4.98
+      "MoM_3yr_avg": 0.23,
+      "YoY_3yr_avg": 4.99
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.21,
-      "YoY_3yr_avg": 4.5
+      "MoM_3yr_avg": 0.24,
+      "YoY_3yr_avg": 4.54
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.29,
+      "YoY_3yr_avg": 4.29
     }
   ],
   "Prestressed Concrete Products": [
@@ -95064,7 +95399,12 @@
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.22,
-      "YoY_3yr_avg": 9.31
+      "YoY_3yr_avg": 9.3
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.13,
+      "YoY_3yr_avg": 8.35
     }
   ],
   "Producer Price Index (PPI For Final Demand": [
@@ -95830,8 +96170,13 @@
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.19,
+      "MoM_3yr_avg": 0.18,
       "YoY_3yr_avg": 3.14
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.18,
+      "YoY_3yr_avg": 2.97
     }
   ],
   "Ready Mixed Concrete": [
@@ -98028,7 +98373,12 @@
     {
       "Date": "2025-07",
       "MoM_3yr_avg": 0.45,
-      "YoY_3yr_avg": 7.59
+      "YoY_3yr_avg": 7.6
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.42,
+      "YoY_3yr_avg": 7.31
     }
   ],
   "Residential Maintenance and Repair": [
@@ -98485,12 +98835,17 @@
     {
       "Date": "2025-06",
       "MoM_3yr_avg": -0.02,
-      "YoY_3yr_avg": 1.58
+      "YoY_3yr_avg": 1.57
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.05,
-      "YoY_3yr_avg": 1.41
+      "MoM_3yr_avg": 0.04,
+      "YoY_3yr_avg": 1.4
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.09,
+      "YoY_3yr_avg": 1.2
     }
   ],
   "Roofing Contractors": [
@@ -99368,6 +99723,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.49,
       "YoY_3yr_avg": 9.65
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.49,
+      "YoY_3yr_avg": 9.15
     }
   ],
   "Sheet Metal Products": [
@@ -101553,18 +101913,23 @@
     },
     {
       "Date": "2025-05",
-      "MoM_3yr_avg": 0.16,
+      "MoM_3yr_avg": 0.15,
       "YoY_3yr_avg": 3.91
     },
     {
       "Date": "2025-06",
       "MoM_3yr_avg": 0.16,
-      "YoY_3yr_avg": 3.47
+      "YoY_3yr_avg": 3.46
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.15,
-      "YoY_3yr_avg": 3.04
+      "MoM_3yr_avg": 0.14,
+      "YoY_3yr_avg": 3.03
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.12,
+      "YoY_3yr_avg": 2.68
     }
   ],
   "Stainless and Alloy Steel Scrap": [
@@ -102910,13 +103275,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": -0.47,
-      "YoY_3yr_avg": -10.79
+      "MoM_3yr_avg": -0.48,
+      "YoY_3yr_avg": -10.8
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": -0.01,
-      "YoY_3yr_avg": -10.33
+      "MoM_3yr_avg": -0.04,
+      "YoY_3yr_avg": -10.36
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.09,
+      "YoY_3yr_avg": -9.63
     }
   ],
   "Steel Mill Products": [
@@ -105108,12 +105478,17 @@
     {
       "Date": "2025-06",
       "MoM_3yr_avg": -0.77,
-      "YoY_3yr_avg": -11.38
+      "YoY_3yr_avg": -11.39
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": -0.67,
-      "YoY_3yr_avg": -11.31
+      "MoM_3yr_avg": -0.69,
+      "YoY_3yr_avg": -11.33
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.51,
+      "YoY_3yr_avg": -10.87
     }
   ],
   "Steel Pipe and Tube": [
@@ -107311,6 +107686,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": -0.76,
       "YoY_3yr_avg": -8.25
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.76,
+      "YoY_3yr_avg": -8.7
     }
   ],
   "Truck Transportation of Freight": [
@@ -108096,13 +108476,18 @@
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": -0.35,
+      "MoM_3yr_avg": -0.34,
       "YoY_3yr_avg": -0.44
     },
     {
       "Date": "2025-07",
       "MoM_3yr_avg": -0.32,
       "YoY_3yr_avg": -1.06
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": -0.22,
+      "YoY_3yr_avg": -1.51
     }
   ],
   "Truck and Bus (Inc Off Highway) Pneumatic Tires": [
@@ -110283,23 +110668,28 @@
     },
     {
       "Date": "2025-04",
-      "MoM_3yr_avg": 0.12,
-      "YoY_3yr_avg": 4.29
+      "MoM_3yr_avg": 0.1,
+      "YoY_3yr_avg": 4.27
     },
     {
       "Date": "2025-05",
-      "MoM_3yr_avg": 0.07,
+      "MoM_3yr_avg": 0.1,
       "YoY_3yr_avg": 3.82
     },
     {
       "Date": "2025-06",
-      "MoM_3yr_avg": 0.04,
-      "YoY_3yr_avg": 3.33
+      "MoM_3yr_avg": 0.05,
+      "YoY_3yr_avg": 3.34
     },
     {
       "Date": "2025-07",
-      "MoM_3yr_avg": 0.06,
-      "YoY_3yr_avg": 3.0
+      "MoM_3yr_avg": 0.04,
+      "YoY_3yr_avg": 2.98
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.04,
+      "YoY_3yr_avg": 2.63
     }
   ],
   "Unemployment Rate": [
@@ -112497,6 +112887,11 @@
       "Date": "2025-07",
       "MoM_3yr_avg": 0.55,
       "YoY_3yr_avg": 1.86
+    },
+    {
+      "Date": "2025-08",
+      "MoM_3yr_avg": 0.53,
+      "YoY_3yr_avg": 2.74
     }
   ]
 }

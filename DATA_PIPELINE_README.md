@@ -294,3 +294,5 @@ cd frontend && python updateFirestor.py
 ---
 
 **This pipeline ensures your construction material data flows seamlessly from BLS collection through analysis to user display, with full automation and version control.** 🚀
+
+
