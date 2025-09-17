@@ -503,13 +503,16 @@ async def run_gpt(query: GPTQuery):
 
             cluster_prompt = (
                 f"You are a market analyst assistant. Based on the following data for the '{material}' cluster, "
-                f"write a concise, expert-level financial summary. Your tone must be formal and strictly clinical.\n\n"
+                f"write a concise, expert-level report. Your tone must be formal and strictly clinical.\n\n"
                 f"Cluster data:\n{json.dumps(cluster_blob, indent=2)}\n\n"
-                f"**Instructions:**\n"
-                f"- Focus only on MoM and YoY changes and magnitudes.\n"
-                f"- Highlight major outliers or movers numerically.\n"
-                f"- Do not offer reasons, implications, or commentary (no 'indicates', 'suggests', 'demand', 'doing well', 'due to').\n"
-                f"- Keep it clean, structured, and free of bullet points or numbered lists."
+                f"**Output Structure:**\n"
+                f"1) A single paragraph of 1–2 sentences summarizing observed movements across the cluster (no causes).\n"
+                f"2) A bulleted list of per-material movements formatted as: '- <Material>: MoM <x.xx>% | YoY <y.yy>%'.\n\n"
+                f"**Rules:**\n"
+                f"- Focus only on MoM and YoY direction and magnitudes.\n"
+                f"- Do not offer reasons, implications, or commentary (no 'indicates', 'suggests', 'demand', 'due to').\n"
+                f"- Use hyphen bullets only; keep each bullet to one line.\n"
+                f"- If a value is missing, write 'n/a'."
             )
 
             final_response = client.chat.completions.create(
