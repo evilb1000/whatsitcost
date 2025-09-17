@@ -4,11 +4,8 @@ import GPTChatAssistant from "./components/GPTChatAssistant.jsx"; // ⬅️ impo
 
 function App() {
     return (
-        <div className="min-h-screen bg-gray-100 text-gray-900 px-6 py-8">
-            <div className="max-w-6xl mx-auto">
-                <MaterialTrends />
-            </div>
-
+        <div>
+            <MaterialTrends />
             {/* 💬 GPT Assistant */}
             <GPTChatAssistant />
         </div>

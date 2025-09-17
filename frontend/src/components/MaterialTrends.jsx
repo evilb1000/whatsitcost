@@ -190,17 +190,32 @@ export default function MaterialTrends() {
 
 return (
     <div
-        className="p-4 sm:p-6 min-h-screen overflow-x-hidden"
-        style={{ backgroundColor: "#BE6428", fontFamily: "josefin-sans, sans-serif" }}
+        style={{ 
+            backgroundColor: "#BE6428", 
+            fontFamily: "josefin-sans, sans-serif",
+            minHeight: "100vh",
+            padding: "1rem"
+        }}
     >
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-slate-800">
-            Latest Fed Pricing Adjustment Data For The Construction Industry
+        <h1 style={{ 
+            fontSize: '4rem', 
+            fontWeight: 'bold', 
+            marginBottom: '1rem', 
+            textAlign: 'center', 
+            color: '#1e293b',
+            position: 'static'
+        }}>
+            What's It Cost: Latest BLS Pricing Data
         </h1>
         
         {/* Latest BLS Month Display */}
         {!loading && materials.length > 0 && (
-            <div className="text-center mb-4">
-                <p className="text-lg sm:text-xl text-slate-700 font-semibold">
+            <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+                <p style={{ 
+                    color: '#334155', 
+                    fontWeight: '600', 
+                    fontSize: '1.5rem' 
+                }}>
                     Latest BLS Month: {(() => {
                         // Find the latest month from all materials
                         let latestMonth = null;
@@ -230,15 +245,28 @@ return (
         )}
 
         {loading ? (
-            <p className="text-gray-600 text-lg sm:text-xl text-center">
+            <p style={{ 
+                color: '#6b7280', 
+                fontSize: '1.125rem', 
+                textAlign: 'center' 
+            }}>
                 Loading data...
             </p>
         ) : materials.length === 0 ? (
-            <p className="text-red-600 text-lg sm:text-xl text-center">
+            <p style={{ 
+                color: '#dc2626', 
+                fontSize: '1.125rem', 
+                textAlign: 'center' 
+            }}>
                 No data found. Check Firestore or field names.
             </p>
         ) : (
-            <div className="overflow-auto max-h-[90vh] rounded-xl shadow border border-gray-300 bg-white">
+            <div style={{
+                borderRadius: '0.75rem',
+                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                border: '1px solid #d1d5db',
+                backgroundColor: 'white'
+            }}>
                 {Object.entries(
                     materials.reduce((acc, mat) => {
                         acc[mat.category] = acc[mat.category] || [];
@@ -258,13 +286,21 @@ return (
                     return indexA - indexB;
                 }).map(([category, group]) => (
 
-                    <div key={category}>
+                    <div key={category} style={{ position: "relative" }}>
                         <div
-                            className="sticky top-0 z-50 text-white text-lg sm:text-xl font-bold tracking-wide text-center shadow-md"
                             style={{
+                                position: "sticky",
+                                top: "0",
+                                zIndex: 50,
                                 backgroundColor: "#4DAAf8",
                                 padding: "10px 0",
                                 borderBottom: "2px solid #e2e8f0",
+                                color: "white",
+                                fontSize: "1.125rem",
+                                fontWeight: "bold",
+                                letterSpacing: "0.025em",
+                                textAlign: "center",
+                                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
                             }}
                         >
                             {category}
@@ -284,6 +320,9 @@ return (
                                             key={label}
                                             className="text-xs sm:text-sm md:text-base"
                                             style={{
+                                                position: "sticky",
+                                                top: 44,
+                                                zIndex: 40,
                                                 color: "#f1f5f9",
                                                 fontWeight: "700",
                                                 backgroundColor: "#3886C8",
