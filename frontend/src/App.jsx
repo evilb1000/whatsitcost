@@ -6,6 +6,7 @@ function App() {
     const [railSpacer, setRailSpacer] = useState(220); // seed so first paint is close
     const [measured, setMeasured] = useState(false);
 
+
     useLayoutEffect(() => {
         const updateSpacer = () => {
             const el = document.getElementById("gridStart");
@@ -62,6 +63,30 @@ function App() {
                     transition: 'opacity 120ms ease-out'
                 }}
             >
+                {/* Sponsored label */}
+                <div style={{
+                    width: '100%',
+                    textAlign: 'center',
+                    color: '#f1f5f9',
+                    letterSpacing: '0.08em',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    fontSize: '0.9rem',
+                    background: 'rgba(56,134,200,0.18)',
+                    borderRadius: '10px',
+                    padding: '8px 10px 10px',
+                    marginBottom: '6px',
+                    boxShadow: '0 4px 10px rgba(0,0,0,0.15)'
+                }}>
+                    Sponsored by
+                    <div style={{
+                        height: '3px',
+                        width: '60%',
+                        margin: '6px auto 0',
+                        borderRadius: '6px',
+                        background: 'linear-gradient(90deg,#4DAAf8 0%, #3886C8 100%)'
+                    }} />
+                </div>
                 <a href="https://www.studio1049.com" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
                     <img
                         src="/sponsors/Studio%201049.png"
@@ -127,6 +152,30 @@ function App() {
 
             {/* Right sponsor rail */}
             <aside style={{ position: 'static', marginTop: `${railSpacer}px`, backgroundColor: '#BE6428', padding: '0 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', gap: '16px', opacity: measured ? 1 : 0, transition: 'opacity 120ms ease-out' }}>
+                {/* Sponsored label */}
+                <div style={{
+                    width: '100%',
+                    textAlign: 'center',
+                    color: '#f1f5f9',
+                    letterSpacing: '0.08em',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    fontSize: '0.9rem',
+                    background: 'rgba(56,134,200,0.18)',
+                    borderRadius: '10px',
+                    padding: '8px 10px 10px',
+                    marginBottom: '6px',
+                    boxShadow: '0 4px 10px rgba(0,0,0,0.15)'
+                }}>
+                    Sponsored by
+                    <div style={{
+                        height: '3px',
+                        width: '60%',
+                        margin: '6px auto 0',
+                        borderRadius: '6px',
+                        background: 'linear-gradient(90deg,#4DAAf8 0%, #3886C8 100%)'
+                    }} />
+                </div>
                 <a href="https://www.mascaroconstruction.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
                     <img src="/sponsors/ico-mascaro.png" alt="Mascaro Construction" style={{ width: '360px', height: 'auto', borderRadius: '6px', display: 'block' }} />
                 </a>

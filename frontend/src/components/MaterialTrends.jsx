@@ -29,14 +29,14 @@ function Sparkline({ data, width = 100, height = 30 }) {
 
 // === CATEGORY MAP ===
 const categoryMap = {
-    "Econ Indicators": [
+    "Overhead Ecnomic Indicators": [
         "Consumer Price Index (CPI-U)",
         "Producer Price Index (PPI For Final Demand",
         "Unemployment Rate",
         "Labor Force Participation Rate",
         "Construction Employment"
     ],
-    "Indexes/Inputs": [
+    "Construction Indexes and Inputs": [
         "Final Demand Construction",
         "Inputs to Construction Industries",
         "Inputs to Construction Industries, Energy",
@@ -197,26 +197,44 @@ return (
             padding: "1rem"
         }}
     >
-        <h1 style={{ 
-            fontSize: '4rem', 
-            fontWeight: 'bold', 
-            marginBottom: '1rem', 
-            textAlign: 'center', 
-            color: '#1e293b',
-            position: 'static'
+        {/* Banner header */}
+        <div style={{
+            background: 'linear-gradient(90deg, #1f2937 0%, #334155 100%)',
+            color: 'white',
+            borderRadius: '16px',
+            padding: '20px 16px',
+            boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
+            marginBottom: '12px'
         }}>
-            What's It Cost: Latest BLS Pricing Data
-        </h1>
-        
-        {/* Latest BLS Month Display */}
-        {!loading && materials.length > 0 && (
-            <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-                <p style={{ 
-                    color: '#334155', 
-                    fontWeight: '600', 
-                    fontSize: '1.5rem' 
+            <h1 style={{ 
+                fontSize: '3.5rem', 
+                fontWeight: '900', 
+                margin: 0,
+                textAlign: 'center',
+                letterSpacing: '0.04em'
+            }}>
+                WHAT'S IT COST
+            </h1>
+            <div style={{ textAlign: 'center', marginTop: '6px' }}>
+                <p style={{
+                    color: '#e5e7eb',
+                    fontWeight: 700,
+                    fontSize: '1.25rem',
+                    margin: 0
                 }}>
-                    Latest BLS Month: {(() => {
+                    Your Source For The Latest In BLS Pricing Data
+                </p>
+            </div>
+            {/* Latest BLS Month Display */}
+            {!loading && materials.length > 0 && (
+                <div style={{ textAlign: 'center', marginTop: '8px' }}>
+                    <p style={{ 
+                        color: '#e2e8f0', 
+                        fontWeight: 600, 
+                        fontSize: '1.25rem',
+                        margin: 0
+                    }}>
+                        Data Current To {(() => {
                         // Find the latest month from all materials
                         let latestMonth = null;
                         materials.forEach(material => {
@@ -240,9 +258,10 @@ return (
                         }
                         return 'N/A';
                     })()}
-                </p>
-            </div>
-        )}
+                    </p>
+                </div>
+            )}
+        </div>
 
         {loading ? (
             <p style={{ 
@@ -275,8 +294,8 @@ return (
                     }, {})
                 ).sort(([a], [b]) => {
                     const desiredOrder = [
-                        "Econ Indicators",
-                        "Indexes/Inputs"
+                        "Overhead Ecnomic Indicators",
+                        "Construction Indexes and Inputs"
                     ];
                     const indexA = desiredOrder.indexOf(a);
                     const indexB = desiredOrder.indexOf(b);
