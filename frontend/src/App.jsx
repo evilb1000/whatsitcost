@@ -1,27 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import MaterialTrends from "./components/MaterialTrends.jsx";
 import GPTChatAssistant from "./components/GPTChatAssistant.jsx"; // ⬅️ import the assistant
 
 function App() {
-    const [railSpacer, setRailSpacer] = useState(0);
+    const [railSpacer, setRailSpacer] = useState(220); // seed so first paint is close
+    const [measured, setMeasured] = useState(false);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const updateSpacer = () => {
             const el = document.getElementById("gridStart");
             if (!el) return;
             // Recompute on scroll/resize (sticky uses viewport)
             const top = el.getBoundingClientRect().top; // viewport-relative
             setRailSpacer(Math.max(0, Math.round(top)));
+            setMeasured(true);
         };
         const rafUpdate = () => requestAnimationFrame(updateSpacer);
         updateSpacer();
         window.addEventListener("resize", rafUpdate);
         window.addEventListener("scroll", rafUpdate, { passive: true });
+        window.addEventListener("load", updateSpacer, { once: true });
+        // Ensure fonts/layout shifts are accounted for
+        if (document?.fonts?.ready) {
+            // eslint-disable-next-line @typescript-eslint/no-floating-promises
+            document.fonts.ready.then(updateSpacer);
+        }
         const t1 = setTimeout(updateSpacer, 150);
         const t2 = setTimeout(updateSpacer, 350);
         return () => {
             window.removeEventListener("resize", rafUpdate);
             window.removeEventListener("scroll", rafUpdate);
+            window.removeEventListener("load", updateSpacer);
             clearTimeout(t1);
             clearTimeout(t2);
         };
@@ -48,7 +57,9 @@ function App() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'flex-start',
-                    gap: '16px'
+                    gap: '16px',
+                    opacity: measured ? 1 : 0,
+                    transition: 'opacity 120ms ease-out'
                 }}
             >
                 <a href="https://www.studio1049.com" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
@@ -115,7 +126,7 @@ function App() {
             </main>
 
             {/* Right sponsor rail */}
-            <aside style={{ position: 'static', marginTop: `${railSpacer}px`, backgroundColor: '#BE6428', padding: '0 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', gap: '16px' }}>
+            <aside style={{ position: 'static', marginTop: `${railSpacer}px`, backgroundColor: '#BE6428', padding: '0 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', gap: '16px', opacity: measured ? 1 : 0, transition: 'opacity 120ms ease-out' }}>
                 <a href="https://www.mascaroconstruction.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
                     <img src="/sponsors/ico-mascaro.png" alt="Mascaro Construction" style={{ width: '360px', height: 'auto', borderRadius: '6px', display: 'block' }} />
                 </a>
