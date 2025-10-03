@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import { useNavigate } from "react-router-dom";
 
 function Sparkline({ data, width = 100, height = 30 }) {
     if (!Array.isArray(data) || data.length === 0) return null;
@@ -143,6 +144,7 @@ function getCategory(name) {
 export default function MaterialTrends() {
     const [materials, setMaterials] = useState([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function fetchData() {
@@ -224,6 +226,32 @@ return (
                 }}>
                     Your Source For The Latest In BLS Pricing Data
                 </p>
+                <button 
+                    onClick={() => navigate('/consumer')}
+                    style={{
+                        marginTop: '12px',
+                        background: 'linear-gradient(90deg, #4DAAf8 0%, #3886C8 100%)',
+                        border: 'none',
+                        borderRadius: '8px',
+                        padding: '12px 24px',
+                        color: 'white',
+                        fontWeight: '700',
+                        fontSize: '1rem',
+                        cursor: 'pointer',
+                        boxShadow: '0 4px 12px rgba(56, 134, 200, 0.3)',
+                        transition: 'all 0.2s ease'
+                    }}
+                    onMouseOver={(e) => {
+                        e.target.style.transform = 'translateY(-2px)';
+                        e.target.style.boxShadow = '0 6px 16px rgba(56, 134, 200, 0.4)';
+                    }}
+                    onMouseOut={(e) => {
+                        e.target.style.transform = 'translateY(0)';
+                        e.target.style.boxShadow = '0 4px 12px rgba(56, 134, 200, 0.3)';
+                    }}
+                >
+                    Consumer Spending Dashboard
+                </button>
             </div>
             {/* Latest BLS Month Display */}
             {!loading && materials.length > 0 && (
