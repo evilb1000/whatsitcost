@@ -215,14 +215,24 @@ function ConsumerDashboard() {
                                     fontWeight: 700
                                 }}>
                                     Most Recent Data: {(() => {
+                                        // Avoid timezone shift when parsing YYYY-MM-DD
                                         try {
-                                            const d = new Date(indicator.latest.date);
+                                            const raw = String(indicator.latest.date || '');
+                                            const m = raw.match(/^(\d{4})-(\d{2})-\d{2}$/);
+                                            if (m) {
+                                                const year = m[1];
+                                                const monthIdx = parseInt(m[2], 10) - 1; // 0-based
+                                                const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                                                return `${months[monthIdx]} ${year}`;
+                                            }
+                                            // Fallback to safe locale month/year using a noon time to dodge TZ edge cases
+                                            const d = new Date(`${raw}T12:00:00`);
                                             if (!isNaN(d)) {
                                                 return d.toLocaleString('en-US', { month: 'short', year: 'numeric' });
                                             }
-                                            return indicator.latest.date;
+                                            return raw;
                                         } catch {
-                                            return indicator.latest.date;
+                                            return String(indicator.latest.date || '');
                                         }
                                     })()}
                                 </div>
