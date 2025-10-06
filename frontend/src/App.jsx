@@ -1,5 +1,7 @@
 import React, { useLayoutEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MaterialTrends from "./components/MaterialTrends.jsx";
+import ConsumerDashboard from "./components/ConsumerDashboard.jsx";
 import GPTChatAssistant from "./components/GPTChatAssistant.jsx"; // ⬅️ import the assistant
 
 function App() {
@@ -147,7 +149,12 @@ function App() {
 
             {/* Center content */}
             <main style={{ maxWidth: '1100px', margin: '0 auto' }}>
-                <MaterialTrends />
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<MaterialTrends />} />
+                        <Route path="/consumer" element={<ConsumerDashboard />} />
+                    </Routes>
+                </Router>
             </main>
 
             {/* Right sponsor rail */}

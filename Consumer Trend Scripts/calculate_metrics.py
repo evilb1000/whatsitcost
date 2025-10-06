@@ -39,16 +39,39 @@ def calculate_rolling_12mo_change(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+# === Percentage-point calculations for rate series (e.g., UNRATE) ===
+def calculate_mom_change_points(df: pd.DataFrame) -> pd.DataFrame:
+    """Calculate month-over-month change in percentage points (simple diff)."""
+    df['mom_change'] = df['value'].diff(1)
+    return df
+
+
+def calculate_yoy_change_points(df: pd.DataFrame) -> pd.DataFrame:
+    """Calculate year-over-year change in percentage points (simple 12-month diff)."""
+    df['yoy_change'] = df['value'].diff(12)
+    return df
+
+
+def calculate_rolling_12mo_change_points(df: pd.DataFrame) -> pd.DataFrame:
+    """Calculate 12-month change in percentage points (alias of YoY diff)."""
+    df['rolling_12mo_change'] = df['value'].diff(12)
+    return df
+
+
 def calculate_36mo_mom_avg(df: pd.DataFrame) -> pd.DataFrame:
     """Calculate 36-month rolling average of MoM changes"""
-    df['mom_change'] = df['value'].pct_change() * 100  # Ensure MoM exists
+    # Respect existing mom_change if already computed (e.g., UNRATE points)
+    if 'mom_change' not in df.columns:
+        df['mom_change'] = df['value'].pct_change() * 100
     df['mom_36mo_avg'] = df['mom_change'].rolling(window=36, min_periods=1).mean()
     return df
 
 
 def calculate_12mo_mom_avg(df: pd.DataFrame) -> pd.DataFrame:
     """Calculate 12-month rolling average of MoM changes"""
-    df['mom_change'] = df['value'].pct_change() * 100  # Ensure MoM exists
+    # Respect existing mom_change if already computed (e.g., UNRATE points)
+    if 'mom_change' not in df.columns:
+        df['mom_change'] = df['value'].pct_change() * 100
     df['mom_12mo_avg'] = df['mom_change'].rolling(window=12, min_periods=1).mean()
     return df
 
@@ -66,9 +89,21 @@ def process_series(file_path: str) -> None:
             return
         
         # Calculate all metrics
-        df = calculate_mom_change(df)
-        df = calculate_yoy_change(df)
-        df = calculate_rolling_12mo_change(df)
+        filename = os.path.basename(file_path)
+        is_unrate = filename.startswith('UNRATE')
+
+        if is_unrate:
+            # Use percentage-point changes for rates
+            df = calculate_mom_change_points(df)
+            df = calculate_yoy_change_points(df)
+            df = calculate_rolling_12mo_change_points(df)
+        else:
+            # Default: percentage changes
+            df = calculate_mom_change(df)
+            df = calculate_yoy_change(df)
+            df = calculate_rolling_12mo_change(df)
+
+        # Rolling averages operate on MoM change regardless of units
         df = calculate_36mo_mom_avg(df)
         df = calculate_12mo_mom_avg(df)
         
