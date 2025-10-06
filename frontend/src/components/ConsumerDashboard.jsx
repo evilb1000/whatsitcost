@@ -32,8 +32,21 @@ function ConsumerDashboard() {
                 });
                 
                 console.log("Processed data:", data);
-                // Sort by series name
-                data.sort((a, b) => a.series_name.localeCompare(b.series_name));
+                // Sort by latest MoM change (descending). Null/undefined last. Tie-breaker: series name
+                data.sort((a, b) => {
+                    const aVal = a?.latest?.mom_change;
+                    const bVal = b?.latest?.mom_change;
+                    const aHas = typeof aVal === 'number' && !Number.isNaN(aVal);
+                    const bHas = typeof bVal === 'number' && !Number.isNaN(bVal);
+
+                    if (aHas && bHas) {
+                        if (bVal !== aVal) return bVal - aVal; // higher first
+                        return a.series_name.localeCompare(b.series_name);
+                    }
+                    if (aHas && !bHas) return -1; // a before b
+                    if (!aHas && bHas) return 1;  // b before a
+                    return a.series_name.localeCompare(b.series_name);
+                });
                 setIndicators(data);
             } catch (error) {
                 console.error("Error fetching indicators:", error);
@@ -167,16 +180,18 @@ function ConsumerDashboard() {
                             overflow: 'hidden'
                         }}
                         onMouseOver={(e) => {
-                            e.target.style.transform = 'translateY(-4px) scale(1.02)';
-                            e.target.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.35)';
-                            e.target.style.background = 'rgba(255, 255, 255, 0.5)';
-                            e.target.style.border = '1px solid rgba(255, 255, 255, 0.5)';
+                            const el = e.currentTarget;
+                            el.style.transform = 'translateY(-4px) scale(1.02)';
+                            el.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.35)';
+                            el.style.background = 'rgba(255, 255, 255, 0.5)';
+                            el.style.border = '1px solid rgba(255, 255, 255, 0.5)';
                         }}
                         onMouseOut={(e) => {
-                            e.target.style.transform = 'translateY(0) scale(1)';
-                            e.target.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.25)';
-                            e.target.style.background = 'rgba(255, 255, 255, 0.35)';
-                            e.target.style.border = '1px solid rgba(255, 255, 255, 0.35)';
+                            const el = e.currentTarget;
+                            el.style.transform = 'translateY(0) scale(1)';
+                            el.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.25)';
+                            el.style.background = 'rgba(255, 255, 255, 0.35)';
+                            el.style.border = '1px solid rgba(255, 255, 255, 0.35)';
                         }}
                     >
                         <h3 style={{
@@ -193,10 +208,30 @@ function ConsumerDashboard() {
                         {indicator.latest ? (
                             <div>
                                 <div style={{
+                                    fontSize: '0.95rem',
+                                    color: 'rgba(255, 255, 255, 0.9)',
+                                    marginBottom: '10px',
+                                    textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+                                    fontWeight: 700
+                                }}>
+                                    Most Recent Data: {(() => {
+                                        try {
+                                            const d = new Date(indicator.latest.date);
+                                            if (!isNaN(d)) {
+                                                return d.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+                                            }
+                                            return indicator.latest.date;
+                                        } catch {
+                                            return indicator.latest.date;
+                                        }
+                                    })()}
+                                </div>
+
+                                <div style={{
                                     fontSize: '1.25rem',
                                     fontWeight: '800',
                                     color: '#ffffff',
-                                    marginBottom: '8px',
+                                    marginBottom: '12px',
                                     textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)'
                                 }}>
                                     {typeof indicator.latest.value === 'number' 
@@ -207,21 +242,12 @@ function ConsumerDashboard() {
                                         : indicator.latest.value
                                     }
                                 </div>
-                                
-                                <div style={{
-                                    fontSize: '0.9rem',
-                                    color: 'rgba(255, 255, 255, 0.8)',
-                                    marginBottom: '12px',
-                                    textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
-                                }}>
-                                    {indicator.latest.date}
-                                </div>
 
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '0.85rem' }}>
                                     <div style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                                         <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>MoM:</strong>
                                         <span style={{ 
-                                            color: indicator.latest.mom_change > 0 ? '#ff6b6b' : '#51cf66',
+                                            color: '#ffffff',
                                             fontWeight: '600',
                                             marginLeft: '4px',
                                             textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
@@ -232,7 +258,7 @@ function ConsumerDashboard() {
                                     <div style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                                         <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>YoY:</strong>
                                         <span style={{ 
-                                            color: indicator.latest.yoy_change > 0 ? '#ff6b6b' : '#51cf66',
+                                            color: '#ffffff',
                                             fontWeight: '600',
                                             marginLeft: '4px',
                                             textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
@@ -241,9 +267,9 @@ function ConsumerDashboard() {
                                         </span>
                                     </div>
                                     <div style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>12Mo Avg:</strong>
+                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>Avg Monthly Change Past 12 Months:</strong>
                                         <span style={{ 
-                                            color: indicator.latest.mom_12mo_avg > 0 ? '#ff6b6b' : '#51cf66',
+                                            color: '#ffffff',
                                             fontWeight: '600',
                                             marginLeft: '4px',
                                             textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
@@ -252,14 +278,25 @@ function ConsumerDashboard() {
                                         </span>
                                     </div>
                                     <div style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>36Mo Avg:</strong>
+                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>Avg Monthly Change Past 36 Months:</strong>
                                         <span style={{ 
-                                            color: indicator.latest.mom_36mo_avg > 0 ? '#ff6b6b' : '#51cf66',
+                                            color: '#ffffff',
                                             fontWeight: '600',
                                             marginLeft: '4px',
                                             textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
                                         }}>
                                             {indicator.latest.mom_36mo_avg !== null ? `${indicator.latest.mom_36mo_avg.toFixed(2)}%` : '—'}
+                                        </span>
+                                    </div>
+                                    <div style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>12 Month Rolling Average:</strong>
+                                        <span style={{ 
+                                            color: '#ffffff',
+                                            fontWeight: '600',
+                                            marginLeft: '4px',
+                                            textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
+                                        }}>
+                                            {indicator.latest.rolling_12mo_change !== null ? `${indicator.latest.rolling_12mo_change.toFixed(2)}%` : '—'}
                                         </span>
                                     </div>
                                 </div>

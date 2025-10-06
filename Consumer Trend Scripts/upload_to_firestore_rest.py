@@ -9,7 +9,10 @@ import csv
 import os
 import sys
 from datetime import datetime
-import requests
+import json
+from urllib import request, error
+from urllib.parse import quote
+import subprocess
 
 
 def get_latest_row_from_csv(file_path: str) -> dict:
@@ -38,6 +41,25 @@ def get_latest_row_from_csv(file_path: str) -> dict:
         return {}
 
 
+def get_access_token() -> str:
+    """Obtain an OAuth2 access token for Firestore writes without extra deps.
+    Strategy:
+    1) Use FIRESTORE_BEARER env var if provided.
+    2) Fallback to `gcloud auth print-access-token` if available.
+    Returns empty string if unavailable.
+    """
+    token = os.environ.get("FIRESTORE_BEARER", "").strip()
+    if token:
+        return token
+    try:
+        result = subprocess.run([
+            "gcloud", "auth", "print-access-token"
+        ], capture_output=True, text=True, check=True)
+        return result.stdout.strip()
+    except Exception:
+        return ""
+
+
 def upload_to_firestore_rest(data: dict) -> bool:
     """Upload data to Firestore using REST API"""
     
@@ -54,8 +76,13 @@ def upload_to_firestore_rest(data: dict) -> bool:
         'upload_timestamp': datetime.now().isoformat(),
     }
     
-    # Firestore REST API endpoint
-    url = f"https://firestore.googleapis.com/v1/projects/{project_id}/databases/(default)/documents/{collection_id}/{doc_id}"
+    # Firestore REST API endpoint (URL-encode path segments)
+    url = (
+        f"https://firestore.googleapis.com/v1/projects/{quote(project_id, safe='')}/"
+        f"databases/(default)/documents/"
+        f"{quote(collection_id, safe='')}/"
+        f"{quote(doc_id, safe='')}"
+    )
     
     # Convert to Firestore format
     firestore_doc = {
@@ -76,18 +103,28 @@ def upload_to_firestore_rest(data: dict) -> bool:
             firestore_doc["fields"][key] = {"stringValue": str(value)}
     
     # Make PATCH request to create/update document
+    token = get_access_token()
     headers = {
         'Content-Type': 'application/json',
+        **({ 'Authorization': f'Bearer {token}' } if token else {})
     }
-    
+
     try:
-        response = requests.patch(url, json=firestore_doc, headers=headers)
-        response.raise_for_status()
-        return True
-    except requests.exceptions.RequestException as e:
+        data_bytes = json.dumps(firestore_doc).encode('utf-8')
+        req = request.Request(url, data=data_bytes, headers=headers, method='PATCH')
+        with request.urlopen(req) as resp:
+            # Success on 200-range status
+            return 200 <= resp.status < 300
+    except error.HTTPError as e:
+        print(f"❌ Failed to upload {doc_id}: HTTP {e.code}")
+        try:
+            body = e.read().decode('utf-8')
+            print(f"Response: {body}")
+        except Exception:
+            pass
+        return False
+    except Exception as e:
         print(f"❌ Failed to upload {doc_id}: {e}")
-        if hasattr(e, 'response') and e.response is not None:
-            print(f"Response: {e.response.text}")
         return False
 
 
