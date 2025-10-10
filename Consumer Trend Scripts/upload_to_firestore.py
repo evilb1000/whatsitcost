@@ -68,7 +68,6 @@ def process_csv_files(data_dir: str, collection_name: str, db, dry_run: bool = F
                 "value": float(value),
                 "mom_change": None if pd.isna(latest_row.get('mom_change')) else round(float(latest_row.get('mom_change')), 4),
                 "yoy_change": None if pd.isna(latest_row.get('yoy_change')) else round(float(latest_row.get('yoy_change')), 4),
-                "rolling_12mo_change": None if pd.isna(latest_row.get('rolling_12mo_change')) else round(float(latest_row.get('rolling_12mo_change')), 4),
                 "mom_36mo_avg": None if pd.isna(latest_row.get('mom_36mo_avg')) else round(float(latest_row.get('mom_36mo_avg')), 4),
                 "mom_12mo_avg": None if pd.isna(latest_row.get('mom_12mo_avg')) else round(float(latest_row.get('mom_12mo_avg')), 4)
             }]

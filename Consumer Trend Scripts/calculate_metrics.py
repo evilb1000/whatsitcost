@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Calculate metrics for FRED series data
-Adds: MoM change, Rolling 12-month change, 36-month MoM avg, 12-month MoM avg, YoY change
+Adds: MoM change, YoY change, 36-month MoM avg, 12-month MoM avg
 """
 
 import argparse
@@ -33,12 +33,6 @@ def calculate_yoy_change(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def calculate_rolling_12mo_change(df: pd.DataFrame) -> pd.DataFrame:
-    """Calculate rolling 12-month percentage change"""
-    df['rolling_12mo_change'] = df['value'].pct_change(periods=12) * 100
-    return df
-
-
 # === Percentage-point calculations for rate series (e.g., UNRATE) ===
 def calculate_mom_change_points(df: pd.DataFrame) -> pd.DataFrame:
     """Calculate month-over-month change in percentage points (simple diff)."""
@@ -49,12 +43,6 @@ def calculate_mom_change_points(df: pd.DataFrame) -> pd.DataFrame:
 def calculate_yoy_change_points(df: pd.DataFrame) -> pd.DataFrame:
     """Calculate year-over-year change in percentage points (simple 12-month diff)."""
     df['yoy_change'] = df['value'].diff(12)
-    return df
-
-
-def calculate_rolling_12mo_change_points(df: pd.DataFrame) -> pd.DataFrame:
-    """Calculate 12-month change in percentage points (alias of YoY diff)."""
-    df['rolling_12mo_change'] = df['value'].diff(12)
     return df
 
 
@@ -96,22 +84,24 @@ def process_series(file_path: str) -> None:
             # Use percentage-point changes for rates
             df = calculate_mom_change_points(df)
             df = calculate_yoy_change_points(df)
-            df = calculate_rolling_12mo_change_points(df)
         else:
             # Default: percentage changes
             df = calculate_mom_change(df)
             df = calculate_yoy_change(df)
-            df = calculate_rolling_12mo_change(df)
 
         # Rolling averages operate on MoM change regardless of units
         df = calculate_36mo_mom_avg(df)
         df = calculate_12mo_mom_avg(df)
         
         # Round to 4 decimal places for readability
-        numeric_cols = ['mom_change', 'yoy_change', 'rolling_12mo_change', 'mom_36mo_avg', 'mom_12mo_avg']
+        numeric_cols = ['mom_change', 'yoy_change', 'mom_36mo_avg', 'mom_12mo_avg']
         for col in numeric_cols:
             if col in df.columns:
                 df[col] = df[col].round(4)
+        
+        # Drop rolling_12mo_change if it exists (deprecated duplicate column)
+        if 'rolling_12mo_change' in df.columns:
+            df = df.drop(columns=['rolling_12mo_change'])
         
         # Save back to CSV
         df.to_csv(file_path, index=False)

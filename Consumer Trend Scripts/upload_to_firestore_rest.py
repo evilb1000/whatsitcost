@@ -28,7 +28,7 @@ def get_latest_row_from_csv(file_path: str) -> dict:
             latest_row = max(rows, key=lambda x: x['date'])
             
             # Convert numeric fields
-            for field in ['value', 'mom_change', 'yoy_change', 'rolling_12mo_change', 'mom_36mo_avg', 'mom_12mo_avg']:
+            for field in ['value', 'mom_change', 'yoy_change', 'mom_36mo_avg', 'mom_12mo_avg']:
                 if field in latest_row and latest_row[field]:
                     try:
                         latest_row[field] = float(latest_row[field])

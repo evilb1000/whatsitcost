@@ -277,7 +277,7 @@ function ConsumerDashboard() {
                                         </span>
                                     </div>
                                     <div style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>Avg Monthly Change Past 12 Months:</strong>
+                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>12 Month Rolling Average:</strong>
                                         <span style={{ 
                                             color: '#ffffff',
                                             fontWeight: '600',
@@ -288,7 +288,7 @@ function ConsumerDashboard() {
                                         </span>
                                     </div>
                                     <div style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>Avg Monthly Change Past 36 Months:</strong>
+                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>36 Month Rolling Average:</strong>
                                         <span style={{ 
                                             color: '#ffffff',
                                             fontWeight: '600',
@@ -296,17 +296,6 @@ function ConsumerDashboard() {
                                             textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
                                         }}>
                                             {indicator.latest.mom_36mo_avg !== null ? `${indicator.latest.mom_36mo_avg.toFixed(2)}%` : '—'}
-                                        </span>
-                                    </div>
-                                    <div style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                                        <strong style={{ color: '#ffffff', textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}>12 Month Rolling Average:</strong>
-                                        <span style={{ 
-                                            color: '#ffffff',
-                                            fontWeight: '600',
-                                            marginLeft: '4px',
-                                            textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
-                                        }}>
-                                            {indicator.latest.rolling_12mo_change !== null ? `${indicator.latest.rolling_12mo_change.toFixed(2)}%` : '—'}
                                         </span>
                                     </div>
                                 </div>
